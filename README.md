@@ -16,10 +16,11 @@ are explicitly licensed under CC BY-SA 4.0.
 
 ## Repository Structure
 .
-├── kmr_paper.md # Primary mathematical exposition
-├── kmr_operations.py # Python implementation
-├── LICENSE # CC BY-SA 4.0 license
-└── examples/ # Usage examples
+├── kmr_paper.md       # Primary mathematical exposition  
+├── kmr_operations.py  # Python implementation  
+├── LICENSE-СС         # CC BY-SA 4.0 license for theory  
+├── LICENSE            # Code GPL 3.0 license for code 
+└── examples/          # Usage examples  
 
 ## 🚀 Quick Start
 ```python
