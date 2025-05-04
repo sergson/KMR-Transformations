@@ -25,18 +25,18 @@ $$ A ⊘ B ≔ \frac{A}{1 - AB} $$
 ## Core Algebraic Properties
 
 ### Direct KMR Operator (⊙)
-| Property               | Formula                          | Note                                                                  |
-|------------------------|----------------------------------|-----------------------------------------------------------------------|
-| **Closure**           | \( A ⊙ B \in \mathbb{R} \)       | Defined ∀ \( A,B \in \mathbb{R}\setminus\{-\frac{1}{B}\} \)           |
-| **Non-Associativity** | \( (A ⊙ B) ⊙ C \neq A ⊙ (B ⊙ C) \) | Example: \( (1 ⊙ 2) ⊙ 3 = 0.1666 \neq 1 ⊙ (2 ⊙ 3) = 0.2222 \) |
-| **Identity Element**  | \( A ⊙ 0 = A \)                  | The zero element retains its value                                    |
-| **Non-Commutativity** | \( A ⊙ B \neq B ⊙ A \)           | Example: \( 1 ⊙ 2 = 0.333 \neq 2 ⊙ 1 = 0.666 \)                     |
+| Property               | Formula                               | Note                                                                  |
+|------------------------|---------------------------------------|-----------------------------------------------------------------------|
+| **Closure**            | \( A ⊙ B \in \mathbb{R} \)            | Defined ∀ \( A,B \in \mathbb{R}\setminus\{-\frac{1}{B}\} \)          |
+| **Non-Associativity**  | \( (A ⊙ B) ⊙ C \neq A ⊙ (B ⊙ C) \) | Example: \( (1 ⊙ 2) ⊙ 3 = 0.1666 \neq 1 ⊙ (2 ⊙ 3) = 0.2222 \)     |
+| **Identity Element**   | \( A ⊙ 0 = A \)                       | The zero element retains its value                                   |
+| **Non-Commutativity**  | \( A ⊙ B \neq B ⊙ A \)               | Example: \( 1 ⊙ 2 = 0.333 \neq 2 ⊙ 1 = 0.666 \)                     |
 
 ### Inverse KMR Operator (⊘)
-| Property               | Formula                          | Note                                      |
-|------------------------|----------------------------------|-------------------------------------------|
-| **Inversion**         | \( (A ⊘ B) ⊙ B = A \)            | Full restoration of the original value   |
-| **Singularity**       | \( \lim_{B \to 1/A} A ⊘ B = \infty \) | Vertical asymptote at \( AB \to 1 \) |
+| Property               | Formula                                  | Note                                      |
+|------------------------|------------------------------------------|-------------------------------------------|
+| **Inversion**          | \( (A ⊘ B) ⊙ B = A \)                  | Full restoration of the original value    |
+| **Singularity**        | \( \lim_{B \to 1/A} A ⊘ B = \infty \)   | Vertical asymptote at \( AB \to 1 \)      |
 
 ### Composition Laws
 1. **Sequential Application**:
@@ -62,3 +62,36 @@ def kmr_direct(a, b):
 def kmr_inverse(a, b):
     """A ⊘ B operation""" 
     return a / (1 - a*b)
+
+## Iterative Properties of Operators
+
+### KMR Continued Fraction Decomposition
+Both operators represent continued fractions with `B` iterations:
+
+**Direct operator (⊙):**
+$$ A ⊙ B = \frac{A}{1 + \frac{AB}{1 + \frac{AB}{1 + \cdots}}} $$  
+(`B` iterations)
+
+**Inverse operator (⊘):**  
+$$ A ⊘ B = \frac{A}{1 - \frac{AB}{1 - \frac{AB}{1 - \cdots}}} $$  
+(`B` iterations)
+
+### Decomposition Components
+For KMR decomposition, we define:
+- $A_0 = A$
+- $A_{n+1} = \frac{A_n}{1 ± A_nB}$ (sign depends on the operator)
+
+## Iterative Python Implementation
+
+```python
+def kmr_inverse_iterative(a, b, iterations):
+    """A ⊘ B via continued fraction (iterative approach)"""
+    result = a
+    for _ in range(iterations):
+        result = result / (1 - result * b)
+    return result
+
+def kmr_inverse_direct(a, b):
+    """A ⊘ B via analytic formula"""
+    return a / (1 - a * b)
+
