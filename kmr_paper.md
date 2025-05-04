@@ -69,17 +69,21 @@ def kmr_inverse(a, b):
 Both operators represent continued fractions with `B` iterations:
 
 **Direct operator (⊙):**
-$$ A ⊙ B = \frac{A}{1 + \frac{AB}{1 + \frac{AB}{1 + \cdots}}} $$  
+$$
+A ⊙ B = \cfrac{A}{1 + \cfrac{AB}{1 + \cfrac{AB}{1 + \cdots}}}
+$$
 (`B` iterations)
 
 **Inverse operator (⊘):**  
-$$ A ⊘ B = \frac{A}{1 - \frac{AB}{1 - \frac{AB}{1 - \cdots}}} $$  
+$$
+A ⊘ B = \cfrac{A}{1 - \cfrac{AB}{1 - \cfrac{AB}{1 - \cdots}}}
+$$
 (`B` iterations)
 
 ### Decomposition Components
 For KMR decomposition, we define:
 - $A_0 = A$
-- $A_{n+1} = \frac{A_n}{1 ± A_nB}$ (sign depends on the operator)
+- $A_{n+1} = \frac{A_n}{1 \pm A_nB}$ (sign depends on the operator)
 
 ## Iterative Python Implementation
 
