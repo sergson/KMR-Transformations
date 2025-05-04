@@ -11,8 +11,8 @@ but this applies only to source code files. All theoretical materials
 are explicitly licensed under CC BY-SA 4.0.
 
 ## Core Operators
-- **Direct (⊙)**: `A ⊙ B ≔ A/(1 + AB)`
-- **Inverse (⊘)**: `A ⊘ B ≔ A/(1 - AB)`
+- **Direct (⊙)**: `A ⊙ K ≔ A/(1 + AK)`
+- **Inverse (⊘)**: `A ⊘ K ≔ A/(1 - AK)`
 
 ## Repository Structure
 ```text
@@ -29,7 +29,7 @@ are explicitly licensed under CC BY-SA 4.0.
 from kmr_operations import kmr_direct, kmr_inverse
 
 print(kmr_direct(2, 3))  # 0.2857 = 2 ⊙ 3
-print(kmr_inverse(2, 3)) # -1.0   = 2 ⊘ 3
+print(kmr_inverse(2, 3)) # -0.4   = 2 ⊘ 3
 ```
 
 ## Key Features
