@@ -15,12 +15,14 @@ are explicitly licensed under CC BY-SA 4.0.
 - **Inverse (⊘)**: `A ⊘ B ≔ A/(1 - AB)`
 
 ## Repository Structure
+```text
 .
-├── kmr_paper.md       # Primary mathematical exposition  
-├── kmr_operations.py  # Python implementation  
-├── LICENSE-СС         # CC BY-SA 4.0 license for theory  
-├── LICENSE            # Code GPL 3.0 license for code 
-└── examples/          # Usage examples  
+├── kmr_paper.md         # Primary mathematical exposition  
+├── kmr_operations.py    # Python implementation  
+├── LICENSE-СС           # Theory (CC BY-SA 4.0)  
+├── LICENSE              # Code (GPL 3.0)  
+└── examples/            # Usage examples  
+```
 
 ## 🚀 Quick Start
 ```python
