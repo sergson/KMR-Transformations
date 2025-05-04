@@ -162,7 +162,10 @@ Let's compute $2 ⊙ 3$ both recursively and directly:
 2. $\mathrm{KMR}(1) = \frac{2}{1+2} = \frac{2}{3} \approx 0.6667$
 3. $\mathrm{KMR}(2) = \frac{\frac{2}{3}}{1+\frac{2}{3}} = \frac{2}{5} = 0.4$
 4. $\mathrm{KMR}(3) = \frac{\frac{2}{5}}{1+\frac{2}{5}} = \frac{2}{7} \approx 0.2857$
-
+As full fraction:
+$$ 
+2 ⊙ 3 = \frac{2}{1 + \frac{2}{1 + \frac{2}{1 + \underbrace{2}_{K=1}}}}
+$$ 
 **Direct formula**:
 $$
 \mathrm{KMR}(3) = \frac{2}{1 + 3 \cdot 2} = \frac{2}{7} \approx 0.2857
