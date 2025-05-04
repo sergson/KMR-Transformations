@@ -59,13 +59,13 @@ $$ A ⊘ K ≔ \frac{A}{1 - AK} $$
 ## Python Implementation of mathematical definitions  
 ```python
 # License: CC BY-SA 4.0 (see LICENSE-CC.md)
-def kmrd(A, K):
-    """A ⊙ K operation
+def kmrd(A):
+    """A ⊙ 1 operation
        KMR direct operator: A/(1+A) (works for all A ≠ -1)"""
     return A / (1 + A)
 
-def kmri(A, K):
-    """A ⊘ K operation
+def kmri(A):
+    """A ⊘ 1 operation
        KMR inverse operator: A/(1-A) (works for all A ≠ 1)"""
     return A / (1 - A) if (1 - A) != 0 else float('inf')
 
