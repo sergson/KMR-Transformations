@@ -1,3 +1,7 @@
+<!-- 
+License: CC BY-SA 4.0 (see LICENSE-CC.md)
+-->
+
 ### For Theoretical Content
 - All mathematical formulations and documentation must be licensed under **CC BY-SA 4.0**
 - When adding new theoretical content, include the header:
@@ -7,8 +11,8 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->```
 
 # KMR Transformations: Novel Binary Operators  
-**Author**: [Sergei Terikhov]  
-**Date**: [04.05.2025] 
+**Author**: Sergei Terikhov  
+**Date**: 04.05.2025
 
 ## KMR Acronym Interpretations  
 - **K**-modulated Möbius Reduction  
@@ -17,85 +21,93 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 ## Mathematical Definitions  
 
 ### Direct KMR Operator (⊙)  
-$$ A ⊙ B ≔ \frac{A}{1 + AB} $$  
+$$ A ⊙ K ≔ \frac{A}{1 + AK} $$  
 
 ### Inverse KMR Operator (⊘)  
-$$ A ⊘ B ≔ \frac{A}{1 - AB} $$  
+$$ A ⊘ K ≔ \frac{A}{1 - AK} $$  
 
 ## Core Algebraic Properties
 
 ### Direct KMR Operator (⊙)
 | Property               | Formula                               | Note                                                                  |
 |------------------------|---------------------------------------|-----------------------------------------------------------------------|
-| **Closure**            | \( A ⊙ B \in \mathbb{R} \)            | Defined ∀ \( A,B \in \mathbb{R}\setminus\{-\frac{1}{B}\} \)          |
-| **Non-Associativity**  | \( (A ⊙ B) ⊙ C \neq A ⊙ (B ⊙ C) \) | Example: \( (1 ⊙ 2) ⊙ 3 = 0.1666 \neq 1 ⊙ (2 ⊙ 3) = 0.2222 \)     |
+| **Closure**            | \( A ⊙ K \in \mathbb{R} \)            | Defined ∀ \( A,K \in \mathbb{R}\setminus\{-\frac{1}{K}\} \)          |
+| **Non-Associativity**  | \( (A ⊙ K) ⊙ C \neq A ⊙ (K ⊙ C) \) | Example: \( (1 ⊙ 2) ⊙ 3 = 0.1666 \neq 1 ⊙ (2 ⊙ 3) = 0.2222 \)     |
 | **Identity Element**   | \( A ⊙ 0 = A \)                       | The zero element retains its value                                   |
-| **Non-Commutativity**  | \( A ⊙ B \neq B ⊙ A \)               | Example: \( 1 ⊙ 2 = 0.333 \neq 2 ⊙ 1 = 0.666 \)                     |
+| **Non-Commutativity**  | \( A ⊙ K \neq K ⊙ A \)               | Example: \( 1 ⊙ 2 = 0.333 \neq 2 ⊙ 1 = 0.666 \)                     |
 
 ### Inverse KMR Operator (⊘)
 | Property               | Formula                                  | Note                                      |
 |------------------------|------------------------------------------|-------------------------------------------|
-| **Inversion**          | \( (A ⊘ B) ⊙ B = A \)                  | Full restoration of the original value    |
-| **Singularity**        | \( \lim_{B \to 1/A} A ⊘ B = \infty \)   | Vertical asymptote at \( AB \to 1 \)      |
+| **Inversion**          | \( (A ⊘ K) ⊙ K = A \)                  | Full restoration of the original value    |
+| **Singularity**        | \( \lim_{K \to 1/A} A ⊘ K = \infty \)   | Vertical asymptote at \( AK \to 1 \)      |
 
 ### Composition Laws
 1. **Sequential Application**:
    \[
-   A ⊙ B ⊙ C ≔ \frac{A}{1 + AB + AC + ABC}
+   A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC}
    \]
 2. **Mixed Operations**:
    \[
-   A ⊙ (B ⊘ C) = \frac{A(1 - BC)}{1 + AB - ABC}
+   A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC}
    \]
 3. **Fixed Points**:
    \[
    \exists X : A ⊙ X = X \implies X = 0
    \]
 
-## Python Implementation  
+## Python Implementation of mathematical definitions  
 ```python
 # License: CC BY-SA 4.0 (see LICENSE-CC.md)
-def kmr_direct(a, b):
-    """A ⊙ B operation"""
-    return a / (1 + a*b)
+def kmrd(A, K):
+    """A ⊙ K operation
+       KMR direct operator: A/(1+A) (works for all A ≠ -1)"""
+    return A / (1 + A)
 
-def kmr_inverse(a, b):
-    """A ⊘ B operation""" 
-    return a / (1 - a*b)
+def kmri(A, K):
+    """A ⊘ K operation
+       KMR inverse operator: A/(1-A) (works for all A ≠ 1)"""
+    return A / (1 - A) if (1 - A) != 0 else float('inf')
+
+def kmr_dircly(A: float, K: float) -> float:
+    """A ⊙ K OR A ⊘ K
+       KMR calculation: A/(1+K*A) for K ∈ ℝ"""
+    return A / (1 + K * A) if (1 + K * A) != 0 else float('inf')```
 
 ## Iterative Properties of Operators
 
 ### KMR Continued Fraction Decomposition
-Both operators represent continued fractions with `B` iterations:
+Both operators represent continued fractions with `K` iterations:
 
 **Direct operator (⊙):**
 \[
-A ⊙ B = \cfrac{A}{1 + \cfrac{AB}{1 + \cfrac{AB}{1 + \cdots}}}
+A ⊙ K = \cfrac{A}{1 + \cfrac{AK}{1 + \cfrac{AK}{1 + \cdots}}}
 \]
-(`B` iterations)
+(`K` iterations)
 
 **Inverse operator (⊘):**  
 \[
-A ⊘ B = \cfrac{A}{1 - \cfrac{AB}{1 - \cfrac{AB}{1 - \cdots}}}
+A ⊘ K = \cfrac{A}{1 - \cfrac{AK}{1 - \cfrac{AK}{1 - \cdots}}}
 \]
-(`B` iterations)
+(`K` iterations)
 
 ### Decomposition Components
 For KMR decomposition, we define:
 - $A_0 = A$
-- $A_{n+1} = \frac{A_n}{1 \pm A_nB}$ (sign depends on the operator)
+- $A_{n+1} = \frac{A_n}{1 \pm A_nK}$ (sign depends on the operator)
 
 ## Iterative Python Implementation
 
 ```python
-def kmr_inverse_iterative(a, b, iterations):
-    """A ⊘ B via continued fraction (iterative approach)"""
-    result = a
-    for _ in range(iterations):
-        result = result / (1 - result * b)
-    return result
-
-def kmr_inverse_direct(a, b):
-    """A ⊘ B via analytic formula"""
-    return a / (1 - a * b)
-
+def kmr_iter_n(A: float, K: int) -> list[float]:
+  """A ⊘ K via continued fraction (iterative approach)
+     Iterative KMR^n calculation for any K ∈ ℤ
+     Returns [KMR_0, KMR_1, ..., KMR_K]"""
+  if not isinstance(K, int):
+      raise ValueError("K must be integer")
+      
+  result = [A]
+  for _ in range(abs(K)):
+      result.append(kmrp(result[-1]) if K >= 0 
+                   else kmrm(result[-1]))
+  return result
