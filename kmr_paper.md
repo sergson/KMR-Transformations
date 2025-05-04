@@ -22,12 +22,35 @@ $$ A ⊙ B ≔ \frac{A}{1 + AB} $$
 ### Inverse KMR Operator (⊘)  
 $$ A ⊘ B ≔ \frac{A}{1 - AB} $$  
 
-## Core Properties  
+## Core Algebraic Properties
 
-| Property          | Formula                          |  
-|-------------------|----------------------------------|  
-| **Non-Associative** | $(A ⊙ B) ⊙ C \neq A ⊙ (B ⊙ C)$ |  
-| **Fixed Points**  | $A ⊙ 0 = A$                      |  
+### Direct KMR Operator (⊙)
+| Property               | Formula                          | Note                                                                  |
+|------------------------|----------------------------------|-----------------------------------------------------------------------|
+| **Closure**           | \( A ⊙ B \in \mathbb{R} \)       | Defined ∀ \( A,B \in \mathbb{R}\setminus\{-\frac{1}{B}\} \)           |
+| **Non-Associativity** | \( (A ⊙ B) ⊙ C \neq A ⊙ (B ⊙ C) \) | Example: \( (1 ⊙ 2) ⊙ 3 = 0.1666 \neq 1 ⊙ (2 ⊙ 3) = 0.2222 \) |
+| **Identity Element**  | \( A ⊙ 0 = A \)                  | The zero element retains its value                                    |
+| **Non-Commutativity** | \( A ⊙ B \neq B ⊙ A \)           | Example: \( 1 ⊙ 2 = 0.333 \neq 2 ⊙ 1 = 0.666 \)                     |
+
+### Inverse KMR Operator (⊘)
+| Property               | Formula                          | Note                                      |
+|------------------------|----------------------------------|-------------------------------------------|
+| **Inversion**         | \( (A ⊘ B) ⊙ B = A \)            | Full restoration of the original value   |
+| **Singularity**       | \( \lim_{B \to 1/A} A ⊘ B = \infty \) | Vertical asymptote at \( AB \to 1 \) |
+
+### Composition Laws
+1. **Sequential Application**:
+   \[
+   A ⊙ B ⊙ C ≔ \frac{A}{1 + AB + AC + ABC}
+   \]
+2. **Mixed Operations**:
+   \[
+   A ⊙ (B ⊘ C) = \frac{A(1 - BC)}{1 + AB - ABC}
+   \]
+3. **Fixed Points**:
+   \[
+   \exists X : A ⊙ X = X \implies X = 0
+   \]
 
 ## Python Implementation  
 ```python
