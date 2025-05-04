@@ -75,6 +75,7 @@ def kmr_dircly(A: float, K: float) -> float:
     """A ⊙ K OR A ⊘ K
        KMR calculation: A/(1+K*A) for K ∈ ℝ"""
     return A / (1 + K * A) if (1 + K * A) != 0 else float('inf')```
+```
 
 ## Iterative Properties of Operators
 
@@ -196,3 +197,5 @@ def kmr_iter_n(A: float, K: int) -> list[float]:
       result.append(kmrp(result[-1]) if K >= 0 
                    else kmrm(result[-1]))
   return result
+```
+
