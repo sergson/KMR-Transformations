@@ -69,15 +69,15 @@ def kmr_inverse(a, b):
 Both operators represent continued fractions with `B` iterations:
 
 **Direct operator (⊙):**
-$$
+\[
 A ⊙ B = \cfrac{A}{1 + \cfrac{AB}{1 + \cfrac{AB}{1 + \cdots}}}
-$$
+\]
 (`B` iterations)
 
 **Inverse operator (⊘):**  
-$$
+\[
 A ⊘ B = \cfrac{A}{1 - \cfrac{AB}{1 - \cfrac{AB}{1 - \cdots}}}
-$$
+\]
 (`B` iterations)
 
 ### Decomposition Components
