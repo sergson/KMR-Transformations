@@ -79,17 +79,17 @@ def kmr_dircly(A: float, K: float) -> float:
 ### KMR Continued Fraction Decomposition
 Both operators represent continued fractions with `K` iterations:
 
-**Direct operator (⊙):**:
+**Direct operator (⊙)**:
 \[
-A ⊙ K = \cfrac{A}{1 + \cfrac{AK}{1 + \cfrac{AK}{1 + \cdots}}}
+A ⊙ K = \cfrac{A}{1 + \cfrac{AK}{1 + \cfrac{AK}{\ddots + \cfrac{AK}{1 + AK}}}}
+\quad \text{(K iterations)}
 \]
-(`K` iterations)
 
-**Inverse operator (⊘):**: 
+**Inverse operator (⊘)**: 
 \[
-A ⊘ K = \cfrac{A}{1 - \cfrac{AK}{1 - \cfrac{AK}{1 - \cdots}}}
+A ⊘ K = \cfrac{A}{1 - \cfrac{AK}{1 - \cfrac{AK}{\ddots - \cfrac{AK}{1 - AK}}}}
+\quad \text{(K iterations)}
 \]
-(`K` iterations)
 
 ### Decomposition Components
 For KMR decomposition, we define:
