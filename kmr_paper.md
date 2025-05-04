@@ -44,17 +44,20 @@ $$ A ⊘ K ≔ \frac{A}{1 - AK} $$
 
 ### Composition Laws
 1. **Sequential Application**:
-   \[
-   A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC}
-   \]
+   $$ A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC} $$
+
 2. **Mixed Operations**:
-   \[
-   A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC}
-   \]
+   $$ A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC} $$
+
 3. **Fixed Points**:
-   \[
-   \exists X : A ⊙ X = X \implies X = 0
-   \]
+  $$ \exists X : A ⊙ X = X \implies X = 0 $$
+
+4. **Iterated Application**:
+  $$ A ⊙ \underbrace{K ⊙ K ⊙ \dots ⊙ K}_{n \text{ times}} = A ⊙ K n = \frac{A}{1 + A K n} $$
+  $$ A ⊘ \underbrace{K ⊘ \dots ⊘ K}_{n \text{ times}} = A ⊘ K n = \frac{A}{1 - A K n} $$
+  **Special case of iterated application**: (when \( K = 1 \)):
+  $$ A ⊙ \underbrace{1 ⊙ \dots ⊙ 1}_{n \text{ times}} = A ⊙ n $$
+  $$ A ⊘ \underbrace{1 ⊘ \dots ⊘ 1}_{n \text{ times}} = A ⊘ n $$
 
 ## Python Implementation of mathematical definitions  
 ```python
