@@ -80,21 +80,18 @@ def kmr_dircly(A: float, K: float) -> float:
 Both operators represent continued fractions with `K` iterations:
 
 **Direct operator (⊙)**:
-\[
-A ⊙ K = \cfrac{A}{1 + \cfrac{AK}{1 + \cfrac{AK}{\ddots + \cfrac{AK}{1 + AK}}}}
-\quad \text{(K iterations)}
-\]
+A ⊙ K = A/(1 + A/(1 + A/(... + A/(1 + A)))) (K iterations)
 
-**Inverse operator (⊘)**: 
-\[
-A ⊘ K = \cfrac{A}{1 - \cfrac{AK}{1 - \cfrac{AK}{\ddots - \cfrac{AK}{1 - AK}}}}
-\quad \text{(K iterations)}
-\]
+**Inverse operator (⊘)**:
+A ⊘ K = A/(1 - A/(1 - A/(... - A/(1 - A)))) (K iterations)
 
 ### Decomposition Components
 For KMR decomposition, we define:
-- $A_0 = A$
-- $A_{n+1} = \frac{A_n}{1 \pm A_nK}$ (sign depends on the operator)
+- KMR₀ = A
+- KMRₙ₊₁ = KMRₙ/(1 ± KMRₙK) (sign depends on operator)
+Or
+- A₀ = A
+- Aₙ₊₁ = Aₙ/(1 ± AₙK) (sign depends on operator)
 
 ## Iterative Python Implementation
 
