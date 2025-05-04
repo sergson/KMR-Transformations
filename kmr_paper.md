@@ -76,30 +76,113 @@ def kmr_dircly(A: float, K: float) -> float:
 
 ## Iterative Properties of Operators
 
-### KMR Continued Fraction Decomposition
-Both operators represent continued fractions with `K` iterations:
+### KMR Decomposition
 
-**Direct operator (⊙)**:
-A ⊙ K = A/(1 + A/(1 + A/(... + A/(1 + A)))) (K iterations)
+Both operators represent fractions obtained by `K` multiple composition (iterations):
 
-**Inverse operator (⊘)**:
-A ⊘ K = A/(1 - A/(1 - A/(... - A/(1 - A)))) (K iterations)
+#### Direct Operator (⊙)
+**Definition**:  
+For a given initial value `A` and `K` iterations:
+$$
+\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 + \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A
+$$
+
+**Example: Calculate 1 ⊙ 2**
+1. Initial value: $\mathrm{KMR}(0) = 1$
+2. First iteration ($n=1$):
+   $$\mathrm{KMR}(1) = \frac{1}{1+1} = \frac{1}{2}$$
+3. Second iteration ($n=2$):
+   $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1+\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{3}{2}} = \frac{1}{3}$$
+   
+**Result**: $1 ⊙ 2 = \frac{1}{3}$
+
+**Notation**:  
+$A ⊙ K$ computes $\mathrm{KMR}(K)$ using the direct operator (positive denominator)
+
+#### Inverse Operator (⊘)
+**Definition**:  
+For a given initial value `A` and `K` iterations:
+$$
+\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 - \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A
+$$
+
+**Example: Calculate 1/3 ⊘ 2**
+1. Initial value: $\mathrm{KMR}(0) = \frac{1}{3}$
+2. First iteration ($n=1$):
+   $$\mathrm{KMR}(1) = \frac{\frac{1}{3}}{1-\frac{1}{3}} = \frac{\frac{1}{3}}{\frac{2}{3}} = \frac{1}{2}$$
+3. Second iteration ($n=2$):
+   $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1-\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{1}{2}} = 1$$
+   
+**Result**: $\frac{1}{3} ⊘ 2 = 1$
+
+**Notation**:  
+$A ⊘ K$ computes $\mathrm{KMR}(K)$ using the inverse operator (negative denominator)
 
 ### Decomposition Components
-For KMR decomposition, we define:
-- KMR₀ = A
-- KMRₙ₊₁ = KMRₙ/(1 ± KMRₙK) (sign depends on operator)
-Or
-- A₀ = A
-- Aₙ₊₁ = Aₙ/(1 ± AₙK) (sign depends on operator)
+
+The KMR decomposition can be represented both recursively and through direct formulas:
+
+#### 1. Recursive Definition
+- **Base case**:  
+  $\mathrm{KMR}(0) = A$
+  
+- **Recursive step**:  
+  $\mathrm{KMR}({n+1}) = \frac{\mathrm{KMR}(n)}{1 \pm \mathrm{KMR}(n)}$  
+  (where `+` for ⊙, `-` for ⊘)
+
+#### 2. Direct Formulas (Non-Recursive)
+For $K$ iterations:
+
+**Direct operator (⊙)**:
+$$
+\mathrm{KMR}(K) = \frac{A}{1 + K \cdot A}
+$$
+
+**Inverse operator (⊘)**:
+$$
+\mathrm{KMR}(K) = \frac{A}{1 - K \cdot A} \quad \text{(for } K \cdot A < 1\text{)}
+$$
+
+#### 3. Composition Rules
+The final value can be expressed as:
+- **As continued fraction**:  
+  $\mathrm{KMR}(K) = \cfrac{A}{1 \pm \cfrac{A}{1 \pm \cfrac{A}{\ddots \pm A}}}$ (K levels)
+
+- **As product expansion**:  
+  $\mathrm{KMR}(K) = A \prod_{i=1}^{K} \frac{1}{1 \pm (i \cdot A)}$
+
+#### 4. Numerical Example
+Let's compute $2 ⊙ 3$ both recursively and directly:
+
+**Recursive method**:
+1. $\mathrm{KMR}(0) = 2$
+2. $\mathrm{KMR}(1) = \frac{2}{1+2} = \frac{2}{3} \approx 0.6667$
+3. $\mathrm{KMR}(2) = \frac{\frac{2}{3}}{1+\frac{2}{3}} = \frac{2}{5} = 0.4$
+4. $\mathrm{KMR}(3) = \frac{\frac{2}{5}}{1+\frac{2}{5}} = \frac{2}{7} \approx 0.2857$
+
+**Direct formula**:
+$$
+\mathrm{KMR}(3) = \frac{2}{1 + 3 \cdot 2} = \frac{2}{7} \approx 0.2857
+$$
+
+#### 5. Component Interpretation
+Each component $\mathrm{KMR}(n)$ represents:
+- Partial evaluation after $n$ steps
+- Intermediate convergence rate (⊙) or divergence factor (⊘)
+- Building blocks for the final composition:  
+  $\mathrm{KMR}(K) = \mathrm{COMPOSE}(\mathrm{KMR}(0), \mathrm{KMR}(1), ..., \mathrm{KMR}(K)$
+
+#### 6. Validity Conditions
+- For ⊙: Always converges for $A > 0$
+- For ⊘: Only valid when $K \cdot A < 1$ (avoid division by zero)
 
 ## Iterative Python Implementation
 
 ```python
 def kmr_iter_n(A: float, K: int) -> list[float]:
   """A ⊘ K via continued fraction (iterative approach)
-     Iterative KMR^n calculation for any K ∈ ℤ
-     Returns [KMR_0, KMR_1, ..., KMR_K]"""
+     Iterative KMR(n) calculation for any K ∈ ℤ
+     Returns [KMR(0), KMR(1), ..., KMR(K)]"""
   if not isinstance(K, int):
       raise ValueError("K must be integer")
       
