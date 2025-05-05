@@ -49,10 +49,10 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
 
 ## Citing This Work
 ```bibtex
-@software{Terikhov_KMR_2023,
+@software{KMR-Transformations,
   author = {Terikhov, Sergei},
   title = {KMR Transformations Framework},
-  year = {2023},
+  year = {2025},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations}}}```
