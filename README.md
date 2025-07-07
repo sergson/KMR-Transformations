@@ -12,7 +12,7 @@ are explicitly licensed under CC BY-SA 4.0.
 
 ## Core Operators
 - **Direct (⊙)**: ` A ⊙ K ≔ (A/(1 + A) ∘ A/(1 + A) ... A/(1 + A)) K times ` 
-- **Inverse (⊘)**: ` A ⊙ K ≔ (A/(1 - A) ∘ A/(1 - A) ... A/(1 - A)) K times `
+- **Inverse (⊘)**: ` A ⊘ K ≔ (A/(1 - A) ∘ A/(1 - A) ... A/(1 - A)) K times `
 - 
 ## Repository Structure
 ```text
