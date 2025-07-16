@@ -1,5 +1,5 @@
 <!-- 
-Лицензия: CC BY-SA 4.0 (см. LICENSE-CC.md) 
+License: CC BY-SA 4.0 (см. LICENSE-CC.md) 
 -->
 # KMR Transformations Framework
 ## Licensing
@@ -17,11 +17,12 @@ are explicitly licensed under CC BY-SA 4.0.
 ## Repository Structure
 ```text
 .
-├── kmr_paper.md         # Primary mathematical exposition  
-├── kmr_operations.py    # Python implementation  
-├── LICENSE-СС           # Theory (CC BY-SA 4.0)  
-├── LICENSE              # Code (GPL 3.0)  
-└── examples/            # Usage examples  
+├── kmr_paper.md                    # Primary mathematical exposition
+├── kmr_extension_to_fractional.md  # Extension to Fractional Compositions  
+├── kmr_operations.py               # Python implementation  
+├── LICENSE-СС                      # Theory (CC BY-SA 4.0)  
+├── LICENSE                         # Code (GPL 3.0)  
+└── examples/                       # Usage examples  
 ```
 
 ## 🚀 Quick Start
