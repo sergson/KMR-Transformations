@@ -14,7 +14,6 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 # KMR Transformations: Extension to Fractional Compositions  
 **Author**: Sergei Terikhov  
 **Date**: 16.07.2025  
-**Revised**: 18.07.2025
 
 ## 9. Fractional Composition Extension  
 
