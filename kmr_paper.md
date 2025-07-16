@@ -17,18 +17,18 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 **Date**: 04.05.2025
 
 
-## Introduction
+## 1. Introduction
 
-### KMR Acronym Interpretations  
+### 1.1 KMR Acronym Interpretations  
 - **K**-modulated Möbius Reduction  
 - **K**-ordered Metric Rescaling 
 
-### Composition in Mathematics and Its Application to a Recurrent Formula
+### 1.2 Composition in Mathematics and Its Application to a Recurrent Formula
 
 In mathematics, the composition of functions is typically denoted by the symbol ∘. For example, given two functions f and g, their composition is written as f∘g and defined as:  
 `(f∘g)(x) = f(g(x))`
 
-### Problem Statement  
+### 1.3 Problem Statement  
 We are given a recurrent formula:  
 `A_{n+1} = A_n/(1 + A_n)`  
 where:  
@@ -42,7 +42,7 @@ Thus, A(K) is:
 `A(K) = (f ∘ f ∘ ... ∘ f)(A) = f^K(A)`  
 (where f^K means K applications of f)
 
-### Computation Examples:
+### 1.4 Computation Examples:
 1. **K=1**:  
    `A(1) = A/(1 + A)`
 2. **K=2**:  
@@ -50,10 +50,10 @@ Thus, A(K) is:
 3. **K=3**:  
    `A(3) = [A/(1+2A)]/[1 + A/(1+2A)] = A/(1 + 3A)`
 
-### General Solution:
+### 1.5 General Solution:
 `A(K) = A/(1 + K A)`
 
-### Proof by Induction:
+### 1.6 Proof by Induction:
 1. **Base case (K=1)**:  
    Matches the first iteration ✓
 2. **Inductive step**:  
@@ -61,30 +61,30 @@ Thus, A(K) is:
    Then for K=n+1:  
    `A(n+1) = [A/(1+nA)]/[1 + A/(1+nA)] = A/(1 + (n+1)A)` ✓
 
-### Final Answer:
+### 1.7 Final Answer:
 The K-fold composition gives:  
 `A(K) = A/(1 + K A)`
 
 
-## Mathematical Definitions of KMR 
+## 2. Mathematical Definitions of KMR 
 
-### Direct KMR Operator (⊙)  
+### 2.1 Direct KMR Operator (⊙)  
 $$ A ⊙ K ≔ \underbrace{(\frac{A}{1 + A} ∘ \frac{A}{1 + A} \dots ∘ \frac{A}{1 + A})}_{K \text{ times}} $$ 
 
-### Inverse KMR Operator (⊘)
+### 2.2 Inverse KMR Operator (⊘)
 $$ A ⊘ K ≔ \underbrace{(\frac{A}{1 - A} ∘ \frac{A}{1 - A} \dots ∘ \frac{A}{1 - A})}_{K \text{ times}} $$  
 
 
-## KMR General Solutions
+## 3. KMR General Solutions
 
-### Direct KMR General Solution
+### 3.1 Direct KMR General Solution
 $$ A ⊙ K ≔ \frac{A}{1 + AK} $$ 
 
-### Inverse KMR General Solution
+### 3.2 Inverse KMR General Solution
 $$ A ⊘ K ≔ \frac{A}{1 - AK} $$
 
 
-## Handling Singularities in Stepwise Computations
+## 4. Handling Singularities in Stepwise Computations
 
 When recursively applying the operator \( ⊙ 1 \), a singularity \( s = $\frac{1}{0}$ \, `float('inf')`in Python) may occur at step \( m \), interrupting the computation chain. To maintain consistency with the explicit KMR formula \( A ⊙ K = $\frac{A}{1 + AK}$ \), we implement:
 
@@ -114,9 +114,9 @@ Step 2: -1 ⊙ 1 = s (singularity)
 Step 3: s ⊙ 1 → (-0.5)/(1 + 3*(-0.5)) = 1  (singularity passed, calculations can continue if K > 3, define K=4)
 Step 4: 1 ⊙ 1 = 0.5 (for K = 4)
 
-## Core Algebraic Properties
+## 5. Core Algebraic Properties
 
-### Direct KMR Operator (⊙)
+### 5.1 Direct KMR Operator (⊙)
 | Property               | Formula                               | Note                                                                  |
 |------------------------|---------------------------------------|-----------------------------------------------------------------------|
 | **Closure**            | \( A ⊙ K $\in \mathbb{R}$ \)            | Defined ∀ \( A,K $\in \mathbb{R}\setminus\{-\frac{1}{K}$\} \)          |
@@ -124,13 +124,13 @@ Step 4: 1 ⊙ 1 = 0.5 (for K = 4)
 | **Identity Element**   | \( A ⊙ 0 = A \)                       | The zero element retains its value                                   |
 | **Non-Commutativity**  | \( A ⊙ K $\neq$ K ⊙ A \)               | Example: \( 1 ⊙ 2 = 0.333 $\neq$ 2 ⊙ 1 = 0.666 \)                     |
 
-### Inverse KMR Operator (⊘)
+### 5.2 Inverse KMR Operator (⊘)
 | Property               | Formula                                  | Note                                      |
 |------------------------|------------------------------------------|-------------------------------------------|
 | **Inversion**          | \( (A ⊘ K) ⊙ K = A \)                  | Full restoration of the original value    |
 | **Singularity**        | \( $\lim_{K \to 1/A} A ⊘ K = \infty$ \)   | Vertical asymptote at \( AK $\to$ 1 \)      |
 
-### Composition Laws
+### 5.3 Composition Laws
 1. **Sequential Application**:
    $$ A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC} $$
 
@@ -148,7 +148,7 @@ Step 4: 1 ⊙ 1 = 0.5 (for K = 4)
   $$ A ⊘ \underbrace{1 ⊘ \dots ⊘ 1}_{n \text{ times}} = A ⊘ n $$
 
 
-## Python Implementation of mathematical definitions  
+## 6. Python Implementation of mathematical definitions  
 ```python
 # License: CC BY-SA 4.0 (see LICENSE-CC.md)
 def kmrd(A):
@@ -186,13 +186,13 @@ def kmr_invly(A: float, K: float) -> float:
     return A / (1 - K * A) if (1 - K * A) != 0 else float('inf')
 ```
 
-## Iterative Properties of Operators
+## 7. Iterative Properties of Operators
 
-### KMR Decomposition
+### 7.1 KMR Decomposition
 
 Both operators represent fractions obtained by `K` multiple composition (iterations):
 
-#### Direct Operator (⊙)
+#### 7.1.1 Direct Operator (⊙)
 **Definition**:  
 For a given initial value `A` and `K` iterations:
 $$
@@ -211,7 +211,7 @@ $$
 **Notation**:  
 $A ⊙ K$ computes $\mathrm{KMR}(K)$ using the direct operator (positive denominator)
 
-#### Inverse Operator (⊘)
+#### 7.1.2 Inverse Operator (⊘)
 **Definition**:  
 For a given initial value `A` and `K` iterations:
 $$
@@ -230,11 +230,11 @@ $$
 **Notation**:  
 $A ⊘ K$ computes $\mathrm{KMR}(K)$ using the inverse operator (negative denominator)
 
-### Decomposition Components
+### 7.2 Decomposition Components
 
 The KMR decomposition can be represented both recursively and through direct formulas:
 
-#### 1. Recursive Definition
+#### 7.2.1 Recursive Definition
 - **Base case**:  
   $\mathrm{KMR}(0) = A$
   
@@ -242,7 +242,7 @@ The KMR decomposition can be represented both recursively and through direct for
   $\mathrm{KMR}({n+1}) = \frac{\mathrm{KMR}(n)}{1 \pm \mathrm{KMR}(n)}$  
   (where `+` for ⊙, `-` for ⊘)
 
-#### 2. Direct Formulas (Non-Recursive)
+#### 7.2.2 Direct Formulas (Non-Recursive)
 For $K$ iterations:
 
 **Direct operator (⊙)**:
@@ -255,12 +255,12 @@ $$
 \mathrm{KMR}(K) = \frac{A}{1 - K \cdot A} \quad \text{(for } K \cdot A \neq 1\text{)}
 $$
 
-#### 3. Composition Rules
+#### 7.3 Composition Rules
 The final value can be expressed as:
 - **As fraction**:  
   $\mathrm{KMR}(K) = A ⊙ K = \underbrace{\frac{\frac{\frac{A\ddots}{1+A\ddots}}{1+\frac{A\ddots}{1+A\ddots}}}{1+\frac{\frac{A\ddots}{1+A\ddots}}{1+\frac{A\ddots}{1+A\ddots}}}}_{2^K \text{ levels}}$
 
-#### 4. Numerical Example
+#### 7.4 Numerical Example
 Let's compute $2 ⊙ 3$ both recursively and directly:
 
 **Direct formula**:
@@ -282,7 +282,7 @@ $$
 2 ⊙ 3 = KMR(0) ⊙ 1⊙ 1 ⊙ 1  = KMR(1) ⊙ 1 ⊙ 1 = KMR(2) ⊙ 1 = KMR(3)
 $$
 
-## Iterative Python Implementation
+## 8. Iterative Python Implementation
 
 ```python
 def kmr_iter_n(A: float, K: int) -> list[float]:
@@ -297,3 +297,4 @@ def kmr_iter_n(A: float, K: int) -> list[float]:
         result.append(kmrd(result[-1]) if K >= 0 else kmri(result[-1]))
     return result
 ```
+
