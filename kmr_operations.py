@@ -19,6 +19,8 @@ symmetric form:
 K − C = ( ( ( − A ⊘ K ) ⊙ C ) ⊘ 1 A ) − 1 
 """
 
+import math
+
 def kmr_direct(A, K):
     """version without error protection of A ⊙ K = A/(1 + AK)"""
     return A / (1 + A*K)
@@ -61,24 +63,41 @@ def kmr_invly(A: float, K: float) -> float:
     """
     return A / (1 - K * A) if (1 - K * A) != 0 else float('inf')
 
-def kmr_add(A: float, K: float, C: float) -> float:
-    """Compute K + C using KMR operators."""
-    if abs(A) < 1e-15:  # Handle A ≈ 0 case
-        return K + C
+
+def kmr_add(A: float, K: float, C: float, eps: float = 1e-12) -> float:
+    """Compute K + C using KMR operators without classical fallback.
+
+    For |A| < eps, the parameter is adjusted to eps to maintain
+    computation within the KMR operator framework.
+    """
+    # Maintain KMR purity: adjust A rather than fall back to classical arithmetic
+    if abs(A) < eps:
+        # Preserve sign for consistency, default to positive for A=0
+        A = math.copysign(eps, A) if A != 0 else eps
+
+    # Pure KMR composition without classical shortcuts
     X = kmr_dircly(A, K)
     Y = kmr_dircly(X, C)
-    Z = kmr_invly(Y, 1/A)
-    return 1/Z
+    Z = kmr_invly(Y, 1 / A)
+    return 1 / Z
 
-def kmr_sub(A: float, K: float, C: float) -> float:
-    """Compute K - C using KMR operators."""
-    if abs(A) < 1e-15:  # Handle A ≈ 0 case
-        return K - C
-    # Using the standard form
+
+def kmr_sub(A: float, K: float, C: float, eps: float = 1e-12) -> float:
+    """Compute K - C using KMR operators without classical fallback.
+
+    For |A| < eps, the parameter is adjusted to eps to maintain
+    computation within the KMR operator framework.
+    """
+    # Maintain KMR purity: adjust A rather than fall back to classical arithmetic
+    if abs(A) < eps:
+        # Preserve sign for consistency, default to positive for A=0
+        A = math.copysign(eps, A) if A != 0 else eps
+
+    # Pure KMR composition using standard form
     X = kmr_invly(A, K)
     Y = kmr_dircly(X, C)
-    Z = kmr_invly(Y, 1/A)
-    return -1/Z
+    Z = kmr_invly(Y, 1 / A)
+    return -1 / Z
     
     # Alternative using symmetric form
     # X = kmr_invly(-A, K)
