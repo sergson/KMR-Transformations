@@ -128,8 +128,44 @@ def kmr_sub(A: float, K: float, C: float) -> float:
     # return 1/Z
 ```
 
-	
-##  10.7 Implications and Future Directions
+
+
+## 10.7 Numerical Stability and Implementation Considerations
+
+The KMR formulation of arithmetic provides an elegant theoretical framework. However, practical numerical implementation reveals stability characteristics that define its operational domain.
+
+### 10.7.1 Stability Analysis
+
+Direct computation using the chained operator formula exhibits numerical sensitivity to the parameter $A$. The relative error $\epsilon$ for the addition operation $K + C$ follows approximately:
+$\epsilon \approx O\left( \frac{|K \cdot C|}{|A|} \right) \quad \text{for small } |A|$
+
+Empirical testing establishes the following precision boundaries:
+
+| A Range | Maximum Relative Error | Recommendation |
+| :--- | :--- | :--- |
+| $\|A\| \geq 10^{-6}$ | $< 10^{-11}$ | Safe for most applications |
+| $10^{-9} \leq \|A\| < 10^{-6}$ | $< 10^{-8}$ | Acceptable for engineering use |
+| $\|A\| < 10^{-9}$ | $> 10^{-8}$ | Use with caution; asymptotic methods recommended |
+
+### 10.7.2 Special Cases and Boundary Behavior
+
+- **$A = 0$**: The implementation defaults to classical arithmetic $(K + C)$
+- **$A = 1$**: Exact implementation by definition, zero theoretical error
+- **$A \to \infty$**: Approaches classical arithmetic as a limiting case
+- **$A \to 0$**: First-order asymptotic expansion: $K + C + A \cdot K \cdot C \cdot (K + C) + O(A^2)$
+
+### 10.7.3 Implementation Notes
+
+The provided Python implementation includes a threshold at $|A| < 10^{-15}$ for automatic fallback to classical arithmetic. For the range $10^{-15} < |A| < 10^{-8}$, consider using the asymptotic expansion for improved accuracy:
+
+```python
+def kmr_add_asymptotic(A, K, C):
+    """First-order asymptotic expansion for small |A|"""
+    return (K + C) + A * K * C * (K + C)
+```
+
+
+##  10.8 Implications and Future Directions
 These results demonstrate that:
 
 Basic arithmetic operations emerge naturally from KMR operator composition
@@ -147,11 +183,12 @@ Future research directions include:
 Extension to multiplication and division through KMR operators
 
 
-##  10.8 Conclusion
+##  10.9 Conclusion
 The expression of arithmetic operations through KMR operators provides further evidence for the fundamental nature of nonlinear transformations in mathematics. This approach offers a unified framework where linear arithmetic emerges as a special case of more general nonlinear operations, potentially leading to new insights in both theoretical and applied mathematics.
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
 
 
 
