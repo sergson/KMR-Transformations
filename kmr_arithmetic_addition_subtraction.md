@@ -19,91 +19,59 @@ This section demonstrates how fundamental arithmetic operations (addition and su
 3. **Non-Commutativity**: $A ⊙ K ≠ K ⊙ A$ and $A ⊘ K ≠ K ⊘ A$
 4. **Non-Associativity**: $(A ⊙ K) ⊙ C ≠ A ⊙ (K ⊙ C)$
 5. **Scaling Property**: $L \cdot (A ⊙ K) = (L \cdot A) ⊙ (K/L)$
-6. **Parameter Extraction**: 
+6. **Parameter Extraction**:
    - If $A ⊙ K = X$, then $K = (X ⊘ \frac{1}{A})^{-1}$
    - If $A ⊘ K = X$, then $K = - (X ⊘ \frac{1}{A})^{-1} = [(-X) ⊘ \frac{-1}{A}]^{-1}$
 
-**Proof of Scaling Property**:
-\[
-L \cdot (A ⊙ K) = L \cdot \frac{A}{1 + K \cdot A} = \frac{L \cdot A}{1 + K \cdot A}
-\]
-\[
-(L \cdot A) ⊙ (K/L) = \frac{L \cdot A}{1 + (K/L) \cdot (L \cdot A)} = \frac{L \cdot A}{1 + K \cdot A}
-\]
-Thus, $L \cdot (A ⊙ K) = (L \cdot A) ⊙ (K/L)$ $\square$
+**Proof of Scaling Property**:  
+$$[L \cdot (A ⊙ K) = L \cdot \frac{A}{1 + K \cdot A} = \frac{L \cdot A}{1 + K \cdot A}]$$  
+$$[(L \cdot A) ⊙ (K/L) = \frac{L \cdot A}{1 + (K/L) \cdot (L \cdot A)} = \frac{L \cdot A}{1 + K \cdot A}]$$  
+Thus, $L \cdot (A ⊙ K) = (L \cdot A) ⊙ (K/L) \square$
 
 **Proof of Revised Parameter Extraction**:
-From the definition, if $A ⊘ K = X$, then:
-\[
-X = \frac{A}{1 - K \cdot A} \implies X(1 - K \cdot A) = A \implies X - X \cdot K \cdot A = A
-\]
-\[
-- X \cdot K \cdot A = A - X \implies K = \frac{X - A}{A \cdot X} = \frac{1}{A} - \frac{1}{X}
-\]
+From the definition, if $A ⊘ K = X$, then:  
+$$[X = \frac{A}{1 - K \cdot A} \implies X(1 - K \cdot A) = A \implies X - X \cdot K \cdot A = A]$$  
+$$[- X \cdot K \cdot A = A - X \implies K = \frac{X - A}{A \cdot X} = \frac{1}{A} - \frac{1}{X}]$$
 
-Now verify both forms:
-1. $X ⊘ \frac{1}{A} = \frac{X}{1 - \frac{1}{A} \cdot X} = \frac{X}{1 - \frac{X}{A}} = \frac{X}{\frac{A - X}{A}} = \frac{A \cdot X}{A - X}$
-   \[
-   (X ⊘ \frac{1}{A})^{-1} = \frac{A - X}{A \cdot X} \implies - (X ⊘ \frac{1}{A})^{-1} = \frac{X - A}{A \cdot X} = K
-   \]
+Now verify both forms:  
+$$1.[X ⊘ \frac{1}{A} = \frac{X}{1 - \frac{1}{A} \cdot X} = \frac{X}{1 - \frac{X}{A}} = \frac{X}{\frac{A - X}{A}} = \frac{A \cdot X}{A - X}]$$  
+$$[(X ⊘ \frac{1}{A})^{-1} = \frac{A - X}{A \cdot X} \implies - (X ⊘ \frac{1}{A})^{-1} = \frac{X - A}{A \cdot X} = K]$$  
+$$2.[(-X) ⊘ \frac{-1}{A} = \frac{-X}{1 - (-\frac{1}{A}) \cdot (-X)} = \frac{-X}{1 - \frac{X}{A}} = \frac{-X}{\frac{A - X}{A}} = \frac{-A \cdot X}{A - X}]$$  
+$$[(-X) ⊘ \frac{-1}{A}]^{-1} = \frac{A - X}{-A \cdot X} = \frac{X - A}{A \cdot X} = K]$$
 
-2. $(-X) ⊘ \frac{-1}{A} = \frac{-X}{1 - (-\frac{1}{A}) \cdot (-X)} = \frac{-X}{1 - \frac{X}{A}} = \frac{-X}{\frac{A - X}{A}} = \frac{-A \cdot X}{A - X}$
-   \[
-   [(-X) ⊘ \frac{-1}{A}]^{-1} = \frac{A - X}{-A \cdot X} = \frac{X - A}{A \cdot X} = K
-   \]
-
-Both forms are equivalent and correct. $\square$
+Both forms are equivalent and correct.
 
 ## 10.3 Addition Through KMR Operators
 
 ### 10.3.1 General Case Expression
-For any $A ≠ 0$, the sum of two parameters $K$ and $C$ can be expressed as:
-$$
-K + C = \left( \left( (A ⊙ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}
-$$
+For any $A ≠ 0$, the sum of two parameters $K$ and $C$ can be expressed as:  
+$$K + C = \left( \left( (A ⊙ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}$$
 
 ### 10.3.2 Special Case (A = 1)
-When $A = 1$, the expression simplifies to:
-$$
-K + C = \left( \left( (1 ⊙ K) ⊙ C \right) ⊘ 1 \right)^{-1}
-$$
+When $A = 1$, the expression simplifies to:  
+$$K + C = \left( \left( (1 ⊙ K) ⊙ C \right) ⊘ 1 \right)^{-1}$$
 
 ### 10.3.3 Proof
-Let $Y = (A ⊙ K) ⊙ C$. From the group property:
-$$
-Y = A ⊙ (K + C) = \frac{A}{1 + A \cdot (K + C)}
-$$
-Then:
-$$
-Y ⊘ \frac{1}{A} = \frac{Y}{1 - \frac{1}{A} \cdot Y} = \frac{\frac{A}{1 + A \cdot (K + C)}}{1 - \frac{1}{1 + A \cdot (K + C)}} = \frac{1}{K + C}
-$$
+Let $Y = (A ⊙ K) ⊙ C$. From the group property:  
+$$Y = A ⊙ (K + C) = \frac{A}{1 + A \cdot (K + C)}$$
+Then:  
+$$Y ⊘ \frac{1}{A} = \frac{Y}{1 - \frac{1}{A} \cdot Y} = \frac{\frac{A}{1 + A \cdot (K + C)}}{1 - \frac{1}{1 + A \cdot (K + C)}} = \frac{1}{K + C}$$  
 Thus:
-$$
-\left( Y ⊘ \frac{1}{A} \right)^{-1} = K + C \quad \square
-$$
+$\left( Y ⊘ \frac{1}{A} \right)^{-1} = K + C \quad \square$
 
 ## 10.4 Subtraction Through KMR Operators
 
 ### 10.4.1 General Case Expression
-For any $A ≠ 0$, the difference of two parameters $K$ and $C$ can be expressed as:
-$$
-K - C = - \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} = \left( \left( (-A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}
-$$
+For any $A ≠ 0$, the difference of two parameters $K$ and $C$ can be expressed as:  
+$$K - C = - \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} = \left( \left( (-A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}$$
 
-### 10.4.2 Special Case (A = 1)
-When $A = 1$, the expression simplifies to:
-$$
-K - C = - \left( \left( (1 ⊘ K) ⊙ C \right) ⊘ 1 \right)^{-1} = \left( \left( (-1 ⊘ K) ⊙ C \right) ⊘ 1 \right)^{-1}
-$$
+### 10.4.2 Special Case (A = 1)  
+When $A = 1$, the expression simplifies to:  
+$$K - C = - \left( \left( (1 ⊘ K) ⊙ C \right) ⊘ 1 \right)^{-1} = \left( \left( (-1 ⊘ K) ⊙ C \right) ⊘ 1 \right)^{-1}$$
 
 ### 10.4.3 Proof
-Using the scaling property and the revised parameter extraction:
-\[
-K - C = - \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} = \left( -1 \cdot \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right) \right)^{-1}
-\]
-\[
-= \left( \left( (-A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} \quad \square
-\]
+Using the scaling property and the revised parameter extraction:  
+$$[K - C = - \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} = \left( -1 \cdot \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right) \right)^{-1} = \left( \left( (-A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} \quad \square]$$
 
 ## 10.5 Numerical Examples
 
@@ -153,7 +121,10 @@ def kmr_sub(A: float, K: float, C: float) -> float:
     # X = kmr_inverse(-A, K)
     # Y = kmr_direct(X, C)
     # Z = kmr_inverse(Y, 1/A)
-    # return 1/Z```
+    # return 1/Z
+```
+
+
 	
 ##  10.7 Implications and Future Directions
 These results demonstrate that:
@@ -180,5 +151,6 @@ Implementation in computational mathematics and symbolic computation systems
 
 ##  10.8 Conclusion
 The expression of arithmetic operations through KMR operators provides further evidence for the fundamental nature of nonlinear transformations in mathematics. This approach offers a unified framework where linear arithmetic emerges as a special case of more general nonlinear operations, potentially leading to new insights in both theoretical and applied mathematics.
+
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
