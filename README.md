@@ -23,6 +23,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_operations.py                       # Reference Python implementation
 ├── LICENSE-СС                              # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                                 # License for CODE (GPL 3.0)
+├── tests/                                  # Framework tests
 └── examples/                               # Usage examples for the Python module 
 ```
 
