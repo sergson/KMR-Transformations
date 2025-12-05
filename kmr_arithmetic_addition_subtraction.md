@@ -128,7 +128,6 @@ def kmr_sub(A: float, K: float, C: float) -> float:
     # return 1/Z
 ```
 
-
 	
 ##  10.7 Implications and Future Directions
 These results demonstrate that:
@@ -143,10 +142,16 @@ The symmetric forms reveal deeper algebraic structure of KMR operations
 
 The framework provides a unified approach to linear and nonlinear mathematics
 
+Future research directions include:
+
+Extension to multiplication and division through KMR operators
+
+
 ##  10.8 Conclusion
 The expression of arithmetic operations through KMR operators provides further evidence for the fundamental nature of nonlinear transformations in mathematics. This approach offers a unified framework where linear arithmetic emerges as a special case of more general nonlinear operations, potentially leading to new insights in both theoretical and applied mathematics.
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
 
 
