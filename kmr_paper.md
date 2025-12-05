@@ -113,7 +113,7 @@ Step 4: 1 ⊙ 1 = 0.5 (for K = 4)
 ### 5.1 Direct KMR Operator (⊙)
 | Property               | Formula                               | Note                                                                  |
 |------------------------|---------------------------------------|-----------------------------------------------------------------------|
-| **Closure**            | \( A ⊙ K $\in \mathbb{R}$ \)            | Defined ∀ \( A,K $\in \mathbb{R}\setminus\{-\frac{1}{K}$\} \)          |
+| **Closure**            | \( A ⊙ K $\in \mathbb{R}$ \)            | Defined ∀ \( A,K $\in\mathbb{R}\setminus\{-\frac{1}{K}\}$ \)          |
 | **Non-Associativity**  | \( (A ⊙ K) ⊙ C $\neq$ A ⊙ (K ⊙ C) \) | Example: \( (1 ⊙ 2) ⊙ 3 = 0.1666 $\neq$ 1 ⊙ (2 ⊙ 3) = 0.2222 \)     |
 | **Identity Element**   | \( A ⊙ 0 = A \)                       | The zero element retains its value                                   |
 | **Non-Commutativity**  | \( A ⊙ K $\neq$ K ⊙ A \)               | Example: \( 1 ⊙ 2 = 0.333 $\neq$ 2 ⊙ 1 = 0.666 \)                     |
@@ -125,21 +125,24 @@ Step 4: 1 ⊙ 1 = 0.5 (for K = 4)
 | **Singularity**        | \( $\lim_{K \to 1/A} A ⊘ K = \infty$ \)   | Vertical asymptote at \( AK $\to$ 1 \)      |
 
 ### 5.3 Composition Laws
-1. **Sequential Application**:
-   $$ A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC} $$
+1. **Sequential Application**:  
+   $$A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC}$$
 
-2. **Mixed Operations**:
-   $$ A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC} $$
+2. **Mixed Operations**:  
+   $$A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC}$$
 
-3. **Fixed Points**:
-  $$ \exists X : A ⊙ X = X \implies X = 0 $$
+3. **Fixed Points**:  
+  $$\exists X : A ⊙ X = X \implies X = 0$$
 
-4. **Iterated Application**:
-  $$ A ⊙ \underbrace{K ⊙ K ⊙ \dots ⊙ K}_{n \text{ times}} = A ⊙ K n = \frac{A}{1 + A K n} $$
-  $$ A ⊘ \underbrace{K ⊘ \dots ⊘ K}_{n \text{ times}} = A ⊘ K n = \frac{A}{1 - A K n} $$
-  **Special case of iterated application**: (when \( K = 1 \)):
-  $$ A ⊙ \underbrace{1 ⊙ \dots ⊙ 1}_{n \text{ times}} = A ⊙ n $$
-  $$ A ⊘ \underbrace{1 ⊘ \dots ⊘ 1}_{n \text{ times}} = A ⊘ n $$
+4. **Iterated Application**:   
+   $$A ⊙ \underbrace{K ⊙ K ⊙ \dots ⊙ K}_{n \text{ times}} = A ⊙ Kn = \frac{A}{1 + A K n}$$
+
+   $$A ⊘ \underbrace{K ⊘ \dots ⊘ K}_{n \text{ times}} = A ⊘ K n = \frac{A}{1 - A K n}$$
+     
+  **Special case of iterated application**: (when \( K = 1 \)):  
+  $A ⊙ \underbrace{1 ⊙ \dots ⊙ 1}_{n \text{ times}} = A ⊙ n$  
+  
+  $A ⊘ \underbrace{1 ⊘ \dots ⊘ 1}_{n \text{ times}} = A ⊘ n$  
 
 
 ## 6. Python Implementation of mathematical definitions  
@@ -188,16 +191,14 @@ Both operators represent fractions obtained by `K` multiple composition (iterati
 
 #### 7.1.1 Direct Operator (⊙)
 **Definition**:  
-For a given initial value `A` and `K` iterations:
-$$
-\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 + \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A
-$$
+For a given initial value `A` and `K` iterations:  
+$$\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 + \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A$$
 
 **Example: Calculate 1 ⊙ 2**
 1. Initial value: $\mathrm{KMR}(0) = 1$
-2. First iteration ($n=1$):
+2. First iteration ($n=1$):  
    $$\mathrm{KMR}(1) = \frac{1}{1+1} = \frac{1}{2}$$
-3. Second iteration ($n=2$):
+3. Second iteration ($n=2$):  
    $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1+\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{3}{2}} = \frac{1}{3}$$
    
 **Result**: $1 ⊙ 2 = \frac{1}{3}$
@@ -208,9 +209,7 @@ $A ⊙ K$ computes $\mathrm{KMR}(K)$ using the direct operator (positive denomin
 #### 7.1.2 Inverse Operator (⊘)
 **Definition**:  
 For a given initial value `A` and `K` iterations:
-$$
-\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 - \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A
-$$
+$$\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 - \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A$$
 
 **Example: Calculate 1/3 ⊘ 2**
 1. Initial value: $\mathrm{KMR}(0) = \frac{1}{3}$
@@ -240,14 +239,10 @@ The KMR decomposition can be represented both recursively and through direct for
 For $K$ iterations:
 
 **Direct operator (⊙)**:
-$$
-\mathrm{KMR}(K) = \frac{A}{1 + K \cdot A}\quad \text{(for } K \cdot A \neq -1\text{)}
-$$
+$$\mathrm{KMR}(K) = \frac{A}{1 + K \cdot A}\quad \text{(for } K \cdot A \neq -1\text{)}$$
 
 **Inverse operator (⊘)**:
-$$
-\mathrm{KMR}(K) = \frac{A}{1 - K \cdot A} \quad \text{(for } K \cdot A \neq 1\text{)}
-$$
+$$\mathrm{KMR}(K) = \frac{A}{1 - K \cdot A} \quad \text{(for } K \cdot A \neq 1\text{)}$$
 
 #### 7.3 Composition Rules
 The final value can be expressed as:
@@ -258,23 +253,21 @@ The final value can be expressed as:
 Let's compute $2 ⊙ 3$ both recursively and directly:
 
 **Direct formula**:
-$$
-\mathrm{KMR}(3) = \frac{2}{1 + 3 \cdot 2} = \frac{2}{7} \approx 0.2857
-$$
+$$\mathrm{KMR}(3) = \frac{2}{1 + 3 \cdot 2} = \frac{2}{7} \approx 0.2857$$
 
-**Recursive method**:
+**Recursive method**:  
 1. $\mathrm{KMR}(0) = 2$
-2. $\mathrm{KMR}(1) = \frac{2}{1+2} = \frac{2}{3} \approx 0.6667$
-3. $\mathrm{KMR}(2) = \frac{\frac{2}{3}}{1+\frac{2}{3}} = \frac{2}{5} = 0.4$
-4. $\mathrm{KMR}(3) = \frac{\frac{2}{5}}{1+\frac{2}{5}} = \frac{2}{7} \approx 0.2857$
-As full fraction:
-$$ 
-2 ⊙ 3 = \frac{\frac{\frac{2}{1+2}}{1 + \frac{2}{1+2}}}{1 + \frac{\frac{2}{1+2}}{ 1 + \frac{2}{1+2}}} =  \frac{\displaystyle \frac{2}{3}}{\displaystyle 1 + \frac{2}{3}} \Bigg/ \left(1 + \frac{\displaystyle \frac{2}{3}}{\displaystyle 1 + \frac{2}{3}}\right) = \frac{2/5}{1+2/5} = \frac{2}{7}
-$$ 
+   
+3. $\mathrm{KMR}(1) = \frac{2}{1+2} = \frac{2}{3} \approx 0.6667$
+   
+5. $\mathrm{KMR}(2) = \frac{\frac{2}{3}}{1+\frac{2}{3}} = \frac{2}{5} = 0.4$
+   
+7. $\mathrm{KMR}(3) = \frac{\frac{2}{5}}{1+\frac{2}{5}} = \frac{2}{7} \approx 0.2857$
+   
+As full fraction:  
+$$2 ⊙ 3 = \frac{\frac{\frac{2}{1+2}}{1 + \frac{2}{1+2}}}{1 + \frac{\frac{2}{1+2}}{ 1 + \frac{2}{1+2}}} =  \frac{\displaystyle \frac{2}{3}}{\displaystyle 1 + \frac{2}{3}} \Bigg/ \left(1 + \frac{\displaystyle \frac{2}{3}}{\displaystyle 1 + \frac{2}{3}}\right) = \frac{2/5}{1+2/5} = \frac{2}{7}$$ 
 
-$$
-2 ⊙ 3 = KMR(0) ⊙ 1⊙ 1 ⊙ 1  = KMR(1) ⊙ 1 ⊙ 1 = KMR(2) ⊙ 1 = KMR(3)
-$$
+$$2 ⊙ 3 = KMR(0) ⊙ 1⊙ 1 ⊙ 1  = KMR(1) ⊙ 1 ⊙ 1 = KMR(2) ⊙ 1 = KMR(3)$$
 
 ## 8. Iterative Python Implementation
 
