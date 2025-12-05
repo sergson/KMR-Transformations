@@ -195,11 +195,13 @@ For a given initial value `A` and `K` iterations:
 $$\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 + \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A$$
 
 **Example: Calculate 1 ⊙ 2**
-1. Initial value: $\mathrm{KMR}(0) = 1$
+1. Initial value: $\mathrm{KMR}(0) = 1$  
+   
 2. First iteration ($n=1$):  
-   $$\mathrm{KMR}(1) = \frac{1}{1+1} = \frac{1}{2}$$
-3. Second iteration ($n=2$):  
-   $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1+\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{3}{2}} = \frac{1}{3}$$
+   $$\mathrm{KMR}(1) = \frac{1}{1+1} = \frac{1}{2}$$  
+   
+4. Second iteration ($n=2$):  
+   $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1+\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{3}{2}} = \frac{1}{3}$$  
    
 **Result**: $1 ⊙ 2 = \frac{1}{3}$
 
@@ -208,17 +210,17 @@ $A ⊙ K$ computes $\mathrm{KMR}(K)$ using the direct operator (positive denomin
 
 #### 7.1.2 Inverse Operator (⊘)
 **Definition**:  
-For a given initial value `A` and `K` iterations:
+For a given initial value `A` and `K` iterations:  
 $$\mathrm{KMR}(n) = \frac{\mathrm{KMR}(n-1)}{1 - \mathrm{KMR}(n-1)},\quad \mathrm{KMR}(0) = A$$
 
-**Example: Calculate 1/3 ⊘ 2**
-1. Initial value: $\mathrm{KMR}(0) = \frac{1}{3}$
-2. First iteration ($n=1$):
-   $$\mathrm{KMR}(1) = \frac{\frac{1}{3}}{1-\frac{1}{3}} = \frac{\frac{1}{3}}{\frac{2}{3}} = \frac{1}{2}$$
-3. Second iteration ($n=2$):
-   $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1-\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{1}{2}} = 1$$
+**Example: Calculate 1/3 ⊘ 2**  
+Initial value: $\mathrm{KMR}(0) = \frac{1}{3}$  
+First iteration ($n=1$):  
+   $$\mathrm{KMR}(1) = \frac{\frac{1}{3}}{1-\frac{1}{3}} = \frac{\frac{1}{3}}{\frac{2}{3}} = \frac{1}{2}$$  
+Second iteration ($n=2$):  
+   $$\mathrm{KMR}(2) = \frac{\frac{1}{2}}{1-\frac{1}{2}} = \frac{\frac{1}{2}}{\frac{1}{2}} = 1$$  
    
-**Result**: $\frac{1}{3} ⊘ 2 = 1$
+**Result**: $\frac{1}{3} ⊘ 2 = 1$  
 
 **Notation**:  
 $A ⊘ K$ computes $\mathrm{KMR}(K)$ using the inverse operator (negative denominator)
@@ -236,39 +238,39 @@ The KMR decomposition can be represented both recursively and through direct for
   (where `+` for ⊙, `-` for ⊘)
 
 #### 7.2.2 Direct Formulas (Non-Recursive)
-For $K$ iterations:
+For $K$ iterations:  
 
-**Direct operator (⊙)**:
+**Direct operator (⊙)**:  
 $$\mathrm{KMR}(K) = \frac{A}{1 + K \cdot A}\quad \text{(for } K \cdot A \neq -1\text{)}$$
 
-**Inverse operator (⊘)**:
+**Inverse operator (⊘)**:  
 $$\mathrm{KMR}(K) = \frac{A}{1 - K \cdot A} \quad \text{(for } K \cdot A \neq 1\text{)}$$
 
 #### 7.3 Composition Rules
 The final value can be expressed as:
 - **As fraction**:  
-  $\mathrm{KMR}(K) = A ⊙ K = \underbrace{\frac{\frac{\frac{A\ddots}{1+A\ddots}}{1+\frac{A\ddots}{1+A\ddots}}}{1+\frac{\frac{A\ddots}{1+A\ddots}}{1+\frac{A\ddots}{1+A\ddots}}}}_{2^K \text{ levels}}$
+  $\mathrm{KMR}(K) = A ⊙ K = \underbrace{\frac{\frac{\frac{A\ddots}{1+A\ddots}}{1+\frac{A\ddots}{1+A\ddots}}}{1+\frac{\frac{A\ddots}{1+A\ddots}}{1+\frac{A\ddots}{1+A\ddots}}}}_{2^K \text{ levels}}$  
 
 #### 7.4 Numerical Example
 Let's compute $2 ⊙ 3$ both recursively and directly:
 
-**Direct formula**:
+**Direct formula**:  
 $$\mathrm{KMR}(3) = \frac{2}{1 + 3 \cdot 2} = \frac{2}{7} \approx 0.2857$$
 
 **Recursive method**:  
-1. $\mathrm{KMR}(0) = 2$
-   
-3. $\mathrm{KMR}(1) = \frac{2}{1+2} = \frac{2}{3} \approx 0.6667$
-   
-5. $\mathrm{KMR}(2) = \frac{\frac{2}{3}}{1+\frac{2}{3}} = \frac{2}{5} = 0.4$
-   
-7. $\mathrm{KMR}(3) = \frac{\frac{2}{5}}{1+\frac{2}{5}} = \frac{2}{7} \approx 0.2857$
+$\mathrm{KMR}(0) = 2$  
+    
+$\mathrm{KMR}(1) = \frac{2}{1+2} = \frac{2}{3} \approx 0.6667$  
+  
+$\mathrm{KMR}(2) = \frac{\frac{2}{3}}{1+\frac{2}{3}} = \frac{2}{5} = 0.4$  
+  
+$\mathrm{KMR}(3) = \frac{\frac{2}{5}}{1+\frac{2}{5}} = \frac{2}{7} \approx 0.2857$  
    
 As full fraction:  
 $$2 ⊙ 3 = \frac{\frac{\frac{2}{1+2}}{1 + \frac{2}{1+2}}}{1 + \frac{\frac{2}{1+2}}{ 1 + \frac{2}{1+2}}} =  \frac{\displaystyle \frac{2}{3}}{\displaystyle 1 + \frac{2}{3}} \Bigg/ \left(1 + \frac{\displaystyle \frac{2}{3}}{\displaystyle 1 + \frac{2}{3}}\right) = \frac{2/5}{1+2/5} = \frac{2}{7}$$ 
-
+  
 $$2 ⊙ 3 = KMR(0) ⊙ 1⊙ 1 ⊙ 1  = KMR(1) ⊙ 1 ⊙ 1 = KMR(2) ⊙ 1 = KMR(3)$$
-
+  
 ## 8. Iterative Python Implementation
 
 ```python
