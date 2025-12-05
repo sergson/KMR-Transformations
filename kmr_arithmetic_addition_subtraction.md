@@ -20,15 +20,19 @@ This section demonstrates how fundamental arithmetic operations (addition and su
 4. **Non-Associativity**: $(A ⊙ K) ⊙ C ≠ A ⊙ (K ⊙ C)$
 5. **Scaling Property**: $L \cdot (A ⊙ K) = (L \cdot A) ⊙ (K/L)$
 6. **Parameter Extraction**:
-   - If $A ⊙ K = X$, then $K = (X ⊘ \frac{1}{A})^{-1}$
-   - If $A ⊘ K = X$, then $K = - (X ⊘ \frac{1}{A})^{-1} = [(-X) ⊘ \frac{-1}{A}]^{-1}$
+   - If $A ⊙ K = X$, then $K = (X ⊘ \frac{1}{A})^{-1}= \frac{1}{X} - \frac{1}{A}$
+   - If $A ⊘ K = X$, then $K = - (X ⊘ \frac{1}{A})^{-1} = [(-X) ⊘ \frac{-1}{A}]^{-1}= \frac{1}{A} - \frac{1}{X}$
 
 **Proof of Scaling Property**:  
 $$[L \cdot (A ⊙ K) = L \cdot \frac{A}{1 + K \cdot A} = \frac{L \cdot A}{1 + K \cdot A}]$$  
 $$[(L \cdot A) ⊙ (K/L) = \frac{L \cdot A}{1 + (K/L) \cdot (L \cdot A)} = \frac{L \cdot A}{1 + K \cdot A}]$$  
 Thus, $L \cdot (A ⊙ K) = (L \cdot A) ⊙ (K/L) \square$
 
-**Proof of Revised Parameter Extraction**:
+**Proof of Parameters Extraction**:  
+From the definition, if $A ⊙ K = X$, then:  
+$$[X = \frac{A}{1 + K \cdot A} \implies X(1 + K \cdot A) = A \implies X + X \cdot K \cdot A = A]$$  
+$$[X \cdot K \cdot A = A - X \implies K = \frac{A - X}{A \cdot X} = \frac{1}{X} - \frac{1}{A}]$$
+
 From the definition, if $A ⊘ K = X$, then:  
 $$[X = \frac{A}{1 - K \cdot A} \implies X(1 - K \cdot A) = A \implies X - X \cdot K \cdot A = A]$$  
 $$[- X \cdot K \cdot A = A - X \implies K = \frac{X - A}{A \cdot X} = \frac{1}{A} - \frac{1}{X}]$$
@@ -154,3 +158,4 @@ The expression of arithmetic operations through KMR operators provides further e
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
