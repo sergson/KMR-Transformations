@@ -34,19 +34,28 @@ For $A \in \mathbb{R}$, the closed-form expressions
 $$A ⊙ K \coloneqq \frac{A}{1 + K \cdot A}, \quad 
 A ⊘ K \coloneqq \frac{A}{1 - K \cdot A}$$  
 provide unique analytic continuations to $K \in \mathbb{R}$ that satisfy:  
-1. **Consistency**: $⊙\big|_{\mathbb{Z}} = ⊙$ and $⊘\big|_{\mathbb{Z}} = ⊘$  
+1. **Consistency**:  
+
+$⊙\big|_{\mathbb{Z}} = ⊙$  
+
+and  
+
+$⊘\big|_{\mathbb{Z}} = ⊘$  
+
 2. **Duality**: $A ⊙ K = A ⊘ (-K)$  
 3. **Group Property**: $(A ⊙ K) ⊙ C = A ⊙ (K + C)$  
 
 *Proof*.  
 1. **Consistency for integers**:  
-   For $K = n \in \mathbb{Z}_+$: $A ⊙ n = A/(1 + nA)$  
-   For $K = -n \in \mathbb{Z}_-$: $A ⊙ (-n) = \frac{A}{1 - n \cdot A} = A ⊘ n$  
-2. **Duality**:  
+   For $K = n \in \mathbb{Z}_+$: $A ⊙ n = A/(1 + nA)$
+   
+   For $K = -n \in \mathbb{Z}_-$: $A ⊙ (-n) = \frac{A}{1 - n \cdot A} = A ⊘ n$
+   
+3. **Duality**:  
    $$A ⊘ (-K) = \frac{A}{1 - (-K)A} = \frac{A}{1 + KA} = A ⊙ K$$  
-3. **Group Property**:  
+4. **Group Property**:  
    $$(A ⊙ K) ⊙ C = \frac{\frac{A}{1+KA}}{1 + C \cdot \frac{A}{1+KA}} = \frac{A}{1 + KA + CA} = A ⊙ (K+C)$$  
-4. **Uniqueness**: By the identity theorem for meromorphic functions, since $A/(1+KA)$ is meromorphic in $\mathbb{C}$ with simple pole at $K=-1/A$, and agrees with the discrete operator on $\mathbb{Z}$ (which has accumulation points), it is the unique analytic continuation. ∎  
+5. **Uniqueness**: By the identity theorem for meromorphic functions, since $A/(1+KA)$ is meromorphic in $\mathbb{C}$ with simple pole at $K=-1/A$, and agrees with the discrete operator on $\mathbb{Z}$ (which has accumulation points), it is the unique analytic continuation. ∎  
 
 ### 9.3 Flow Equation Derivation  
 
@@ -75,16 +84,13 @@ Solutions are locally unique in neighborhoods where $A ⊙ K \neq 0$ and $A ⊘ 
 
 *Proof*.  
 1. **Direct operator singularity**:  
-   \begin{align*}
-   A ⊙ (-A^{-1} + \varepsilon) &= \frac{A}{1 + A(-A^{-1} + \varepsilon)} \\
-   &= \frac{A}{A\varepsilon} = \frac{1}{\varepsilon}
-   \end{align*}  
-2. **Inverse operator singularity**:  
-   \begin{align*}
-   A ⊘ (A^{-1} + \varepsilon) &= \frac{A}{1 - A(A^{-1} + \varepsilon)} \\
-   &= \frac{A}{-A\varepsilon} = -\frac{1}{\varepsilon} \quad \square
-   \end{align*}  
-
+   
+   $$A ⊙ (-A^{-1} + \varepsilon) = \frac{A}{1 + A(-A^{-1} + \varepsilon)} = \frac{A}{A\varepsilon} = \frac{1}{\varepsilon}$$
+     
+3. **Inverse operator singularity**:  
+   
+   $$A ⊘ (A^{-1} + \varepsilon) = \frac{A}{1 - A(A^{-1} + \varepsilon)} = \frac{A}{-A\varepsilon} = -\frac{1}{\varepsilon} \quad \square$$  
+   
 ### 9.5 Composition Algebra  
 
 **Corollary 1** (Fractional Rules). For $K, C \in \mathbb{R}$:  
