@@ -89,22 +89,16 @@ $$ A ⊘ K ≔ \frac{A}{1 - AK} $$
 When recursively applying the operator \( ⊙ 1 \), a singularity \( s = $\frac{1}{0}$ \, `float('inf')`in Python) may occur at step \( m \), interrupting the computation chain. To maintain consistency with the explicit KMR formula \( A ⊙ K = $\frac{A}{1 + AK}$ \), we implement:
 
 1. **Singularity Regularization**  
-   Replace the singular step \( s ⊙ 1 \) with the general solution value:
-   $$
-   s ⊙ 1 \coloneqq \frac{A}{1 + K A}
-   $$
-    $$
-   s ⊘ 1 \coloneqq \frac{A}{1 - K A}
-   $$
+   Replace the singular step \( s ⊙ 1 \) with the general solution value:  
+   $$s ⊙ 1 \coloneqq \frac{A}{1 + K A}$$  
+   $$s ⊘ 1 \coloneqq \frac{A}{1 - K A}$$  
    where:
    - \( A) = initial input value
    - \( K \) = total steps in computation
 
 2. **Validity Conditions**  
-   This substitution requires:
-   $$
-   1 + K A \neq 0
-   $$
+   This substitution requires:  
+   $$1 + K A \neq 0$$  
    Otherwise, the singularity is fundamental (e.g., when \( A = $-\frac{1}{K}$ \)).
 
 **Example Calculation**  
