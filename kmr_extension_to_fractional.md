@@ -59,6 +59,11 @@ $⊘\big|_{\mathbb{Z}} = ⊘$
 
 ### 9.3 Flow Equation Derivation  
 
+**Motivation for the Differential Equation Approach**  
+To extend the discrete KMR operator 
+$A ⊙ K = A/(1 + K·A)$
+from integer $K$ to continuous $K ∈ ℝ$, we seek a natural continuous flow that interpolates between discrete iterations. Differential equations arise naturally as infinitesimal generators of such flows: if we view $K$ as a continuous "time" parameter, then the rate of change $\frac{∂}{∂K}(A ⊙ K)$ should be determined by the local behavior of the operator. This leads to a differential equation whose unique solution coincides with the explicit fractional formula, thereby providing a consistent analytic continuation.
+
 **Theorem 2** (Dual Generators).  
 For $A \neq 0$, the fractional compositions satisfy dual differential equations:  
 1. **Direct operator**:  
@@ -68,11 +73,48 @@ For $A \neq 0$, the fractional compositions satisfy dual differential equations:
 Solutions are locally unique in neighborhoods where $A ⊙ K \neq 0$ and $A ⊘ K \neq 0$.
 
 *Proof*.  
+
 1. **Direct operator**:  
-   $$\frac{d}{dK}\left(\frac{A}{1 + AK}\right) = \frac{-A^2}{(1 + AK)^2} = -(A ⊙ K)^2$$  
+   Direct differentiation yields:
+   $$\frac{d}{dK}\left(\frac{A}{1 + AK}\right) = \frac{-A^2}{(1 + AK)^2} = -(A ⊙ K)^2$$
+
 2. **Inverse operator**:  
-   $$\frac{d}{dK}\left(\frac{A}{1 - AK}\right) = \frac{A^2}{(1 - AK)^2} = (A ⊘ K)^2$$  
-3. **Local uniqueness**: The solution to $y' = -y^2$ with $y(0)=A$ is locally unique by Picard-Lindelöf theorem since $f(y) = -y^2$ is locally Lipschitz in $\mathbb{R} \setminus \{0\}$. Analogous for $y' = y^2$. ∎  
+   Similarly:
+   $$\frac{d}{dK}\left(\frac{A}{1 - AK}\right) = \frac{A^2}{(1 - AK)^2} = (A ⊘ K)^2$$
+
+3. **Local uniqueness**:  
+
+   For the direct operator, consider the initial value problem (IVP):
+
+$$
+\begin{cases}
+\dfrac{dy}{dK} = -y^2, \\
+y(0) = A \neq 0.
+\end{cases}
+$$
+
+   Define $f(y) = -y^2$. The function $f$ is continuously differentiable (hence locally Lipschitz) on any open interval not containing $0$. Since $A \neq 0$, there exists a neighborhood of $A$ where $f$ is Lipschitz. By the Picard–Lindelöf theorem, the IVP has a unique local solution. The explicit formula $y(K) = A/(1 + AK)$ satisfies the ODE and the initial condition, and therefore it is the unique solution where $1 + AK \neq 0$.
+
+   For the inverse operator, the corresponding IVP is:
+   
+$$
+\begin{cases}
+\dfrac{dy}{dK} = y^2, \\
+y(0) = A \neq 0.
+\end{cases}
+$$
+
+   Here $f(y) = y^2$ is likewise locally Lipschitz away from $0$. The unique local solution is $y(K) = A/(1 - AK)$, valid where $1 - AK \neq 0$.
+
+   In both cases, the explicit fractional KMR formulas provide the unique solutions guaranteed by the Picard–Lindelöf theorem. ∎
+
+*Explanation of the Picard–Lindelöf theorem application*:
+- The theorem ensures existence and uniqueness of solutions to  
+$y' = f(y)$ with $y(0)=y_0$  
+when $f$ is Lipschitz continuous in a neighborhood of $y_0$.  
+- For $f(y) = \pm y^2$, the derivative $f'(y) = \pm 2y$ is bounded on any bounded interval, which implies Lipschitz continuity on that interval.  
+- Since $A \neq 0$, we can choose a neighborhood of $A$ that does not include $0$, guaranteeing that $f$ is Lipschitz there.  
+- The solutions extend uniquely until they approach a singularity (where the denominator vanishes), which corresponds exactly to the conditions $1 + AK = 0$ for $⊙$ and $1 - AK = 0$ for $⊘$. 
 
 ### 9.4 Laurent Series at Singularities  
 
