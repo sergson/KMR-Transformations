@@ -96,7 +96,7 @@ $D = \frac{L}{1 + L A_k} \implies A_k = \frac{L - D}{L D} = \frac{1}{D} - \frac{
 **Final formula**: 
 
 $$
-A_k = \frac{1}{X ⊘ R} - \frac{1}{L}
+A_k = \frac{1}{X ⊘ R} - \frac{1}{L} = ({X ⊘ R})^{-1} - {L}^{-1}
 $$  
 
 where:
