@@ -20,8 +20,8 @@ This section demonstrates how fundamental arithmetic operations (addition and su
 4. **Non-Associativity**: $(A ⊙ K) ⊙ C ≠ A ⊙ (K ⊙ C)$
 5. **Scaling Property**: $L \cdot (A ⊙ K) = (L \cdot A) ⊙ (K/L)$
 6. **Parameter Extraction**:
-   - If $A ⊙ K = X$, then $K = (X ⊘ \frac{1}{A})^{-1}= \frac{1}{X} - \frac{1}{A}$
-   - If $A ⊘ K = X$, then $K = - (X ⊘ \frac{1}{A})^{-1} = [(-X) ⊘ \frac{-1}{A}]^{-1}= \frac{1}{A} - \frac{1}{X}$
+   - If $A ⊙ K = X$, then $K =\frac{1}{X} - \frac{1}{A}= \frac{A - X}{A \cdot X} = (\frac{A \cdot X}{A - X})^{-1}= (X ⊘ \frac{1}{A})^{-1}$
+   - If $A ⊘ K = X$, then $K =-(\frac{1}{X} - \frac{1}{A})= \frac{1}{A} - \frac{1}{X}= - (X ⊘ \frac{1}{A})^{-1} = [(-X) ⊘ \frac{-1}{A}]^{-1}$
 
 **Proof of Scaling Property**:  
 $$[L \cdot (A ⊙ K) = L \cdot \frac{A}{1 + K \cdot A} = \frac{L \cdot A}{1 + K \cdot A}]$$  
@@ -35,13 +35,13 @@ $$[X \cdot K \cdot A = A - X \implies K = \frac{A - X}{A \cdot X} = \frac{1}{X} 
 
 From the definition, if $A ⊘ K = X$, then:  
 $$[X = \frac{A}{1 - K \cdot A} \implies X(1 - K \cdot A) = A \implies X - X \cdot K \cdot A = A]$$  
-$$[- X \cdot K \cdot A = A - X \implies K = \frac{X - A}{A \cdot X} = \frac{1}{A} - \frac{1}{X}]$$
+$$[- X \cdot K \cdot A = A - X \implies K = \frac{X - A}{A \cdot X} = \frac{1}{A} - \frac{1}{X} = -(\frac{1}{X} - \frac{1}{A})]$$
 
 Now verify both forms:  
-$$1.[X ⊘ \frac{1}{A} = \frac{X}{1 - \frac{1}{A} \cdot X} = \frac{X}{1 - \frac{X}{A}} = \frac{X}{\frac{A - X}{A}} = \frac{A \cdot X}{A - X}]$$  
-$$[(X ⊘ \frac{1}{A})^{-1} = \frac{A - X}{A \cdot X} \implies - (X ⊘ \frac{1}{A})^{-1} = \frac{X - A}{A \cdot X} = K]$$  
-$$2.[(-X) ⊘ \frac{-1}{A} = \frac{-X}{1 - (-\frac{1}{A}) \cdot (-X)} = \frac{-X}{1 - \frac{X}{A}} = \frac{-X}{\frac{A - X}{A}} = \frac{-A \cdot X}{A - X}]$$  
-$$[(-X) ⊘ \frac{-1}{A}]^{-1} = \frac{A - X}{-A \cdot X} = \frac{X - A}{A \cdot X} = K]$$
+$$1.[X ⊘ \frac{1}{A} = \frac{X}{1 - \frac{1}{A} \cdot X} = \frac{X}{1 - \frac{X}{A}} = \frac{X}{\frac{A - X}{A}} = \frac{A \cdot X}{A - X}= (\frac{A - X}{A \cdot X})^{-1}]$$  
+$$[(X ⊘ \frac{1}{A})^{-1} = ((\frac{A - X}{A \cdot X})^{-1})^{-1}= \frac{A - X}{A \cdot X} \implies - (X ⊘ \frac{1}{A})^{-1} = \frac{X - A}{A \cdot X} = K]$$  
+$$2.[(-X) ⊘ \frac{-1}{A} = \frac{-X}{1 - (-\frac{1}{A}) \cdot (-X)} = \frac{-X}{1 - \frac{X}{A}} = \frac{-X}{\frac{A - X}{A}} = \frac{-A \cdot X}{A - X}= (\frac{A - X}{-A \cdot X})^{-1}]$$  
+$$[(-X) ⊘ \frac{-1}{A}]^{-1} = ((\frac{A - X}{-A \cdot X})^{-1})^{-1} = \frac{A - X}{-A \cdot X} = \frac{X - A}{A \cdot X} = K]$$
 
 Both forms are equivalent and correct.
 
@@ -228,6 +228,7 @@ The expression of arithmetic operations through KMR operators provides further e
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
 
 
 
