@@ -49,7 +49,7 @@ Both forms are equivalent and correct.
 
 ### 10.3.1 General Case Expression
 For any $A ≠ 0$, the sum of two parameters $K$ and $C$ can be expressed as:  
-$$K + C = \left( \left( (A ⊙ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}$$
+$$K + C = \left( \left( (A ⊙ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}=\left( \left( (A ⊙ K) ⊙ C \right) ⊘ A^{-1} \right)^{-1}$$
 
 ### 10.3.2 Special Case (A = 1)
 When $A = 1$, the expression simplifies to:  
@@ -67,7 +67,7 @@ $\left( Y ⊘ \frac{1}{A} \right)^{-1} = K + C \quad \square$
 
 ### 10.4.1 General Case Expression
 For any $A ≠ 0$, the difference of two parameters $K$ and $C$ can be expressed as:  
-$$K - C = - \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} = \left( \left( (-A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1}$$
+$$K - C = - \left( \left( (A ⊘ K) ⊙ C \right) ⊘ \frac{1}{A} \right)^{-1} =- \left( \left( (A ⊘ K) ⊙ C \right) ⊘ A^{-1} \right)^{-1}$$
 
 ### 10.4.2 Special Case (A = 1)  
 When $A = 1$, the expression simplifies to:  
@@ -228,6 +228,7 @@ The expression of arithmetic operations through KMR operators provides further e
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
 
 
 
