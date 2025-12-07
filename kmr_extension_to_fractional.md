@@ -81,7 +81,7 @@ $⊘\big|_{\mathbb{Z}} = ⊘$
    
    Thus $g(K)$ coincides with $A/(1+AK)$ on all rational $K$. By continuity, $g(K)=A/(1+AK)$ for all real $K$. Hence the extension is unique among continuous functions satisfying the group property.
 
-   *Complex analytic perspective*: If we consider $A/(1+KA)$ as a meromorphic function of $K∈ℂ$ (with simple pole at $K=-1/A$), it agrees with the discrete operator on $ℤ$. While the identity theorem for analytic functions requires agreement on a set with a limit point, the integers alone do not suffice. However, imposing the group property as a functional equation forces the rational structure, making $A/(1+KA)$ the unique meromorphic solution. ∎
+   *Complex analytic perspective*: The function $A/(1+KA)$ is meromorphic on $\mathbb{C}$ — it is the quotient of two entire functions (the constant function $A$ and the linear function $1+KA$) and has a simple pole at $K=-1/A$. While the set of integers $\mathbb{Z}$ does not have a limit point in $\mathbb{C}$, imposing the group property as a functional equation forces the rational structure and ensures uniqueness. Any other meromorphic function satisfying the same conditions must coincide with $A/(1+KA)$ on $\mathbb{C}$ except at isolated singularities. ∎
 
 **Remark**: The group property $(A⊙K)⊙C = A⊙(K+C)$ is the continuous analogue of the discrete composition law $f^K ∘ f^C = f^{K+C}$. It ensures that the continuous extension behaves coherently under partitioning of the parameter $K$.
 
