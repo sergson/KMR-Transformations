@@ -26,8 +26,6 @@ These properties demonstrate the deep algebraic structure of KMR operators and p
 
 **Chain Notation Convention**: Throughout this document, chains of KMR operators are interpreted as left-associative. For example, \( A ⊙ K ⊙ C ⊙ D \) means \( ((A ⊙ K) ⊙ C) ⊙ D \). This notation convention is discussed in detail in Section 12 (Chain Notation and Left-Associativity Convention).
 
-These properties demonstrate the deep algebraic structure of KMR operators and provide computational tools for analyzing complex KMR expressions.
-
 ## 11.2 Tunneling (Shielding) Property
 
 ### 11.2.1 Fundamental Tunneling Identity
