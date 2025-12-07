@@ -17,12 +17,14 @@ are explicitly licensed under CC BY-SA 4.0.
 ## Repository Structure
 ```text
 .
-├── kmr_paper.md                    # Primary mathematical exposition
-├── kmr_extension_to_fractional.md  # Extension to Fractional Compositions  
-├── kmr_operations.py               # Python implementation  
-├── LICENSE-СС                      # Theory (CC BY-SA 4.0)  
-├── LICENSE                         # Code (GPL 3.0)  
-└── examples/                       # Usage examples  
+├── kmr_paper.md                            # Core theory: primary exposition (Sections 1-8)
+├── kmr_extension_to_fractional.md          # Extension to Fractional Compositions (Section 9)
+├── kmr_arithmetic_addition_subtraction.md  # Extension to arithmetic: addition and subtraction (Section 10)
+├── kmr_operations.py                       # Reference Python implementation
+├── LICENSE-СС                              # License for THEORY (CC BY-SA 4.0)
+├── LICENSE                                 # License for CODE (GPL 3.0)
+├── tests/                                  # Framework tests
+└── examples/                               # Usage examples for the Python module 
 ```
 
 ## 🚀 Quick Start
