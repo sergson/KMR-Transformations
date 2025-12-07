@@ -21,6 +21,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_extension_to_fractional.md          # Extension to Fractional Compositions (Section 9)
 ├── kmr_arithmetic_addition_subtraction.md  # Extension to arithmetic: addition and subtraction (Section 10)
 ├── kmr_operations.py                       # Reference Python implementation
+├── kmr_formulas_reference.md               # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                              # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                                 # License for CODE (GPL 3.0)
 ├── tests/                                  # Framework tests
