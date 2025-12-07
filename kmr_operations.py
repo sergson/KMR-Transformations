@@ -25,19 +25,40 @@ def kmr_direct(A, K):
     """version without error protection of A ⊙ K = A/(1 + AK)"""
     return A / (1 + A*K)
 
+def kmr_direct_sh(A: float, K: float) -> float:
+    """A ⊙ K = A/(1 + K·A) with singularity handling"""
+    if A == 0:
+        return 0.0
+    denom = 1.0 + K * A
+    if abs(denom) < 1e-15:
+        # Undefined at pole - return NaN
+        return float('nan')
+    return A / denom
+
+
 def kmr_inverse(A, K):
     """version without error protection of A ⊘ K = A/(1 - AK)"""
     return A / (1 - A*K)
 
+def kmr_inverse_sh(A: float, K: float) -> float:
+    """A ⊘ K = A/(1 - K·A) with singularity handling"""
+    if A == 0:
+        return 0.0
+    denom = 1.0 - K * A
+    if abs(denom) < 1e-15:
+        # Undefined at pole - return NaN
+        return float('nan')
+    return A / denom
+
 def kmrd(A):
     """A ⊙ 1 operation
        KMR direct operator: A/(1+A) (works for all A ≠ -1)"""
-    return A / (1 + A) if (1 + A) != 0 else float('inf')
+    return kmr_direct_sh(A, 1)
 
 def kmri(A):
     """A ⊘ 1 operation
        KMR inverse operator: A/(1-A) (works for all A ≠ 1)"""
-    return A / (1 - A) if (1 - A) != 0 else float('inf')
+    return kmr_inverse_sh(A, 1)
 
 def kmr_dircly(A: float, K: float) -> float:
     """Compute A ⊙ K (direct KMR operator): A/(1 + K*A).
@@ -49,7 +70,7 @@ def kmr_dircly(A: float, K: float) -> float:
     Returns:
         Result of A ⊙ K. Returns float('inf') if a singularity occurs (1 + K*A = 0).
     """
-    return A / (1 + K * A) if (1 + K * A) != 0 else float('inf')
+    return kmr_direct_sh(A, K)
 
 def kmr_invly(A: float, K: float) -> float:
     """Compute A ⊘ K (inverse KMR operator): A/(1 - K*A).
@@ -61,7 +82,7 @@ def kmr_invly(A: float, K: float) -> float:
     Returns:
         Result of A ⊘ K. Returns float('inf') if a singularity occurs (1 - K*A = 0).
     """
-    return A / (1 - K * A) if (1 - K * A) != 0 else float('inf')
+    return kmr_inverse_sh(A, K)
 
 
 def kmr_add(A: float, K: float, C: float, eps: float = 1e-12) -> float:
