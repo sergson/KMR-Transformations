@@ -2,7 +2,19 @@
 License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->
 
+### For Theoretical Content
+- All mathematical formulations and documentation must be licensed under **CC BY-SA 4.0**
+- When adding new theoretical content, include the header:
+```markdown
+<!-- 
+License: CC BY-SA 4.0 (see LICENSE-CC.md)
+-->
+```
+
+
 # 10. Arithmetic Operations via KMR Transformations
+**Author**: Sergei Terikhov  
+**Date**: 08.12.2025  
 
 ## 10.1 Introduction
 This section demonstrates how fundamental arithmetic operations (addition and subtraction) can be expressed through KMR operators, further extending the algebraic framework of KMR transformations. The results show that linear arithmetic emerges as a special case of nonlinear KMR composition, reinforcing the paradigm where nonlinearity represents the fundamental nature of mathematical operations.
@@ -228,6 +240,7 @@ The expression of arithmetic operations through KMR operators provides further e
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
 
 
 
