@@ -172,7 +172,7 @@ Testing confirms the theoretical framework while revealing computational nuances
 2. **Zero Element**: $K + 0 = K$ maintains $\sim 10^{-5}$ relative accuracy even at $A=0$:
    $$2 + 0 = 1.999955756563756 \quad (\Delta \approx 4.4 \times 10^{-5})$$
 
-3. **Self-Cancellation**: $K - K = 0$ generally holds, with occasional singularities (`NaN`) due to intermediate computational poles.
+3. **Self-Cancellation**: $K - K = 0$ frequent singularities ('NaN') due to intermediate computational poles, requires separate processing extension.
 
 #### 10.7.3 Pure KMR Implementation
 
@@ -228,6 +228,7 @@ The expression of arithmetic operations through KMR operators provides further e
 
 
 <!-- License: CC BY-SA 4.0 (see LICENSE-CC.md) -->
+
 
 
 
