@@ -29,33 +29,61 @@ We seek a mathematically consistent extension to fractional $K \in \mathbb{R}$ t
 
 ### 9.2 Analytic Continuation Approach  
 
+**Motivation for Analytic Continuation**  
+The discrete KMR operator $A ⊙ K = A/(1 + K·A)$ is initially defined for integer $K ∈ ℤ$. To extend it to continuous $K ∈ ℝ$ (and further to $ℂ$), we seek a function that:
+1. Matches the discrete values at integer points
+2. Preserves fundamental algebraic properties (duality, group structure)
+3. Behaves "naturally" between integer points
+
+The simplest and most natural candidate is the rational expression $A/(1+KA)$ itself, treated as a function of continuous $K$. This approach is justified by the following theorem.
+
 **Theorem 1** (Canonical Extension).  
 For $A \in \mathbb{R}$, the closed-form expressions  
 $$A ⊙ K \coloneqq \frac{A}{1 + K \cdot A}, \quad 
 A ⊘ K \coloneqq \frac{A}{1 - K \cdot A}$$  
-provide unique analytic continuations to $K \in \mathbb{R}$ that satisfy:  
+provide unique continuous extensions to $K \in \mathbb{R}$ that satisfy:  
+
 1. **Consistency**:  
 
 $⊙\big|_{\mathbb{Z}} = ⊙$  
 
 and  
 
-$⊘\big|_{\mathbb{Z}} = ⊘$  
+$⊘\big|_{\mathbb{Z}} = ⊘$    
 
-2. **Duality**: $A ⊙ K = A ⊘ (-K)$  
-3. **Group Property**: $(A ⊙ K) ⊙ C = A ⊙ (K + C)$  
+3. **Duality**:  
+   $A ⊙ K = A ⊘ (-K)$
+
+4. **Group Property**:  
+   $(A ⊙ K) ⊙ C = A ⊙ (K + C)$
 
 *Proof*.  
+
 1. **Consistency for integers**:  
-   For $K = n \in \mathbb{Z}_+$: $A ⊙ n = A/(1 + nA)$
+   - For $K = n \in \mathbb{Z}_+$: $A ⊙ n = A/(1 + nA)$ matches the discrete iteration formula.  
+   - For $K = -n \in \mathbb{Z}_-$: $A ⊙ (-n) = \frac{A}{1 - n \cdot A} = A ⊘ n$, consistent with the definition of the inverse operator for positive iterations.
+
+2. **Duality**:  
+   Direct computation shows:  
+   $$A ⊘ (-K) = \frac{A}{1 - (-K)A} = \frac{A}{1 + KA} = A ⊙ K$$
+
+3. **Group Property**:  
+   Algebraic manipulation yields:  
+   $$(A ⊙ K) ⊙ C = \frac{\frac{A}{1+KA}}{1 + C \cdot \frac{A}{1+KA}} = \frac{A}{1 + KA + CA} = A ⊙ (K+C)$$
+
+4. **Uniqueness of the continuous extension**:  
+   Let $g(K)$ be any continuous function defined for $K∈\mathbb{R}$ such that:
+   - $g(n) = A⊙n$ for all integers $n$
+   - $g$ satisfies the group property: $g(K+C) = g(K)⊙C$ for all $K,C∈\mathbb{R}$
    
-   For $K = -n \in \mathbb{Z}_-$: $A ⊙ (-n) = \frac{A}{1 - n \cdot A} = A ⊘ n$
+   For any rational $K = p/q$ (with $p,q∈\mathbb{Z}$, $q>0$), repeated application of the group property gives:  
+   $$g(p/q) = \underbrace{g(0) ⊙ (1/q) ⊙ \cdots ⊙ (1/q)}_{p \text{ times}} = A ⊙ (p/q) = \frac{A}{1+A\cdot p/q}$$
    
-3. **Duality**:  
-   $$A ⊘ (-K) = \frac{A}{1 - (-K)A} = \frac{A}{1 + KA} = A ⊙ K$$  
-4. **Group Property**:  
-   $$(A ⊙ K) ⊙ C = \frac{\frac{A}{1+KA}}{1 + C \cdot \frac{A}{1+KA}} = \frac{A}{1 + KA + CA} = A ⊙ (K+C)$$  
-5. **Uniqueness**: By the identity theorem for meromorphic functions, since $A/(1+KA)$ is meromorphic in $\mathbb{C}$ with simple pole at $K=-1/A$, and agrees with the discrete operator on $\mathbb{Z}$ (which has accumulation points), it is the unique analytic continuation. ∎  
+   Thus $g(K)$ coincides with $A/(1+AK)$ on all rational $K$. By continuity, $g(K)=A/(1+AK)$ for all real $K$. Hence the extension is unique among continuous functions satisfying the group property.
+
+   *Complex analytic perspective*: If we consider $A/(1+KA)$ as a meromorphic function of $K∈ℂ$ (with simple pole at $K=-1/A$), it agrees with the discrete operator on $ℤ$. While the identity theorem for analytic functions requires agreement on a set with a limit point, the integers alone do not suffice. However, imposing the group property as a functional equation forces the rational structure, making $A/(1+KA)$ the unique meromorphic solution. ∎
+
+**Remark**: The group property $(A⊙K)⊙C = A⊙(K+C)$ is the continuous analogue of the discrete composition law $f^K ∘ f^C = f^{K+C}$. It ensures that the continuous extension behaves coherently under partitioning of the parameter $K$.
 
 ### 9.3 Flow Equation Derivation  
 
