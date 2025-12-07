@@ -18,8 +18,13 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 ## 11.1 Introduction
 
 This section introduces two fundamental properties of KMR operators that enable powerful algebraic manipulations:
+
 1. **Tunneling (Shielding) Property**: The ability to "tunnel through" arbitrary KMR chains to extract the inverse of a value
 2. **Element Extraction**: Methods to isolate individual elements from multi-step KMR compositions
+
+These properties demonstrate the deep algebraic structure of KMR operators and provide computational tools for analyzing complex KMR expressions.
+
+**Chain Notation Convention**: Throughout this document, chains of KMR operators are interpreted as left-associative. For example, \( A ⊙ K ⊙ C ⊙ D \) means \( ((A ⊙ K) ⊙ C) ⊙ D \). This notation convention is discussed in detail in Section 12 (Chain Notation and Left-Associativity Convention).
 
 These properties demonstrate the deep algebraic structure of KMR operators and provide computational tools for analyzing complex KMR expressions.
 
