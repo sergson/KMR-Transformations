@@ -2,15 +2,6 @@
 License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->
 
-### For Theoretical Content
-- All mathematical formulations and documentation must be licensed under **CC BY-SA 4.0**
-- When adding new theoretical content, include the header:
-```markdown
-<!-- 
-License: CC BY-SA 4.0 (see LICENSE-CC.md)
--->
-```
-
 # KMR Transformations: Properties and Formulas Reference
 **Author**: Sergei Terikhov  
 **Date**: 08.12.2025  
@@ -50,6 +41,8 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC}$ | Mixed operation formula | 5.3 |
 | $A ⊙ \underbrace{K ⊙ \dots ⊙ K}_{n} = A ⊙ (Kn)$ | Iterated direct operator | 5.3 |
 | $A ⊘ \underbrace{K ⊘ \dots ⊘ K}_{n} = A ⊘ (Kn)$ | Iterated inverse operator | 5.3 |
+| $(A ⊙ (K⋅C)) ⊘ (K⋅D) = A ⊙ (K⋅(C-D))$ | Composition with scaled parameters (difference) | 14.5 |
+| $(A ⊙ (K⋅C)) ⊙ (K⋅D) = A ⊙ (K⋅(C+D))$ | Composition with scaled parameters (sum) | 14.5 |
 | **4. Differential Properties** | | |
 | $\frac{\partial}{\partial K}(A ⊙ K) = -(A ⊙ K)^2$ | Flow equation for direct operator | 9.3 |
 | $\frac{\partial}{\partial K}(A ⊘ K) = (A ⊘ K)^2$ | Flow equation for inverse operator | 9.3 |
@@ -67,18 +60,29 @@ This document provides a comprehensive reference of all properties and formulas 
 | $K + C = \left(((A ⊙ K) ⊙ C) ⊘ A^{-1}\right)^{-1}$ | Addition through KMR operators | 10.3.1 |
 | $K - C = -\left(((A ⊘ K) ⊙ C) ⊘ A^{-1}\right)^{-1}$ | Subtraction through KMR operators | 10.4.1 |
 | $K - C = \left(((-A ⊘ K) ⊙ C) ⊘ A^{-1}\right)^{-1}$ | Alternative subtraction form | 10.4.1 |
-| **8. Tunneling Properties** | | |
+| $K \cdot C = \left( \left( A ⊙ (K \cdot C) \right) ⊘ A^{-1} \right)^{-1}$ | Multiplication (tunneling form) | 14.3 |
+| $K \cdot C = \left( \left( A ⊙ \underbrace{K ⊙ K ⊙ \cdots ⊙ K}_{C \text{ times}} \right) ⊘ A^{-1} \right)^{-1}$ | Multiplication (iterative form for integer C) | 14.3 |
+| $\frac{1}{C} = A ⊙ C ⊘ A^{-1}$ | Reciprocal operation | 14.4 |
+| $\frac{K}{C} = K \cdot \frac{1}{C}$ | Division as multiplication by reciprocal | 14.4 |
+| $\frac{K}{C} = -\left( \left( (A ⊘ K) ⊙ \frac{1}{C} \right) ⊘ A^{-1} \right)^{-1}$ | Division (tunneling form) | 14.4 |
+| $\frac{K}{C} = \left( \left( A ⊙ \underbrace{\frac{1}{C} ⊙ \cdots ⊙ \frac{1}{C}}_{K \text{ times}} \right) ⊘ A^{-1} \right)^{-1}$ | Division (iterative form for integer K) | 14.4 |
+| $\frac{K}{C} = \left( \left( (A ⊘ K) ⊙ C^{-1} \right) ⊘ A^{-1} \right)^{-1}$ | Division (alternative direct form) | 14.4 |
+| **8. Decomposition and Iteration Properties** | | |
+| $A ⊙ (K \cdot (D + F)) = \left( A ⊙ (K \cdot D) \right) ⊙ (K \cdot F)$ | Decomposition theorem | 14.3 |
+| $A ⊙ (K \cdot C) = A ⊙ K ⊙ (K \cdot (C-1))$ | Recursive form | 14.3 |
+| $A ⊙ (K \cdot C) = \underbrace{((A ⊙ K) ⊙ K) \dots ⊙ K}_{C \text{ times}}$ | Iteration decomposition | 14.5 |
+| **9. Tunneling Properties** | | |
 | $Y ⊙ X ⊘ Y^{-1} = X^{-1}$ | General tunneling property | 11.1 |
 | $(A_1 ⊙ \dots ⊙ A_n) ⊙ X ⊘ (A_1 ⊙ \dots ⊙ A_n)^{-1} = X^{-1}$ | Chain tunneling property | 11.1 |
-| **9. Element Extraction from Chains** | | |
+| **10. Element Extraction from Chains** | | |
 | $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.2.2 |
 | $A_k = \frac{1}{X ⊘ R} - \frac{1}{L}$ | Extract intermediate element | 11.2.4 |
 | where $L = A_1 ⊙ \dots ⊙ A_{k-1}$, $R = A_{k+1} ⊙ \dots ⊙ A_n$ | | |
-| **10. Special Cases and Limits** | | |
+| **11. Special Cases and Limits** | | |
 | $\lim_{K \to -1/A} A ⊙ K = \infty$ | Singularity of direct operator | 5.2 |
 | $\lim_{K \to 1/A} A ⊘ K = \infty$ | Singularity of inverse operator | 5.2 |
 | $A ⊙ X = X \implies X = 0$ | Fixed point property | 5.3 |
-| **11. Computational Properties** | | |
+| **12. Computational Properties** | | |
 | $A ⊙ K \in \mathbb{R}$ for $A, K \in \mathbb{R} \setminus \{-1/K\}$ | Closure property | 5.1 |
 | $(A ⊙ K) ⊙ C \neq A ⊙ (K ⊙ C)$ | Non-associativity | 5.1 |
 | $A ⊙ K \neq K ⊙ A$ | Non-commutativity | 5.1 |
@@ -111,3 +115,15 @@ At singularities:
 - $A ⊙ (-A^{-1} + \varepsilon) = 1/\varepsilon$
 - $A ⊘ (A^{-1} + \varepsilon) = -1/\varepsilon$
 for $A \neq 0$ and small $\varepsilon$. (Section 9.4)
+
+### Theorem 4 (Decomposition Theorem)
+For any $A \neq 0$, $K \in \mathbb{R}$, and $D, F \in \mathbb{R}^+$:
+
+$$
+A ⊙ (K \cdot (D + F)) = \left( A ⊙ (K \cdot D) \right) ⊙ (K \cdot F)
+$$
+
+This theorem enables fractional iteration and efficient computation by decomposing operations into integer and fractional components. (Section 14.3)
+
+### Theorem 5 (Arithmetic Realization through KMR)
+All fundamental arithmetic operations (addition, subtraction, multiplication, division) can be expressed purely through KMR operators $⊙$ and $⊘$ using an auxiliary parameter $A \neq 0$, demonstrating that linear arithmetic emerges from nonlinear KMR transformations. (Section 14)
