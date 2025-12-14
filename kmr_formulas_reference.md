@@ -78,11 +78,15 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.2.2 |
 | $A_k = \frac{1}{X ⊘ R} - \frac{1}{L}$ | Extract intermediate element | 11.2.4 |
 | where $L = A_1 ⊙ \dots ⊙ A_{k-1}$, $R = A_{k+1} ⊙ \dots ⊙ A_n$ | | |
-| **11. Special Cases and Limits** | | |
+| **11. Derived Identities from Composition** | | |
+| $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K + C + KAC$ | Composition identity for direct operators | 14.10 |
+| $\left( \left( (A ⊙ K) ⊘ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K - (A ⊙ C)$ | Composition identity for mixed operators | 14.10 |
+| $\left( \left( (A ⊘ K) ⊙ (A ⊘ C) \right) ⊘ A^{-1} \right)^{-1} = (A ⊘ C) - K$ | Composition identity for inverse operators | 14.10 |
+| **12. Special Cases and Limits** | | |
 | $\lim_{K \to -1/A} A ⊙ K = \infty$ | Singularity of direct operator | 5.2 |
 | $\lim_{K \to 1/A} A ⊘ K = \infty$ | Singularity of inverse operator | 5.2 |
 | $A ⊙ X = X \implies X = 0$ | Fixed point property | 5.3 |
-| **12. Computational Properties** | | |
+| **13. Computational Properties** | | |
 | $A ⊙ K \in \mathbb{R}$ for $A, K \in \mathbb{R} \setminus \{-1/K\}$ | Closure property | 5.1 |
 | $(A ⊙ K) ⊙ C \neq A ⊙ (K ⊙ C)$ | Non-associativity | 5.1 |
 | $A ⊙ K \neq K ⊙ A$ | Non-commutativity | 5.1 |
@@ -118,11 +122,9 @@ for $A \neq 0$ and small $\varepsilon$. (Section 9.4)
 
 ### Theorem 4 (Decomposition Theorem)
 For any $A \neq 0$, $K \in \mathbb{R}$, and $D, F \in \mathbb{R}^+$:
-
-$$
+\[
 A ⊙ (K \cdot (D + F)) = \left( A ⊙ (K \cdot D) \right) ⊙ (K \cdot F)
-$$
-
+\]
 This theorem enables fractional iteration and efficient computation by decomposing operations into integer and fractional components. (Section 14.3)
 
 ### Theorem 5 (Arithmetic Realization through KMR)
