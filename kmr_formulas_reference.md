@@ -79,9 +79,9 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A_k = \frac{1}{X ⊘ R} - \frac{1}{L}$ | Extract intermediate element | 11.2.4 |
 | where $L = A_1 ⊙ \dots ⊙ A_{k-1}$, $R = A_{k+1} ⊙ \dots ⊙ A_n$ | | |
 | **11. Derived Identities from Composition** | | |
-| $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K + C + KAC$ | Composition identity for direct operators | 14.10 |
-| $\left( \left( (A ⊙ K) ⊘ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K - (A ⊙ C)$ | Composition identity for mixed operators | 14.10 |
-| $\left( \left( (A ⊘ K) ⊙ (A ⊘ C) \right) ⊘ A^{-1} \right)^{-1} = (A ⊘ C) - K$ | Composition identity for inverse operators | 14.10 |
+| $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K + C + KAC$ | Composition identity for direct operators | 14.8.4.1 |
+| $\left( \left( (A ⊙ K) ⊘ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K - (A ⊙ C)$ | Composition identity for mixed operators | 14.8.4.2 |
+| $\left( \left( (A ⊘ K) ⊙ (A ⊘ C) \right) ⊘ A^{-1} \right)^{-1} = (A ⊘ C) - K$ | Composition identity for inverse operators | 14.8.4.3 |
 | **12. Special Cases and Limits** | | |
 | $\lim_{K \to -1/A} A ⊙ K = \infty$ | Singularity of direct operator | 5.2 |
 | $\lim_{K \to 1/A} A ⊘ K = \infty$ | Singularity of inverse operator | 5.2 |
