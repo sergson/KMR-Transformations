@@ -75,9 +75,9 @@ This document provides a comprehensive reference of all properties and formulas 
 | $Y ⊙ X ⊘ Y^{-1} = X^{-1}$ | General tunneling property | 11.1 |
 | $(A_1 ⊙ \dots ⊙ A_n) ⊙ X ⊘ (A_1 ⊙ \dots ⊙ A_n)^{-1} = X^{-1}$ | Chain tunneling property | 11.1 |
 | **10. Element Extraction from Chains** | | |
-| $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.2.2 |
-| $A_k = \frac{1}{X ⊘ R} - \frac{1}{L}$ | Extract intermediate element ($1 < k < n$) | 11.2.4 |
-| where $L = A_1 ⊙ \dots ⊙ A_{k-1}$, $R = A_{k+1}$ | | |
+| $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.3.2 |
+| $A_k = \frac{1}{X ⊘ A_n ⊘ A_{n-1} ⊘ \dots ⊘ A_{k+1}} - \frac{1}{A_1 ⊙ A_2 ⊙ \dots ⊙ A_{k-1}} $ | Extract intermediate element ($1 < k < n$) | 11.3.4 |
+| $A_n = X^{-1} - Z^{-1}, Z = A_1 ⊙ ... ⊙ A_{n-1}$ | Extracting the Last Element| 11.3.1 |
 | **11. Derived Identities from Composition** | | |
 | $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K + C + KAC$ | Composition identity for direct operators | 14.8.4.1 |
 | $\left( \left( (A ⊙ K) ⊘ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K - (A ⊙ C)$ | Composition identity for mixed operators | 14.8.4.2 |
