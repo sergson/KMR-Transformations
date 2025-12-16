@@ -1,14 +1,14 @@
 # kmr_chains.py
 """
 KMR Chains - Abstract Minimal Chain Implementation
-Version: 5.5.4
+Version: 5.5.5
 License: GPL 3.0 (see LICENSE)
 Author: Sergei Terikhov
 """
 
 import hashlib
 import secrets
-from typing import Any
+from typing import Any, Dict
 from kmr_operations import kmr_dircly, kmr_invly
 
 
@@ -50,23 +50,28 @@ class KMRChainSpace:
         self.public_heap: dict[str, PublicChainElement] = {}
         self.private_heap: dict[str, PrivateChainElement] = {}
         self._operation_handlers = {}
+        self._operation_aliases = {}
         self._register_default_handlers()
 
     def _register_default_handlers(self):
         """Register default operation handlers"""
         # For numeric types, use kmr_operations functions
-        self.register_operation('⊙', kmr_dircly)
-        self.register_operation('⊘', kmr_invly)
+        self.register_operation('⊙', kmr_dircly, {'dircly': '⊙', 'direct': '⊙', 'dir': '⊙'})
+        self.register_operation('⊘', kmr_invly, {'invly': '⊘', 'inverse': '⊘', 'inv': '⊘'})
 
         # Basic arithmetic operations
-        self.register_operation('+', lambda a, b: a + b)
-        self.register_operation('-', lambda a, b: a - b)
-        self.register_operation('*', lambda a, b: a * b)
-        self.register_operation('/', lambda a, b: a / b)
+        self.register_operation('+', lambda a, b: a + b, {'add': '+'})
+        self.register_operation('-', lambda a, b: a - b, {'sub': '-'})
+        self.register_operation('*', lambda a, b: a * b, {'mul': '*'})
+        self.register_operation('/', lambda a, b: a / b, {'div': '/'})
 
-    def register_operation(self, op_symbol: str, handler):
+    def register_operation(self, op_symbol: str, handler, op_map: Dict = None):
         """Register custom operation handler for any object type"""
         self._operation_handlers[op_symbol] = handler
+
+        if op_map:
+            for alias, target_op in op_map.items():
+                self._operation_aliases[alias.lower()] = target_op
 
     def _apply_operation(self, value_before: Any, operation: str, parameter: Any) -> Any:
         """Apply operation to value - returns result or raises exception"""
@@ -112,7 +117,9 @@ class KMRChainSpace:
             'invly': '⊘', 'inverse': '⊘', 'inv': '⊘',
             'add': '+', 'sub': '-', 'mul': '*', 'div': '/'
         }
-        op = op_map.get(operation.lower(), operation)
+        op = operation
+        if operation.lower() in self._operation_aliases:
+            op = self._operation_aliases[operation.lower()]
 
         # Generate IDs
         if element_id is None:
