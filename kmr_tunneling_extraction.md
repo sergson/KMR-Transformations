@@ -55,7 +55,31 @@ $(A_1 ⊙ A_2 ⊙ \dots ⊙ A_n) ⊙ X ⊘ (A_1 ⊙ A_2 ⊙ \dots ⊙ A_n)^{-1} 
 The tunneling property shows that:
 1. Any KMR chain $Y$ can serve as a "container" that transforms $X$ to $X^{-1}$
 2. The result $X^{-1}$ is independent of the specific content of $Y$ (provided $Y \neq 0$)
-3. This represents a form of algebraic "shielding" where the chain $Y$ becomes transparent to the extraction of $X^{-1}$
+3. This represents a form of algebraic "shielding" where the chain $Y$ becomes transparent to the extraction of $X^{-1}$  
+
+### 11.2.4 Special Case: Y = 1
+
+A particularly elegant and simple case of the tunneling property occurs when \(Y = 1\):   
+
+$$
+1 ⊙ X ⊘ 1 = X^{-1}
+$$
+
+*Proof*:  
+From the general tunneling identity $(Y ⊙ X ⊘ Y^{-1} = X^{-1})$, substitute $(Y = 1)$. Since $(1^{-1} = 1)$, we obtain:  
+
+$$
+1 ⊙ X ⊘ 1 = X^{-1} \quad \square
+$$
+
+*Numerical Example*:  
+Let \(X = 5\). Then:   
+$1 ⊙ 5 = \frac{1}{1 + 1 \cdot 5} = \frac{1}{6} \approx 0.1667$  
+$\frac{1}{6} ⊘ 1 = \frac{1/6}{1 - 1 \cdot (1/6)} = \frac{1/6}{5/6} = \frac{1}{5} = 5^{-1}$
+
+*Interpretation*:  
+This special case demonstrates that the simplest possible chain—a single element equal to 1—can already serve as a complete “tunnel” to extract the inverse of any \(X\). It underscores the fundamental nature of the tunneling property and provides a minimal computational recipe for obtaining $(X^{-1})$ using only the basic KMR operators.
+
 
 ## 11.3 Element Extraction from KMR Chains
 
