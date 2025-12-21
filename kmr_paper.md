@@ -126,10 +126,10 @@ Step 4: 1 ⊙ 1 = 0.5 (for K = 4)
 
 ### 5.3 Composition Laws
 1. **Sequential Application**:  
-   $$A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC + AKC}$$
+   $$A ⊙ K ⊙ C ≔ \frac{A}{1 + AK + AC}$$
 
 2. **Mixed Operations**:  
-   $$A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC}$$
+   $$A ⊙ (K ⊘ C) = \frac{A(1 - CK)}{1 - CK + AK}$$
 
 3. **Fixed Points**:  
   $$\exists X : A ⊙ X = X \implies X = 0$$
