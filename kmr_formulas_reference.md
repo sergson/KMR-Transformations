@@ -73,6 +73,7 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A ⊙ (K \cdot C) = \underbrace{((A ⊙ K) ⊙ K) \dots ⊙ K}_{C \text{ times}}$ | Iteration decomposition | 14.5 |
 | **9. Tunneling Properties** | | |
 | $Y ⊙ X ⊘ Y^{-1} = X^{-1}$ | General tunneling property | 11.1 |
+| $X^{-1} = 1 ⊙ X ⊘ 1^{-1}$ | Special case of tunneling with Y=1| 11.2.4 |
 | $(A_1 ⊙ \dots ⊙ A_n) ⊙ X ⊘ (A_1 ⊙ \dots ⊙ A_n)^{-1} = X^{-1}$ | Chain tunneling property | 11.1 |
 | **10. Element Extraction from Chains** | | |
 | $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.3.2 |
