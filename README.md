@@ -20,6 +20,8 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_paper.md                            # Core theory: primary exposition (Sections 1-8)
 ├── kmr_extension_to_fractional.md          # Extension to Fractional Compositions (Section 9)
 ├── kmr_arithmetic_addition_subtraction.md  # Extension to arithmetic: addition and subtraction (Section 10)
+├── kmr_operations.py                       # Reference Python implementation
+├── kmr_formulas_reference.md               # Properties and Formulas Reference (handbook)
 ├── kmr_tunneling_extraction.md             # Tunneling Property and Element Extraction in KMR Chains (Section 11)
 ├── kmr_chain_notation_convention.md        # Chain Notation and Left-Associativity Convention (Section 12)
 ├── kmr_operations.py                       # Core KMR operations implementation
