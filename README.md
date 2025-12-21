@@ -25,19 +25,20 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_formulas_reference.md               # Properties and Formulas Reference (handbook)
 ├── kmr_operations.py                       # Core KMR operations implementation
 ├── kmr_chains.py                           # Abstract chain space implementation
-├── kmr_chains_operations_by_id.py          # ID-based chain operations
-├── kmr_chains_operations_func.py           # Functional operations extension
-├── kmr_chains_operations_init.py           # Operations initialization
+├── kmr_chains_operations_by_id.py          # Chain space ID-based chain operations
+├── kmr_chains_operations_func.py           # Chain space functional operations extension
+├── kmr_chains_operations_init.py           # Chain space operations initialization
+├── kmr_tunneling.py                        # Tunneling and Extraction implementation
 ├── LICENSE-СС                              # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                                 # License for CODE (GPL 3.0)
 ├── tests/                                  # Framework tests
 └── examples/                               # Usage examples
-    ├── example_operations_by_id.py         # ID operations example
-	├── example_extended_operations_by_id.py# ID operations example
-    ├── example_functional_operations.py    # Functional operations example
-	├── example_quick_start.py              # Functional operations example
-	├── example_usage.py                    # KMR Operations Demo
-    └── example_kmr_algebraic_properties.py # Algebraic properties verification
+	├── example_usage.py                    # Core KMR operations example
+	├── example_quick_start.py              # Chain space functional example
+    ├── example_operations_by_id.py         # Chain space ID as value operations example
+	├── example_extended_operations_by_id.py# Chain space ID as value operations extended example
+    ├── example_functional_operations.py    # Chain space function as value operations example
+    └── example_kmr_algebraic_properties.py # Algebraic properties verification by using functional chains example
 ```
 
 ## 🚀 Quick Start
