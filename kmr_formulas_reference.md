@@ -37,8 +37,8 @@ This document provides a comprehensive reference of all properties and formulas 
 | **3. Composition Laws** | | |
 | $(A ⊙ K) ⊙ C = A ⊙ (K + C)$ | Group property for direct operator | 9.2 |
 | $(A ⊘ K) ⊘ C = A ⊘ (K + C)$ | Group property for inverse operator | 9.5 |
-| $A ⊙ K ⊙ C = \frac{A}{1 + AK + AC + AKC}$ | Sequential application formula | 5.3 |
-| $A ⊙ (K ⊘ C) = \frac{A(1 - KC)}{1 + AK - AKC}$ | Mixed operation formula | 5.3 |
+| $A ⊙ K ⊙ C = \frac{A}{1 + A(K + C}$ | Sequential application formula | 5.3 |
+| $A ⊙ (K ⊘ C) = \dfrac{A(1 - C K)}{1 + K(A - C)}$ | Mixed operation formula | 5.3 |
 | $A ⊙ \underbrace{K ⊙ \dots ⊙ K}_{n} = A ⊙ (Kn)$ | Iterated direct operator | 5.3 |
 | $A ⊘ \underbrace{K ⊘ \dots ⊘ K}_{n} = A ⊘ (Kn)$ | Iterated inverse operator | 5.3 |
 | $(A ⊙ (K⋅C)) ⊘ (K⋅D) = A ⊙ (K⋅(C-D))$ | Composition with scaled parameters (difference) | 14.5 |
