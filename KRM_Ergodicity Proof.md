@@ -4,7 +4,7 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 
 # 15. Ergodicity of the Continuous KMR Flow in Compact Spaces
 **Author**: Sergei Terikhov  
-**Date**: 09.12.2025  
+**Date**: 27.03.2026  
 
 ## 15.1 Abstract
 This section establishes the formal conditions for ergodicity within a modified KMR framework. While the original discrete KMR mapping on $\mathbb{R}$ is dissipative and parabolic, we demonstrate that the continuous flow derived from the fractional extension (Section 9) becomes ergodic when the state space is configured as a compact manifold with periodic boundaries.
