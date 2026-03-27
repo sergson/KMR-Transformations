@@ -40,7 +40,7 @@ The KMR-L theory does not claim to be the "ultimate truth" but offers an effecti
 *   Strict dependence on prehistory (system memory).
 *   Closure or cyclicity of processes.
 
-### 16.6 Functional Replacement of Zero and Topological Continuity
+## 16.6 Functional Replacement of Zero and Topological Continuity
 
 The rejection of the concept of absolute zero in favor of the base state $A$ within the KMR-L model is not a simplification, but a necessary condition for maintaining the informational coherence of the system.
 
@@ -48,7 +48,7 @@ The rejection of the concept of absolute zero in favor of the base state $A$ wit
 2.  **Dynamics of the Singularity "Flyby"**: The phenomenon of passing through infinity in KMR-L is interpreted as a **topological flyby**. Mathematically, this is realized in the inverse space $u = 1/y$ (see Section 15), where passing through the point $y = \infty$ corresponds to standard movement along the $u$ coordinate.
 3.  **Vector Connectivity**: Given an object possesses a transformation vector (parameter $K$), the departure into $+\infty$ and the return from $-\infty$ represent a single continuous trajectory within the compactified $S^1_L$ model. This allows the singularity to be viewed not as a terminal point, but as a node of maximum informational density where the motion vector is preserved.
 
-### 16.7 Conclusion: The Predictive Potential of KMR-L
+## 16.7 Conclusion: The Predictive Potential of KMR-L
 
 In summary, KMR-L synthesizes algebraic rigor with ontological depth, offering a framework for describing systems in regimes of extreme nonlinearity.
 
