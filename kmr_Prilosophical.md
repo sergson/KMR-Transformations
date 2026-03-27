@@ -33,14 +33,7 @@ The transition from a dissipative (decaying) model to the ergodic flow in Sectio
 2. **The Phenomenon of "Return"**: Just as a ship disappearing over the horizon does not signify its destruction, in KMR-L, a singularity ($K = \pm 1/A$) is interpreted as a phase transition, shifting the system into a mirrored regime through inversion.
 3. **Ergodicity as Cohesion**: The hypothesis of Universal ergodicity in KMR-L asserts that information is not lost but circulates. This ensures the internal integrity of being, where every local event is statistically woven into the common fabric of the cosmos.
 
-## 16.5 Scope and Perspectives
-
-The KMR-L theory does not claim to be the "ultimate truth" but offers an effective **interpretive framework** for systems with the following properties:
-*   Presence of feedback loops and nonlinear saturation.
-*   Strict dependence on prehistory (system memory).
-*   Closure or cyclicity of processes.
-
-## 16.6 Functional Replacement of Zero and Topological Continuity
+## 16.5 Functional Replacement of Zero and Topological Continuity
 
 The rejection of the concept of absolute zero in favor of the base state $A$ within the KMR-L model is not a simplification, but a necessary condition for maintaining the informational coherence of the system.
 
@@ -48,7 +41,7 @@ The rejection of the concept of absolute zero in favor of the base state $A$ wit
 2.  **Dynamics of the Singularity "Flyby"**: The phenomenon of passing through infinity in KMR-L is interpreted as a **topological flyby**. Mathematically, this is realized in the inverse space $u = 1/y$ (see Section 15), where passing through the point $y = \infty$ corresponds to standard movement along the $u$ coordinate.
 3.  **Vector Connectivity**: Given an object possesses a transformation vector (parameter $K$), the departure into $+\infty$ and the return from $-\infty$ represent a single continuous trajectory within the compactified $S^1_L$ model. This allows the singularity to be viewed not as a terminal point, but as a node of maximum informational density where the motion vector is preserved.
 
-## 16.7 Conclusion: The Predictive Potential of KMR-L
+## 16.6 Conclusion: The Predictive Potential of KMR-L
 
 In summary, KMR-L synthesizes algebraic rigor with ontological depth, offering a framework for describing systems in regimes of extreme nonlinearity.
 
