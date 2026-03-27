@@ -40,6 +40,18 @@ The KMR-L theory does not claim to be the "ultimate truth" but offers an effecti
 *   Strict dependence on prehistory (system memory).
 *   Closure or cyclicity of processes.
 
+## 16.6 Vector Breakthrough: Singularity as a Dynamic Flyby
+
+The rejection of absolute zero and the stitching of infinities in KMR-L are not "sacrifices" of rigor, nor are they mere technical assumptions. They represent a fundamental expansion of classical logic into a **Vector KMR Space**.
+
+1.  **Replacing Void with Potential**: We replace the "dead" 0 with a "living" basis $A$. In the $A ⊙ K = R$ system, information can no longer be erased by "multiplication by zero." The environment $A$ (the vacuum) is always present as an indestructible carrier, guaranteeing that every action ($K$) leaves a trace.
+2.  **Dynamic Flyby**: In KMR-L, the singularity ceases to be a "wall" against which mathematics breaks. If an object possesses a **motion vector** (a transformation velocity $K$), then heading toward $+\infty$ is not a disappearance, but a **flyby of the horizon**. Maintaining the vector inevitably causes the system to "emerge" from $-\infty$.
+3.  **The Impulse of Indestructibility**: This solution proves the complete **informational coherence of the Universe**. Infinity is not the edge of the world, but a point of maximum informational density—a transit hub.
+
+**Philosophical Impulse**:
+If an entity possesses a vector, it will overcome any limit. We postulate: **The Universe has no dead ends; it only has phases.** Where old philosophy saw the "end of the world" or "nothingness," KMR-L sees a point of peak tension followed by an inevitable return. This provides the impulse to search not for the "boundaries" of knowledge, but for the **flyby trajectories** around any singularity—from black holes to the limits of the human mind.
+
+
 **Conclusion**: 
 KMR-L synthesizes a rigorous algebraic structure with the ideas of process philosophy. We shift from studying "objects" to studying "flows of transformations." In this worldview, the Universe appears as a self-reproducing computational network where every $A$ (observer) and every $K$ (action) are co-authors of the unfolding reality.
 
