@@ -40,17 +40,22 @@ The KMR-L theory does not claim to be the "ultimate truth" but offers an effecti
 *   Strict dependence on prehistory (system memory).
 *   Closure or cyclicity of processes.
 
-## 16.6 Vector Breakthrough: Singularity as a Dynamic Flyby
+### 16.6 Functional Replacement of Zero and Topological Continuity
 
-The rejection of absolute zero and the stitching of infinities in KMR-L are not "sacrifices" of rigor, nor are they mere technical assumptions. They represent a fundamental expansion of classical logic into a **Vector KMR Space**.
+The rejection of the concept of absolute zero in favor of the base state $A$ within the KMR-L model is not a simplification, but a necessary condition for maintaining the informational coherence of the system.
 
-1.  **Replacing Void with Potential**: We replace the "dead" 0 with a "living" basis $A$. In the $A ⊙ K = R$ system, information can no longer be erased by "multiplication by zero." The environment $A$ (the vacuum) is always present as an indestructible carrier, guaranteeing that every action ($K$) leaves a trace.
-2.  **Dynamic Flyby**: In KMR-L, the singularity ceases to be a "wall" against which mathematics breaks. If an object possesses a **motion vector** (a transformation velocity $K$), then heading toward $+\infty$ is not a disappearance, but a **flyby of the horizon**. Maintaining the vector inevitably causes the system to "emerge" from $-\infty$.
-3.  **The Impulse of Indestructibility**: This solution proves the complete **informational coherence of the Universe**. Infinity is not the edge of the world, but a point of maximum informational density—a transit hub.
+1.  **Basis A as a Carrier**: According to Axiom 1 ($A \neq 0$), the state $A$ acts as an indestructible metric background. In the operator environment $A ⊙ K = R$, this ensures that any interaction $K$ leads to a computable result, eliminating the singular "erasure" of data characteristic of multiplication by a classical zero.
+2.  **Dynamics of the Singularity "Flyby"**: The phenomenon of passing through infinity in KMR-L is interpreted as a **topological flyby**. Mathematically, this is realized in the inverse space $u = 1/y$ (see Section 15), where passing through the point $y = \infty$ corresponds to standard movement along the $u$ coordinate.
+3.  **Vector Connectivity**: Given an object possesses a transformation vector (parameter $K$), the departure into $+\infty$ and the return from $-\infty$ represent a single continuous trajectory within the compactified $S^1_L$ model. This allows the singularity to be viewed not as a terminal point, but as a node of maximum informational density where the motion vector is preserved.
 
-**Philosophical Impulse**:
-If an entity possesses a vector, it will overcome any limit. We postulate: **The Universe has no dead ends; it only has phases.** Where old philosophy saw the "end of the world" or "nothingness," KMR-L sees a point of peak tension followed by an inevitable return. This provides the impulse to search not for the "boundaries" of knowledge, but for the **flyby trajectories** around any singularity—from black holes to the limits of the human mind.
+### 16.7 Conclusion: The Predictive Potential of KMR-L
 
+In summary, KMR-L synthesizes algebraic rigor with ontological depth, offering a framework for describing systems in regimes of extreme nonlinearity.
+
+*   **Interpretive Status**: We treat the "flyby of singularities" as a working model for describing phase transitions where classical metrics suffer a rupture. This broad interpretation of KMR-L mathematical properties offers a hypothesis that the Universe contains no informational dead ends, only topological gateways.
+*   **Methodological Impulse**: Shifting from the search for static "boundaries" of knowledge to the analysis of **transformation trajectories** allows for the construction of models that preserve data continuity even at the points of mathematical poles.
+
+Thus, KMR-L forms the outline of a "digital ontology," where reality is not a collection of objects, but a continuous, ergodic, and self-documenting flow of computations.
 
 **Conclusion**: 
 KMR-L synthesizes a rigorous algebraic structure with the ideas of process philosophy. We shift from studying "objects" to studying "flows of transformations." In this worldview, the Universe appears as a self-reproducing computational network where every $A$ (observer) and every $K$ (action) are co-authors of the unfolding reality.
