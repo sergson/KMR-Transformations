@@ -50,7 +50,6 @@ We no longer seek a "formula for everything" as a static answer. We recognize th
 
 ---
 _This section provides an interim synthesis of the mathematical (1-12) and physical (13-15) foundations of the KMR-L theory._
-Используйте код с осторожностью.
 
 
 
