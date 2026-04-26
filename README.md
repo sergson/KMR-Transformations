@@ -22,17 +22,24 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_arithmetic_addition_subtraction.md  # Extension to arithmetic: addition and subtraction (Section 10)
 ├── kmr_chain_notation_convention.md        # Chain Notation and Left-Associativity Convention (Section 12)
 ├── kmr_tunneling_extraction.md             # Tunneling Property and Element Extraction in KMR Chains (Section 11)
-├── kmr_formulas_reference.md               # Properties and Formulas Reference (handbook)
-├── kmr_operations.py                       # Core KMR operations implementation
-├── kmr_chains.py                           # Abstract chain space implementation
-├── kmr_chains_operations_by_id.py          # Chain space ID-based chain operations
-├── kmr_chains_operations_func.py           # Chain space functional operations extension
-├── kmr_chains_operations_init.py           # Chain space operations initialization
 ├── kmr_prilosophical_KMR-L.md	            # Relational Ontology of KMR-L: An Interim Synthesis (Section 16)
-├── kmr_tunneling.py                        # Tunneling and Extraction implementation
+├── kmr_formulas_reference.md               # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                              # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                                 # License for CODE (GPL 3.0)
+├── src/
+│	├── kmr_operations.py                   # Core KMR operations implementation
+│	├── kmr_chains.py                       # Abstract chain space implementation
+│	├── kmr_chains_operations_by_id.py      # Chain space ID-based chain operations
+│	├── kmr_chains_operations_func.py       # Chain space functional operations extension
+│	├── kmr_chains_operations_init.py       # Chain space operations initialization
+│	├── kmr_tunneling.py                    # Tunneling and Extraction implementation
 ├── tests/                                  # Framework tests
+│	├──algebra_test_suite.py				# Demonstrating KMR operator algebra and comparing it with classical
+│	├──algebra_test_suite.md				# Results of test KMR operator algebra and comparing it with classical
+│	├──extraction_test_suite.py				# Comprehensive test suite for KMR element extraction functions
+│	├──extraction_test_suite.md				# Results of comprehensive test suite for KMR element extraction functions
+│	├──tunneling_test_suite.py				# Test suite for KMR tunneling operations through KMRChainSpace
+│	├──tunneling_tests_suite.md				# Results of test suite for KMR tunneling operations through KMRChainSpace
 └── examples/                               # Usage examples
 	├── example_usage.py                    # Core KMR operations example
 	├── example_quick_start.py              # Chain space functional example
