@@ -27,7 +27,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
-├── src/
+├── src/											# Source code for KMR
 │	├── kmr_operations.py               		    # Core KMR operations implementation
 │	├── kmr_chains.py                    	  	    # Abstract chain space implementation
 │	├── kmr_chains_operations_by_id.py    			# Chain space ID-based chain operations
