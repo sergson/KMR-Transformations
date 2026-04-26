@@ -28,6 +28,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── kmr_chains_operations_by_id.py          # Chain space ID-based chain operations
 ├── kmr_chains_operations_func.py           # Chain space functional operations extension
 ├── kmr_chains_operations_init.py           # Chain space operations initialization
+├── kmr_prilosophical_KMR-L.md	            # Relational Ontology of KMR-L: An Interim Synthesis (Section 16)
 ├── kmr_tunneling.py                        # Tunneling and Extraction implementation
 ├── LICENSE-СС                              # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                                 # License for CODE (GPL 3.0)
