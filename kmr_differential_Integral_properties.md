@@ -240,7 +240,7 @@ def kmr_derivative(A: float, K: float, order: int = 1) -> float:
         raise NotImplementedError("Higher derivatives via recursion")
 
 def kmr_integral(A: float, K1: float, K2: float) -> float:
-    """Compute definite integral ∫_{K1}^{K2} (A ⊙ t) dt.
+    """Compute definite integral ∫_{K1}^{K2} (A ⊙ t), dt.
     
  Args:
         A: Initial value (A ≠ 0)
