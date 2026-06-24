@@ -79,8 +79,13 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.3.2 |
 | $A_k = \frac{1}{X ⊘ A_n ⊘ A_{n-1} ⊘ \dots ⊘ A_{k+1}} - \frac{1}{A_1 ⊙ A_2 ⊙ \dots ⊙ A_{k-1}} $ | Extract intermediate element ($1 < k < n$) | 11.3.4 |
 | $A_n = X^{-1} - Z^{-1}, Z = A_1 ⊙ ... ⊙ A_{n-1}$ | Extracting the Last Element| 11.3.1 |
+| **10b. Power Functions (Exponential Chains)**| | |
+| $\mathcal{E}_{A}(X) = \left( X \oslash A^{-1} \right)^{-1}$ | Parameter extraction | 17.1|
+| $K^2 = \Bigl( \bigl( A \odot \underbrace{K \odot K \odot \cdots \odot K}_{K \text{ times}} \bigr) \oslash A^{-1} \Bigr)^{-1}$ | Integer square chain | 17.2 |
+| $K^n = \Bigl( \bigl( A \odot \underbrace{K \odot K \odot \cdots \odot K}_{K^{n-1} \text{ times}} \bigr) \oslash A^{-1} \Bigr)^{-1}$ | Higher power chain | 17.3 |
+| $K^r = \mathcal{E}_{A}\bigl( A \odot (K^r) \bigr)$ | Real extension | 17.4 |
 | **11. Derived Identities from Composition** | | |
-| $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K + C + KAC$ | Composition identity for direct operators | 14.8.4.1 |
+| $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = \frac{K + A + KAC}{1+AC}$ | Composition identity for direct operators | 14.8.4.1 |
 | $\left( \left( (A ⊙ K) ⊘ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K - (A ⊙ C)$ | Composition identity for mixed operators | 14.8.4.2 |
 | $\left( \left( (A ⊘ K) ⊙ (A ⊘ C) \right) ⊘ A^{-1} \right)^{-1} = (A ⊘ C) - K$ | Composition identity for inverse operators | 14.8.4.3 |
 | **12. Special Cases and Limits** | | |
