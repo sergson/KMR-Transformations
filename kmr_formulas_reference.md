@@ -71,6 +71,7 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A ⊙ (K \cdot (D + F)) = \left( A ⊙ (K \cdot D) \right) ⊙ (K \cdot F)$ | Decomposition theorem | 14.3 |
 | $A ⊙ (K \cdot C) = A ⊙ K ⊙ (K \cdot (C-1))$ | Recursive form | 14.3 |
 | $A ⊙ (K \cdot C) = \underbrace{((A ⊙ K) ⊙ K) \dots ⊙ K}_{C \text{ times}}$ | Iteration decomposition | 14.5 |
+| $K^2 = \Bigl( \bigl( (A \odot \underbrace{K \odot \cdots \odot K}_{D \text{ times}}) \odot (K \cdot F) \bigr) \oslash A^{-1} \Bigr)^{-1}$ | Real square decomposition ($K = D + F$) | 14.8.5.1 |
 | **9. Tunneling Properties** | | |
 | $Y ⊙ X ⊘ Y^{-1} = X^{-1}$ | General tunneling property | 11.1 |
 | $X^{-1} = 1 ⊙ X ⊘ 1^{-1}$ | Special case of tunneling with Y=1| 11.2.4 |
@@ -79,11 +80,12 @@ This document provides a comprehensive reference of all properties and formulas 
 | $A_1 = X ⊘ A_n ⊘ \dots ⊘ A_2$ | Extract first element from chain | 11.3.2 |
 | $A_k = \frac{1}{X ⊘ A_n ⊘ A_{n-1} ⊘ \dots ⊘ A_{k+1}} - \frac{1}{A_1 ⊙ A_2 ⊙ \dots ⊙ A_{k-1}} $ | Extract intermediate element ($1 < k < n$) | 11.3.4 |
 | $A_n = X^{-1} - Z^{-1}, Z = A_1 ⊙ ... ⊙ A_{n-1}$ | Extracting the Last Element| 11.3.1 |
-| $\mathcal{E}_{A}(X) = \left( X \oslash A^{-1} \right)^{-1}$ | Parameter extraction | 17.1 |
+| $\mathcal{E}_{A}(X) = \left( X ⊘ A^{-1} \right)^{-1}$ | Parameter extraction operator | 17.1 |
 | **10b. Power Functions (Exponential Chains)** | | |
 | $K^2 = \Bigl( \bigl( A \odot \underbrace{K \odot K \odot \cdots \odot K}_{K \text{ times}} \bigr) \oslash A^{-1} \Bigr)^{-1}$ | Integer square chain | 17.2 |
 | $K^n = \Bigl( \bigl( A \odot \underbrace{K \odot K \odot \cdots \odot K}_{K^{n-1} \text{ times}} \bigr) \oslash A^{-1} \Bigr)^{-1}$ | Higher power chain | 17.3 |
 | $K^r = \mathcal{E}_{A}\bigl( A \odot (K^r) \bigr)$ | Real extension | 17.4 |
+| $A \odot K^{r} = \bigl( A \odot K^{n} \bigr) \odot \Delta_{\text{flow}}$ | Spectral isomorphic relation ($\Delta_{\text{flow}} = K^{r} - K^{n}$) | 17.4 |
 | **11. Derived Identities from Composition** | | |
 | $\left( \left( (A ⊙ K) ⊙ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = \frac{K + A + KAC}{1 + AC}$ | Composition identity for direct operators | 14.8.4.1 |
 | $\left( \left( (A ⊙ K) ⊘ (A ⊙ C) \right) ⊘ A^{-1} \right)^{-1} = K - (A ⊙ C)$ | Composition identity for mixed operators | 14.8.4.2 |
