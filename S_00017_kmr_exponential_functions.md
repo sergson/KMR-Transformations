@@ -4,6 +4,9 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 
 # 17. KMR Chains of Power Functions
 
+**Author**: Sergei Terikhov  
+**Date**: 24.06.2026  
+
 Building on the arithmetic framework of Section 14, this section develops a purely relational construction of integer powers $K^n$ and their extension to real exponents. The approach uses the iterative multiplication method, showing that polynomial powers emerge from repeated application of a single KMR operator, without introducing any external arithmetic operations.
 
 ---
