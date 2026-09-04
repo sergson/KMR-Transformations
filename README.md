@@ -26,6 +26,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── S_00015_KRM_Ergodicity Proof.md		   		    # Ergodicity of the Continuous KMR Flow in Compact Spaces (Section 15)
 ├── S_00016_kmr_prilosophical_KMR-L.md	            # Relational Ontology of KMR-L: An Interim Synthesis (Section 16)
 ├── S_00017_kmr_exponential_functions.md            # KMR Chains of Power Functions (Section 17)
+├── S_00018_kmr_squaring_examples_z_r.md            # Practical Examples of KMR Applications for Natural and Real Numbers (Section 18)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
