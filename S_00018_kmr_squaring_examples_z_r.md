@@ -2,6 +2,15 @@
 License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->
 
+### For Theoretical Content
+- All mathematical formulations and documentation must be licensed under **CC BY-SA 4.0**
+- When adding new theoretical content, include the header:
+```markdown
+<!-- 
+License: CC BY-SA 4.0 (see LICENSE-CC.md)
+-->
+```
+
 # 18. Practical Examples of KMR Applications for Natural and Real Numbers: The Musical Notation Analogy (Corrected Version)
 
 **Author**: Sergei Terikhov  
