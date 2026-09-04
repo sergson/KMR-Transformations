@@ -11,7 +11,7 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->
 ```
 
-# 18. Practical Examples of KMR Applications for Natural and Real Numbers: The Musical Notation Analogy (Corrected Version)
+# 18. Practical Examples of KMR Applications for Natural and Real Numbers: The Musical Notation Analogy
 
 **Author**: Sergei Terikhov  
 **Date**: 05.09.2026  
