@@ -34,6 +34,7 @@ During the squaring sequence, the state of the chain is built up solely by seque
 
 **Example of Operator Interaction:**  
 If the final internal state of a chain is $X = \frac{1}{10}$ given a baseline state $A = 1$, the action of the cleaner $\mathcal{E}_1(X)$ maps it onto the linear plan as follows:
+
 $$
 \mathcal{E}_{1}\left(\frac{1}{10}\right) 
 = \left( \frac{1}{10} \oslash 1 \right)^{-1} 
@@ -41,6 +42,7 @@ $$
 = \left(\frac{1}{9}\right)^{-1} 
 = 9.
 $$
+
 The resulting linear scalar value 9 confirms that the underlying KMR chain has accurately constructed the square of number 3.
 
 ---
@@ -88,11 +90,13 @@ For the sake of step visibility, let us use a coarse density of $M = 10$. The to
 2. Micro‑tact 2: $\frac{1}{1.37} \odot 0.37 = \frac{1/1.37}{1 + 0.37\cdot(1/1.37)} = \frac{1}{1 + 2 \cdot 0.37} = \frac{1}{1.74}$
 3. ...
 4. Micro‑tact 37: The final state of the chain after 37 micro‑steps evaluates to  
-   $$
-   \frac{1}{1 + 37 \cdot 0.37 \cdot 1} = \frac{1}{1 + 13.69} = \frac{1}{14.69}.
-   $$
+
+$$
+\frac{1}{1 + 37 \cdot 0.37 \cdot 1} = \frac{1}{1 + 13.69} = \frac{1}{14.69}.
+$$
 
 We apply the extraction operator $\mathcal{E}_1(1/14.69)$ to verify the accumulated value:
+
 $$
 \mathcal{E}_{1}\left(\frac{1}{14.69}\right) 
 = \left( \frac{1}{14.69} \oslash 1 \right)^{-1} 
@@ -100,6 +104,7 @@ $$
 = \left(\frac{1}{13.69}\right)^{-1} 
 = 13.69.
 $$
+
 This linear scalar is precisely $K^2 = 3.7^2 = 13.69$. The intrinsic KMR chain has successfully produced the square without any classical multiplication.
 
 ### 18.2.3 Notes MIE and FA (The Infinite Square of Periodic and Irrational Realities $\mathbb{R} \setminus \mathbb{Q}$)
@@ -113,9 +118,11 @@ The fundamental value of the KMR axis lies in its finite-dimensional boundary ma
 * The micro‑step size remains $dt = K/M = \sqrt{2} \cdot 10^{-6}$.
 * The number of steps is then approximated by the integer $\text{round}(K \cdot M) = \text{round}(\sqrt{2} \times 10^6) = 1\,414\,214$.
 * The accumulated parameter becomes approximately  
-  $$
-  \text{round}(K M) \cdot dt \approx K M \cdot \frac{K}{M} = K^2,
-  $$
+
+$$
+\text{round}(K M) \cdot dt \approx K M \cdot \frac{K}{M} = K^2,
+$$
+  
   with a relative error of order $1/(K M)$, which can be made arbitrarily small by increasing $M$.
 
 By pre‑setting this finite‑dimensional regulator (the bar‑line), the system halts the endless decomposition of counting rods. The chain runs through a finite, predictable sequence of steps within the smooth fabric of the space and yields a stable square projection (e.g., $(\sqrt{2})^2 \approx 2$) as a balanced geometric curve, never escaping into a destructive singularity loop.
