@@ -13,6 +13,9 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 
 # 18. KMR Representation of Zero and Subtraction: Deformation of Classical Arithmetic and Generation of New Equations
 
+**Author**: Sergei Terikhov  
+**Date**: 02.10.2026  
+
 ## Abstract
 
 This paper investigates a property of KMR operators that allows the classical subtraction $t - 0$ to be represented as the difference of inverted KMR images. It is shown that in the KMR algebra, zero is not a neutral element in the classical sense: it is “remembered” as a nonzero quantity $1/A$, which cancels only upon subtraction. The parameter $A$ controls the degree of deformation, and the value $A = 1$ corresponds to degeneration into classical arithmetic. It is proposed to consider this as a one-parameter family of algebras and to pose the inverse problem: find $A$ such that a KMR expression coincides with a given classical identity. This opens a path to the generation of new equations.
