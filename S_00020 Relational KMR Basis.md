@@ -29,7 +29,7 @@ $$
 \alpha(f(x)) = \alpha(x) + 1
 $$
 
-linearizes an iterative process by mapping a nonlinear step \(f\) into an additive shift \(+1\) in the coordinate \(\alpha\). For a continuous parameter \(t \in \mathbb{R}\):
+linearizes an iterative process by mapping a nonlinear step $\(f\)$ into an additive shift $\(+1\)$ in the coordinate $\(\alpha\)$. For a continuous parameter $\(t \in \mathbb{R}\)$:
 
 $$
 f^{t}(x) = \alpha^{-1}(\alpha(x) + t).
