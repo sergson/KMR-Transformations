@@ -170,7 +170,7 @@ The coordinate $t$ is no longer a distance along a pre-existing line — it is t
 
 ---
 
-## 20.6. Infinite Chains: The Continued Fraction as a Self-Referential Chain
+## 20.6. Infinite Chains: The Self-referential iteration as a Self-Referential Chain
 
 For the recursion
 
