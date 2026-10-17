@@ -11,128 +11,212 @@ License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->
 ```
 
-# 18. Practical Examples of KMR Applications for Natural and Real Numbers: The Musical Notation Analogy
-
+# 18. Practical Examples of KMR Applications for Natural and Real Numbers
 **Author**: Sergei Terikhov  
-**Date**: 05.09.2026  
+**Date**: 05.09.2026
 
-This section translates the power function cascades from Section 17 into a practical application framework for natural and real numbers. Using the squaring operation as a primary reference, we introduce an intuitive analogy with musical notation (musical rehearsals). Within this framework, familiar number spaces are separated into clean, isolated object classes, and all computations are executed natively without relying on classical external multiplication.
+## Abstract
 
-**Key correction in this version:** In the original formulation, a uniform micro‑tact $dt = 1/M$ was used with $K \cdot M$ steps, which erroneously produced $K$ instead of $K^2$. The corrected model defines the micro‑tact as $dt = K/M$, so that after $K \cdot M$ steps the total accumulated parameter equals $K \cdot M \cdot (K/M) = K^2$.
+This note is a companion to S_00017 (§17.1–§17.3), where the KMR squaring operator is derived and proved. Here we restate the general formula in a form that works uniformly for natural and real $K$, and verify it on two worked examples ($3^2=9$ and $3.7^2=13.69$). No new theory is introduced; the note serves as a set of exercises ("warm-ups") for readers who want to check the chain arithmetic by hand. The operator $E_A$ and the chain operations $\odot,\oslash$ are exactly those of S_00017 and S_00020.
 
 ---
 
-## 18.1 Verification Tool: The Extraction Operator $\mathcal{E}_A$ in Squaring Cascades
+## 18.1. Setup (recall from S_00017)
 
-To map internal KMR states back onto the classical linear plan, we utilize the extraction property introduced in Section 17.1:
-
-$$\mathcal{E}_{A}(X) = \left( X \oslash A^{-1} \right)^{-1}.$$
-
-This operator does not disrupt the intrinsic geometry of the KMR chain. It is used exclusively to improve human perception: at any moment, we can open "the door to the room" and translate the accumulated structural pattern into a familiar scalar value on a flat axis.
-
-During the squaring sequence, the state of the chain is built up solely by sequentially applying the direct operator ($\odot$), while the extraction operator $\mathcal{E}_A$ serves to confirm the accuracy of the structural mapping on the linear plan.
-
-**Example of Operator Interaction:**  
-If the final internal state of a chain is $X = \frac{1}{10}$ given a baseline state $A = 1$, the action of the cleaner $\mathcal{E}_1(X)$ maps it onto the linear plan as follows:
+We use the two chain operations of the KMR basis:
 
 $$
-\mathcal{E}_{1}\left(\frac{1}{10}\right) 
-= \left( \frac{1}{10} \oslash 1 \right)^{-1} 
-= \left( \frac{1/10}{1 - 1/10} \right)^{-1} 
-= \left(\frac{1}{9}\right)^{-1} 
+A \odot K = \frac{A}{1+KA},
+\qquad
+A \oslash K = \frac{A}{1-KA},
+$$
+
+and the extraction operator with anchor $A$:
+
+$$
+E_A(X) = \bigl(X \oslash A^{-1}\bigr)^{-1}
+= \frac{1}{X} - \frac{1}{A}
+= \frac{A - X}{A\,X}.
+$$
+
+In the Abel coordinate $\alpha(X) = 1/X$ this reads $E_A(X) = \alpha(X) - \alpha(A)$: the extraction returns the Abel distance from $X$ back to the anchor $A$. The case $A=1$ used throughout S_00017 and below is the special case
+
+$$
+E_1(X) = \frac{1}{X} - 1 = \frac{1-X}{X}.
+$$
+
+The identity to be exercised is the **squaring formula** of S_00017, §17.2, written here in a form that covers both integer and non-integer $K$.
+
+**Squaring formula.** For any $K>0$ and any integer $M\ge 1$ such that $KM\in\mathbb{N}$, let
+
+$$
+dt = \frac{K}{M},
+\qquad
+n = K M,
+$$
+
+and iterate the direct chain $n$ times starting from $x_0 = 1$:
+
+$$
+x_n = \underbrace{1 \odot dt \odot dt \odot \cdots \odot dt}_{n\ \text{times}}.
+$$
+
+Then
+
+$$
+x_n = \frac{1}{1 + K^2},
+\qquad
+E_1(x_n) = K^2.
+$$
+
+**Verification of the closed form.** By the homogeneous collapse law of S_00020 (§20.4), $n$ direct steps with parameter $dt$ equal one step with parameter $n\,dt$:
+
+$$
+x_n = 1 \odot (n\,dt) = \frac{1}{1 + n\,dt}.
+$$
+
+Since $n\,dt = (KM)\cdot(K/M) = K^2$, we get $x_n = 1/(1+K^2)$. Applying $E_1$:
+
+$$
+E_1\left(\frac{1}{1+K^2}\right)
+= \frac{1 - 1/(1+K^2)}{1/(1+K^2)}
+= K^2.
+$$
+
+The integer case of S_00017, §17.2 corresponds to $M=1$, i.e. $dt = K$ and $n = K$ steps. The condition $KM\in\mathbb{N}$ is automatic when $K$ is rational and $M$ is a multiple of its denominator; this is why the real example below uses $K=3.7=37/10$ with $M=10$.
+
+---
+
+## 18.2. Example 1: $K = 3$ (integer, $M = 1$)
+
+Take $dt = 3$ and $n = 3$ steps. The chain is
+
+$$
+x_0 = 1,
+\qquad
+x_1 = 1 \odot 3 = \frac{1}{4},
+\qquad
+x_2 = \frac{1}{4} \odot 3 = \frac{1}{7},
+\qquad
+x_3 = \frac{1}{7} \odot 3 = \frac{1}{10}.
+$$
+
+Extraction:
+
+$$
+E_1\left(\frac{1}{10}\right)
+= \frac{1 - 1/10}{1/10}
 = 9.
 $$
 
-The resulting linear scalar value 9 confirms that the underlying KMR chain has accurately constructed the square of number 3.
+So $3^2 = 9$, as expected.
 
 ---
 
-## 18.2 A New Model for Squaring: Monotone KMR Rehearsals
+## 18.3. Example 2: $K = 3.7$ (real, $M = 10$)
 
-Instead of an abstract coordinate axis made of static, immovable points, we propose **a new representation of the numeric axis as a monotone sequence of KMR transformations**. A number is replaced by a live process where each step is a KMR transformation acting on a fixed fraction of the previous result. The size of each micro‑step is chosen to be proportional to the object itself ($dt = K/M$), ensuring that after exactly $K \cdot M$ steps the system has accumulated the parameter $K^2$.
+Take $dt = 3.7/10 = 0.37$ and $n = 37$ steps. Rather than listing all 37 iterates, we use the closed form directly and then confirm on a short prefix.
 
-In this model, the squaring operation is a completed, self‑contained rhythmic loop where an object reproduces itself over a duration equal to its own intrinsic scale. Each distinct number domain is represented by its own clean class of musical monophones.
-
-```text
-                       KMR SQUARING REHEARSAL MATRIX
-                     
-  [ Note DO: Square N² ] ──────► [ Note RE: Square K² ] ──────► [ Notes MIE/FA: Infinite Square ]
-  Discrete pulse-beat             Smooth micro-tact stream       Infinite chain sequence
-  Example: 3 tacts at dt=N        Example: 37 micro-steps at dt=K/M  Regulated via partition constant (M)
-```
-
-### 18.2.1 Note DO (Squaring Natural Numbers $\mathbb{Z}^+$)
-
-Note DO represents the class of natural numbers. It is a space of discrete, highly defined beats. Here, the object is reproduced as a uniform rhythm where each step equals the full operational tact, and the length of the chain exactly matches the scale of the object itself.
-
-* **Input Configuration:** Baseline $A = 1$, object $N = 3$.  
-* **Process Dynamics:** Note DO (scale of 3) sounds for exactly 3 sequential tacts. Since $dt = N$ and $M = 1$, the number of steps is $N \cdot M = N$.
-
-**Numerical Example of Chain Construction:**
-1. Tact 1: $1 \odot 3 = \frac{1}{1 + 3\cdot1} = \frac{1}{4}$
-2. Tact 2: $\frac{1}{4} \odot 3 = \frac{1/4}{1 + 3\cdot(1/4)} = \frac{1}{7}$
-3. Tact 3: $\frac{1}{7} \odot 3 = \frac{1/7}{1 + 3\cdot(1/7)} = \frac{1}{10}$
-
-The chain halts. Verifying via the extraction operator $\mathcal{E}_1(1/10)$ yields the precise value of $9$, proving that the structural rhythm corresponds to $3^2$.
-
-### 18.2.2 Note RE (Squaring Finite Real Numbers $\mathbb{Q}$)
-
-Note RE represents the class of real numbers that can be expressed as finite (terminating) fractions (e.g., $3.7$). Instead of hybrid blending (mixing three full tacts with a broken piece of a fourth), we introduce a logical transition: we preserve the fundamental tact but quantize it into $M$ microscopic parts. **Crucially, the size of each micro‑tact is not universal, but is set proportional to the object’s scale:** $dt = K/M$. For large values of $M$, the discrete beats dissolve into a smooth, continuous flow, and after exactly $K \cdot M$ steps the accumulated parameter equals $K^2$.
-
-* **Input Configuration:** Baseline $A = 1$, object $K = 3.7$, tact partitions $M = 10$.  
-* **Micro‑step size:** $dt = K/M = 3.7/10 = 0.37$.  
-* **Number of steps:** $K \cdot M = 3.7 \cdot 10 = 37$.  
-* **Process Dynamics:** The stream of Note RE smoothly slides along the composition axis for exactly 37 micro‑steps, each of size 0.37.
-
-**Numerical Example of Stream Construction:**
-For the sake of step visibility, let us use a coarse density of $M = 10$. The total duration $K = 3.7$ translates into $3.7 \cdot 10 = 37$ identical micro‑steps, each of size $dt = 0.37$. The algorithm does not branch or split the integer core from the fractional tail; the process is perfectly monotone:
-1. Micro‑tact 1: $1 \odot 0.37 = \frac{1}{1 + 0.37\cdot1} = \frac{1}{1.37}$
-2. Micro‑tact 2: $\frac{1}{1.37} \odot 0.37 = \frac{1/1.37}{1 + 0.37\cdot(1/1.37)} = \frac{1}{1 + 2 \cdot 0.37} = \frac{1}{1.74}$
-3. ...
-4. Micro‑tact 37: The final state of the chain after 37 micro‑steps evaluates to  
+**Closed form.** $n\,dt = 37 \cdot 0.37 = 13.69$, so
 
 $$
-\frac{1}{1 + 37 \cdot 0.37 \cdot 1} = \frac{1}{1 + 13.69} = \frac{1}{14.69}.
+x_{37} = \frac{1}{1 + 13.69} = \frac{1}{14.69}.
 $$
 
-We apply the extraction operator $\mathcal{E}_1(1/14.69)$ to verify the accumulated value:
+**Prefix check** (first three steps, to confirm the recursion matches the closed form):
 
 $$
-\mathcal{E}_{1}\left(\frac{1}{14.69}\right) 
-= \left( \frac{1}{14.69} \oslash 1 \right)^{-1} 
-= \left( \frac{1/14.69}{1 - 1/14.69} \right)^{-1} 
-= \left(\frac{1}{13.69}\right)^{-1} 
+x_0 = 1,
+\qquad
+x_1 = 1 \odot 0.37 = \frac{1}{1.37},
+\qquad
+x_2 = \frac{1}{1.37} \odot 0.37 = \frac{1}{1.74},
+\qquad
+x_3 = \frac{1}{1.74} \odot 0.37 = \frac{1}{2.11}.
+$$
+
+Indeed $x_k = 1/(1 + 0.37\,k)$ for $k=0,1,2,3$, and at $k=37$ this gives $x_{37} = 1/(1+13.69)$, as claimed.
+
+**Extraction.**
+
+$$
+E_1\left(\frac{1}{14.69}\right)
+= \frac{1 - 1/14.69}{1/14.69}
+= 14.69 - 1
 = 13.69.
 $$
 
-This linear scalar is precisely $K^2 = 3.7^2 = 13.69$. The intrinsic KMR chain has successfully produced the square without any classical multiplication.
-
-### 18.2.3 Notes MIE and FA (The Infinite Square of Periodic and Irrational Realities $\mathbb{R} \setminus \mathbb{Q}$)
-
-When the operational parameter is a periodic fraction (Note MIE, such as $K = 1/3 = 0.333...$) or an irrational number (Note FA, such as $K = \sqrt{2} \approx 1.414...$), computing the square exactly would require an infinite chain because the number of steps $K \cdot M$ is not an integer for any finite $M$. This triggers an **infinite chain phenomenon** if one insists on perfect precision.
-
-**Initial Partition Configuration as a Boundary Limiter:**  
-The fundamental value of the KMR axis lies in its finite-dimensional boundary matching the physical world. To avoid an infinite computational loop, it is crucial to establish an **initial fixed partition constant $M$** before the calculation starts. This initialization step acts as a baseline limit of the observer’s analytical capability—conceptually similar to the Planck constant in physical systems.
-
-* While Note RE required only $M = 10$ or $M = 1000$ to close its chain exactly (because $K$ was a terminating decimal), an irrational Note FA ($K = \sqrt{2}$) requires us to enforce a strict observation limit, for instance, $M = 10^6$.
-* The micro‑step size remains $dt = K/M = \sqrt{2} \cdot 10^{-6}$.
-* The number of steps is then approximated by the integer $\text{round}(K \cdot M) = \text{round}(\sqrt{2} \times 10^6) = 1\,414\,214$.
-* The accumulated parameter becomes approximately  
-
-$$
-\text{round}(K M) \cdot dt \approx K M \cdot \frac{K}{M} = K^2,
-$$
-  
-  with a relative error of order $1/(K M)$, which can be made arbitrarily small by increasing $M$.
-
-By pre‑setting this finite‑dimensional regulator (the bar‑line), the system halts the endless decomposition of counting rods. The chain runs through a finite, predictable sequence of steps within the smooth fabric of the space and yields a stable square projection (e.g., $(\sqrt{2})^2 \approx 2$) as a balanced geometric curve, never escaping into a destructive singularity loop.
+So $3.7^2 = 13.69$, as expected.
 
 ---
 
-## 18.3 Summary Map of KMR Squaring Rehearsals
+## 18.4. Why the two examples differ in step count
 
-| Note | Numeric Class | Axis Computation Pattern | Resolution & Boundary Method |
-| :--- | :--- | :--- | :--- |
-| **DO** | Natural Numbers | Discrete pulse-beat of $N$ full tacts with $dt=N$ | Terminated by the final step $N$. Projection: $N^2$ |
-| **RE** | Finite Real Numbers | Continuous stream of $M$ micro-steps, each of size $dt = K/M$ | Terminated by the stream duration $K \cdot M$ (integer). Projection: $K^2$ |
-| **MIE / FA** | Periodic & Irrational | Infinite cascading micro-step chain with $dt = K/M$ | Bound by the initial partition constant $M$ (Planck limit); number of steps $\approx \text{round}(K M)$; projection $\approx K^2$ |
+| Case | $K$ | $M$ | $dt = K/M$ | $n = KM$ | $n\,dt$ |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Integer | $3$ | $1$ | $3$ | $3$ | $9$ |
+| Real | $3.7$ | $10$ | $0.37$ | $37$ | $13.69$ |
+
+The integer case uses one large step per unit of $K$; the real case uses ten small steps per unit. Both are instances of the same squaring formula: what matters is the product $n\,dt = K^2$, not the individual values of $n$ and $dt$. This is the homogeneous collapse law of S_00020 in action: the chain length and the step size are interchangeable, and the invariant is their product.
+
+---
+
+## 18.5. Remarks on the choice of $M$
+
+The parameter $M$ is free. Larger $M$ gives a finer discretization and a longer chain, but the final result $E_1(x_n) = K^2$ is independent of $M$ — provided $n = KM$ and $dt = K/M$ are chosen consistently. Choosing $M$ poorly (for example, $M = 1$ with non-integer $K$) makes $n = KM$ non-integer and breaks the discrete iteration; the formula therefore requires $KM \in \mathbb{N}$, which is automatic when $K$ is rational and $M$ is a multiple of its denominator.
+
+This is why the integer case is treated with $M=1$: for integer $K$, $KM = K$ is already an integer, so the coarsest chain suffices. For $K = 3.7 = 37/10$, the smallest admissible $M$ is $10$, giving $n = 37$.
+
+---
+
+## 18.6. Conclusion
+
+The squaring formula of S_00017, §17.2, extends verbatim to real $K$ by choosing $dt = K/M$ and $n = KM$:
+
+$$
+E_1\left(1 \odot \underbrace{\tfrac{K}{M} \odot \cdots \odot \tfrac{K}{M}}_{KM\ \text{times}}\right) = K^2.
+$$
+
+The two worked examples ($3^2 = 9$ with $M=1$ and $3.7^2 = 13.69$ with $M=10$) confirm the formula by direct computation. No musical analogy, no numerical approximation of irrationals, no new operators: just the chain arithmetic of S_00017 and S_00020 applied to two concrete cases.
+
+---
+
+## 18.7. Python check
+
+```python
+"""
+Companion check for S_00018.
+Uses the chain operations of S_00017 / S_00020.
+License: GPL 3.0 (see LICENSE)
+"""
+
+from __future__ import annotations
+
+
+def chain_direct(a: float, k: float) -> float:
+    return a / (1.0 + k * a)
+
+
+def extract(a: float, x: float) -> float:
+    """E_A(X) = (X oslash A^{-1})^{-1} = (1 - X/A) / (X/A)."""
+    return (1.0 - x / a) / (x / a)
+
+
+def square_via_chain(k: float, m: int = 1) -> float:
+    """K^2 via n = K*M direct steps with dt = K/M, then extract with A=1."""
+    dt = k / m
+    n = int(round(k * m))
+    x = 1.0
+    for _ in range(n):
+        x = chain_direct(x, dt)
+    return extract(1.0, x)
+
+
+if __name__ == "__main__":
+    assert abs(square_via_chain(3.0, 1) - 9.0) < 1e-12
+    assert abs(square_via_chain(3.7, 10) - 13.69) < 1e-10
+    print("3^2   =", square_via_chain(3.0, 1))
+    print("3.7^2 =", square_via_chain(3.7, 10))
+```
+
+
