@@ -2,6 +2,15 @@
 License: CC BY-SA 4.0 (see LICENSE-CC.md)
 -->
 
+### For Theoretical Content
+- All mathematical formulations and documentation must be licensed under **CC BY-SA 4.0**
+- When adding new theoretical content, include the header:
+```markdown
+<!-- 
+License: CC BY-SA 4.0 (see LICENSE-CC.md)
+-->
+```
+
 # 20. Relational KMR Basis: Chain Algebra and the Iterator Paradigm
 **Author**: Sergei Terikhov  
 **Date**: 18.10.2026
