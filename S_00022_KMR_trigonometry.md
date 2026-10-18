@@ -128,7 +128,7 @@ Trigonometry is not an external import. It is what the KMR chain looks like when
 | Components | $\mathop{\mathrm{Re}} z = \dfrac{u}{u^2+t^2},\; \mathop{\mathrm{Im}} z = -\dfrac{t}{u^2+t^2}$ |
 | Circle radius | $R = \dfrac{1}{2u}$ |
 | Projections | $\cos t = \dfrac{u}{\sqrt{u^2+t^2}},\; \sin t = \dfrac{t}{\sqrt{u^2+t^2}}$ |
-| Euler form | $z/|z| = e^{-i\arctan(t/u)}$ |
+| Euler form | $z/\lvert z \rvert = e^{-i\arctan(t/u)}$ |
 
 ## 22.7. Python Reference
 
