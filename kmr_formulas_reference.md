@@ -148,7 +148,7 @@ This document provides a comprehensive reference of all properties and formulas 
 | $\left( \mathop{\mathrm{Re}} z - \frac{1}{2u} \right)^2 + (\mathop{\mathrm{Im}} z)^2 = \left( \frac{1}{2u} \right)^2$ | Circle invariant in the complex plane | 22.2 |
 | $R = \frac{1}{2u}$ | Radius of the complex circle | 22.2 |
 | $\cos t = \frac{u}{\sqrt{u^2 + t^2}}, \quad \sin t = \frac{t}{\sqrt{u^2 + t^2}}$ | Sine and cosine as rational projections of the flow | 22.3 |
-| $\frac{z(t)}{|z(t)|} = e^{-i\arctan(t/u)}$ | Euler's formula as polar form of the chain | 22.4 |
+| $\frac{z(t)}{\lvert z(t) \rvert} = e^{-i\arctan(t/u)}$ | Euler's formula as polar form of the chain | 22.4 |
 
 ---
 
@@ -187,9 +187,11 @@ for $A \neq 0$ and small $\varepsilon$. (Section 9.4)
 
 ### Theorem 4 (Decomposition Theorem)
 For any $A \neq 0$, $K \in \mathbb{R}$, and $D, F \in \mathbb{R}^+$:
-\[
+
+$$
 A ⊙ (K \cdot (D + F)) = \left( A ⊙ (K \cdot D) \right) ⊙ (K \cdot F)
-\]
+$$
+
 This theorem enables fractional iteration and efficient computation by decomposing operations into integer and fractional components. (Section 14.3)
 
 ### Theorem 5 (Arithmetic Realization and Zero Deformation)
