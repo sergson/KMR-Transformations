@@ -178,7 +178,89 @@ $$
 
 ---
 
-## 21.4. What the Modulation Does and Does Not Buy
+## 21.4. Algebraic Structure and Expectations
+
+The modulations of §21.2 and §21.3 are built from the atomic pair
+
+$$
+f(x) = \frac{x}{1+x}, \qquad g(x) = \frac{x}{1-x},
+$$
+
+which are the two primitive chain operations of S_00020. Before stating what these modulations can and cannot produce, it is useful to recall the algebraic structure of this pair.
+
+### 21.4.1. The Abelian Atom and Its Linearization
+
+Both $f$ and $g$ are fractional-linear transformations, represented by the matrices
+
+$$
+f \sim \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix},
+\qquad
+g \sim \begin{pmatrix} 1 & 0 \\ -1 & 1 \end{pmatrix}.
+$$
+
+Their trace is $\tau = 2$ in both cases. In the classification of Möbius transformations by trace, a transformation is **parabolic** if $|\tau| = 2$, **elliptic** if $|\tau| < 2$, and **hyperbolic** if $|\tau| > 2$. The atomic pair is therefore strictly parabolic.
+
+Parabolic elements that share a common fixed point (here $x = 0$) commute and generate an Abelian subgroup isomorphic to $\mathbb{Z}$ (discrete parameters) or $\mathbb{R}$ (continuous parameters). The Abel function
+
+$$
+\alpha(x) = \frac{1}{x}, \qquad \alpha^{-1}(u) = \frac{1}{u},
+$$
+
+makes this isomorphism explicit: in the coordinate $u = 1/x$, the nonlinear steps become ordinary translations,
+
+$$
+\alpha(f(x)) = \alpha(x) + 1,
+\qquad
+\alpha(g(x)) = \alpha(x) - 1.
+$$
+
+A finite chain with constant parameters therefore collapses to a single translation
+
+$$
+u \mapsto u + \sum_i \pm K_i,
+$$
+
+and the group operation is plain addition in $\mathbb{R}$.
+
+### 21.4.2. Consequence: Monotonic Sequences
+
+The Abelian structure has a direct dynamical consequence. Any sequential chain built from $f$ and $g$ with **constant parameters** produces a trajectory that is **monotonic in the Abel coordinate $u$**, and therefore monotonic in $x$ except at the pole $u = 0$ (i.e. $x = \infty$).
+
+This is exactly what the 2D and 3D systems of §21.2 and §21.3 exhibit. In 2D, the invariant $u_1u_2 = C$ and the explicit exponential solutions
+
+$$
+u_1(t) = u_1(0)\, e^{t/C},
+\qquad
+u_2(t) = u_2(0)\, e^{-t/C}
+$$
+
+are the image, under the Abel isomorphism, of two opposite translations on a single Abelian orbit. In 3D, the linear invariant $u_1 + u_3 = C$ is the direct consequence of the cancellation of two opposite parabolic translations: $u_1$ and $u_3$ move in opposite directions with the same parameter $\kappa = 1/u_2$, and their sum is conserved.
+
+**Expectations.** The current modulation is therefore **monotonic by construction**. It produces:
+
+- exact closed forms (because the chain collapses to a translation);
+- linear or multiplicative invariants (because the group is Abelian);
+- monotonic trajectories in $u$-coordinates, with poles at $u=0$.
+
+It does **not** produce oscillations, chaos, or non-monotonic invariants. This is not a shortcoming of the specific equations chosen: it is a structural consequence of the parabolic, Abelian nature of the atomic pair. Any sequential chain of $f$ and $g$ with constant parameters will share this behavior.
+
+### 21.4.3. Toward Richer Dynamics
+
+The monotonicity above is the boundary of the current construction, not the boundary of the framework. Three routes lead beyond it, and each corresponds to a controlled modification of the atom or of its evaluation:
+
+1. **Dynamic parameters.** If the parameter $K_n$ depends on the state $x_n$ (as in the cross-modulated systems of §21.2–§21.3) or on the index $n$, the chain no longer collapses to a single translation. The Abel coordinate then satisfies $u_{n+1} = u_n + K_n$, whose solution is the partial sum $\sum K_n$ — still additive, but no longer a single shift. Periodic or polynomial $K_n$ produce non-monotonic trajectories in $x$ without leaving the real line.
+
+2. **A second generator from a different conjugacy class.** If one adds an elliptic generator ($|\tau| < 2$) or a hyperbolic one ($|\tau| > 2$) with a different fixed point, the generated group ceases to be Abelian. For generic choices, the group $\langle f, h \rangle$ is free of rank 2, with a fractal limit set — a genuinely non-monotonic, non-commutative structure. This is the route to new invariants that are neither linear nor multiplicative.
+
+3. **Complexification.** Replacing the real parameter $K$ by $K = it$ moves the atom into the elliptic class. The orbit becomes a circle, and classical trigonometry emerges (see S_00022). This is the route already explored in the companion paper.
+
+### 21.4.4. Open Search
+
+The modulations of §21.2 and §21.3 are therefore the **first rigorous step**, not the final word. They establish a baseline: a parabolic Abelian atom, evaluated sequentially with constant or state-dependent parameters, yields monotonic or piecewise-monotonic dynamics with linear or multiplicative invariants. Richer behavior requires one of the three modifications above, and the choice among them is a matter of design, not of necessity. The search for modulations that produce genuinely new invariants — spherical, spiral, or fractal — is open, and the algebraic framework of S_00020 provides the language in which that search can be carried out.
+
+---
+
+## 21.5. What the Modulation Does and Does Not Buy
 
 | Gain | Where it appears | Concrete form |
 | :--- | :--- | :--- |
@@ -198,26 +280,26 @@ What the modulation does **not** buy:
 
 ---
 
-## 21.5. Hypothesis on Symmetry of Ensemble and Time Series
+## 21.6. Hypothesis on Symmetry of Ensemble and Time Series
 
-### 21.5.1. Formulation
+### 21.6.1. Formulation
 
 Two limiting constructions are considered:
 
 1. **Spatial ensemble (dimensionality):** cascade $M \to \infty$ of conjugate inverse axes $u_1,\dots,u_M$ — a chain in dimension index.
 2. **Time series (iterations):** infinite iteration of a single operator $t \to \infty$ — a chain in time index.
 
-### 21.5.2. Observed Symmetry
+### 21.6.2. Observed Symmetry
 
 Both constructions are described by the same class of rational chain operators; both possess invariants of the form $\sum_i u_i = \text{const}$ (3D) or $u_1u_2=\text{const}$ (2D); both yield stable attractors in the macroscopic limit.
 
-### 21.5.3. Status
+### 21.6.3. Status
 
 **This is a hypothesis, not a theorem.** To elevate it to a rigorous result, one must (i) define an invariant measure on the phase space of KMR-M, (ii) prove metric transitivity of the flow on the invariant manifold, (iii) numerically confirm coincidence of temporal and spatial averages. Until then it remains a scientifically motivated heuristic.
 
 ---
 
-## 21.6. Conclusion
+## 21.7. Conclusion
 
 The paper explores two cross-modulated KMR chains. What is rigorous:
 
@@ -235,7 +317,7 @@ The design principle is explicit: **choose signs so that a linear relation in in
 
 ---
 
-## 21.7. Appendix: Summary
+## 21.8. Appendix: Summary
 
 | Object | Formula |
 | :--- | :--- |
@@ -246,7 +328,7 @@ The design principle is explicit: **choose signs so that a linear relation in in
 | 3D linear invariant | $u_1 + u_3 = C$ |
 | Failed spherical invariant | $u_1^2+u_2^2+u_3^2 \neq \text{const}$ |
 
-## 21.8. Python Reference
+## 21.9. Python Reference
 
 ```python
 """
