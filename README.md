@@ -18,15 +18,19 @@ are explicitly licensed under CC BY-SA 4.0.
 ```text
 .
 ├── S_00001_00008_kmr_paper.md             			# Core theory: primary exposition (Sections 1-8)
-├── S_00009_kmr_extension_to_fractioional.md    	# Extension to Fractional Compositions (Section 9)
+├── S_00009_kmr_extension_to_fractional.md    		# Extension to Fractional Compositions (Section 9)
 ├── S_00010_kmr_arithmetic_addition_subtraction.md  # Extension to arithmetic: addition and subtraction (Section 10)
 ├── S_00011_kmr_tunneling_extraction.md	   		    # Tunneling Property and Element Extraction in KMR Chains (Section 11)
 ├── S_00012_kmr_chain_notation_convention.md   		# Chain Notation and Left-Associativity Convention (Section 12)
 ├── S_00014_kmr__arithmetic_multiplication_...md    # Multiplication and Division (Section 14)
 ├── S_00015_KRM_Ergodicity Proof.md		   		    # Ergodicity of the Continuous KMR Flow in Compact Spaces (Section 15)
-├── S_00016_kmr_prilosophical_KMR-L.md	            # Relational Ontology of KMR-L: An Interim Synthesis (Section 16)
+├── S_00016_kmr_philosophical_KMR-L.md	            # Relational Ontology of KMR-L: An Interim Synthesis (Section 16)
 ├── S_00017_kmr_exponential_functions.md            # KMR Chains of Power Functions (Section 17)
 ├── S_00018_kmr_squaring_examples_z_r.md            # Practical Examples of KMR Applications for Natural and Real Numbers (Section 18)
+├── S_00019_kmr_representation_of_zero.md           # KMR Representation of Zero and Subtraction (Section 19)
+├── S_00020_Relational_KMR_Basis.md                 # Relational KMR Basis: Chain Algebra and the Iterator Paradigm (Section 20)
+├── S_00021_KMR_modulations.md                      # KMR Modulations: Cross-Chain Dynamics in 2D and 3D (Section 21)
+├── S_00022_KMR_trigonometry.md                     # Complex KMR Continuation: The Genesis of Trigonometry (Section 22)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
@@ -52,6 +56,7 @@ are explicitly licensed under CC BY-SA 4.0.
     ├── example_functional_operations.py    		# Chain space function as value operations example
     └── example_kmr_algebraic_properties.py 		# Algebraic properties verification by using functional chains example
 ```
+
 
 ## 🚀 Quick Start
 
@@ -84,10 +89,10 @@ print(f"f(1) = {evaluate_function_chain(f_id, space, 1):.3f}")  # 0.333
 
 
 ## Key Features
-- Pure mathematical formulation
-- Complete algebraic properties
-- Ready-to-use Python implementation
-- Extensible operator framework
+- Iterator Paradigm: The basis elements are not points, but scale-sensitive operators (chain steps).
+- Exact Closed Forms: Nonlinear 1D flows and power functions collapse into exact rational expressions via Abel's isomorphism.
+- Algebraic Rigor: Full classification of parabolic Abelian dynamics (2D/3D modulations) and their boundaries.
+- Ready-to-use Python Implementation: Pure mathematical formulation with extensible operator framework.
 
 ## Acronym Interpretations
 KMR may represent:
@@ -107,7 +112,3 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations}}}```
-
-💡 Future Directions
-- Applications in mathematical physics
-- Connection to Möbius transformations
