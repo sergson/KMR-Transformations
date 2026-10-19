@@ -74,7 +74,7 @@ Path B allows the space to "breathe," cyclically exchanging roles between $\(A\)
 
 ### 23.3. The Unified Continuous Phase Atom
 
-Both paths are symmetrical and mathematically consistent. They converge when we recognize that the deconstructed unit itself is the phase wave. By substituting \(D = 1 - \cos(2\alpha)\) into our transformed atom, and by keeping a strictly positive sign in the denominator, we arrive at the **Continuous Phase Atom**:
+Both paths are symmetrical and mathematically consistent. They converge when we recognize that the deconstructed unit itself is the phase wave. By substituting $\(D = 1 - \cos(2\alpha)\)$ into our transformed atom, and by keeping a strictly positive sign in the denominator, we arrive at the **Continuous Phase Atom**:
 
 $$
 F(A, B, D, \alpha) = \frac{A \cdot D}{(1 - \cos 2\alpha) + A \cdot \left(\frac{B}{D}\right)}.
@@ -104,7 +104,7 @@ $$
 M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\ A/D & 1 - \cos(2\alpha) \end{pmatrix}.
 $$
 
-*(Note: The trace of a Möbius matrix is independent of the specific values of $\(A\)$ and $\(B\)$ in the numerator/denominator, as they are scaled out).*
+*(Note: The trace of a Möbius matrix is independent of the specific values of (A) and (B) in the numerator/denominator, as they are scaled out).*
 
 The trace of this matrix is:
 
@@ -129,9 +129,9 @@ We have deconstructed the KMR atom along two symmetric paths. The rigid unit $1$
 
 | Object | Formula |
 | :--- | :--- |
-| Perturbed atom | $\(F(A,B,D) = \frac{A}{D \pm AB}\)$ |
-| Co-scaling transformation | $\(F = \frac{D \cdot A}{1 \pm A(B/D)}\)$ |
-| Orthogonal invariant (Path A) | $\(D = 1 - \cos(2\alpha)\)$ |
-| Continuous phase atom | $\(F(A, B, D, \alpha) = \dfrac{A \cdot D}{(1 - \cos 2\alpha) \pm A(B/D)}\)$ |
-| Phase transition ($\(\alpha=0\)$) | $\(F = D^2 / B\)$ |
-| Möbius trace | $\(\tau = 1 - \cos(2\alpha)\)$ |
+| Perturbed atom | $F(A,B,D) = \frac{A}{D \pm AB}$ |
+| Co-scaling transformation | $F = \frac{D \cdot A}{1 \pm A(B/D)}$ |
+| Orthogonal invariant (Path A) | $D = 1 - \cos(2\alpha)$ |
+| Continuous phase atom | $F(A, B, D, \alpha) = \dfrac{A \cdot D}{(1 - \cos 2\alpha) + A(B/D)}$ |
+| Phase transition $\alpha=0$ | $F = D^2 / B$ |
+| Möbius trace | $\tau = 1 - \cos(2\alpha)$ |
