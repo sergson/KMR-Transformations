@@ -32,6 +32,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── S_00020_Relational_KMR_Basis.md                 # Relational KMR Basis: Chain Algebra and the Iterator Paradigm (Section 20)
 ├── S_00021_KMR_modulations.md                      # KMR Modulations: Cross-Chain Dynamics in 2D and 3D (Section 21)
 ├── S_00022_KMR_trigonometry.md                     # Complex KMR Continuation: The Genesis of Trigonometry (Section 22)
+├── S_00023_kmr_continuous_phase_atom.md            # Continuous Phase Atom: Deconstruction of Unity and Gauge-Balanced Dualities (Section 23)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
@@ -94,6 +95,7 @@ print(f"f(1) = {evaluate_function_chain(f_id, space, 1):.3f}")  # 0.333
 - Exact Closed Forms: Nonlinear 1D flows and power functions collapse into exact rational expressions via Abel's isomorphism.
 - Algebraic Rigor: Full classification of parabolic Abelian dynamics (2D/3D modulations) and their boundaries.
 - Ready-to-use Python Implementation: Pure mathematical formulation with extensible operator framework.
+- **Continuous Phase Atom**: The discrete switch $\odot/\oslash$ is replaced by a smooth phase rotation, where the sign-based modulation parameter $B$ governs duality, and the scaling scalar $D$ regulates the computations.
 
 ## Acronym Interpretations
 KMR may represent:
