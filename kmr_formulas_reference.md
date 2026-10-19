@@ -132,6 +132,22 @@ This document provides a comprehensive reference of all properties and formulas 
 | $x_{n+1} = x \odot x_n = \frac{x}{1 + x x_n}$ | Self-referential iteration (fixed parameter) | 20.6 |
 | $x_\infty = \frac{\sqrt{1 + 4x^2} - 1}{2x}$ | Attractor of self-referential chain | 20.6 |
 
+### 9b. Continuous Phase Atom (S_00023)
+
+| Formula | Property Description | Section Reference |
+|---------|---------------------|-------------------|
+| $F(A, B, D) = \dfrac{A}{D \pm AB}$ | Perturbed atom with gauge scalar $D$ | 23.1 |
+| $F(A, B, D) = \dfrac{D \cdot A}{1 \pm A(B/D)}$ | Co-scaling identity (balancing lever) | 23.1 |
+| $D = \sin^2(\alpha) + \cos^2(\alpha + \pi/2) = 1 - \cos(2\alpha)$ | Orthogonal invariant (Path A) | 23.2 |
+| $F(A, B, D, \alpha) = \dfrac{A \cdot D}{(1 - \cos 2\alpha) + A(B/D)}$ | Continuous phase atom (monolithic denominator) | 23.3 |
+| $B > 0 \Rightarrow \odot\text{-like}, \quad B < 0 \Rightarrow \oslash\text{-like}$ | Sign of $B$ as continuous operator switch | 23.3 |
+| $F(A, B, D, 0) = D^2 / B$ | Phase transition at $\alpha = 0$ (pure division) | 23.3 |
+| $\tau = 1 - \cos(2\alpha)$ | Trace controls conjugacy class | 23.4 |
+
+$$
+M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\\\ A / D & 1 - \cos(2\alpha) \end{pmatrix} | Möbius matrix representation | 23.4
+$$
+
 ### 10. Dimensional Modulations (2D and 3D Cross-Chains)
 | Formula | Property Description | Section Reference |
 |---------|---------------------|-------------------|
@@ -211,3 +227,12 @@ Real cross-modulation yields:
 
 ### Theorem 9 (Genesis of Trigonometry)
 Complexification of the chain parameter ($K=it$) moves the atom into the elliptic class. The complex flow $z(t) = 1/(u+it)$ preserves a quadratic form of signature $(+,+)$, producing a circle of radius $R=1/(2u)$. Sine and cosine are rational projections of this complex chain. (Section 22)
+
+### Theorem 10 (Continuous Phase Atom)
+The canonical discrete choice between $\odot$ and $\oslash$ can be absorbed into a continuous phase $\alpha$ and a signed modulation parameter $B$. The atom
+
+$$
+F(A, B, D, \alpha) = \frac{A \cdot D}{(1 - \cos 2\alpha) + A(B/D)}
+$$
+
+interpolates smoothly between elliptic, parabolic, and hyperbolic Möbius classes as $\alpha$ varies. The sign of $B$ determines the operator duality (compression vs. expansion), while $\alpha$ controls the geometry via the trace $\tau = 1 - \cos(2\alpha)$. (Section 23)
