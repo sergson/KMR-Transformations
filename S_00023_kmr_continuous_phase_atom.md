@@ -100,28 +100,50 @@ The system undergoes a phase transition into a "pure division" mode. The paramet
 
 (Note: If one chooses Path A — the strict geometric link $\(D = 1 - \cos(2\alpha)\)$ — then as $\(\alpha \to 0\)$, $\(D \to 0\)$, and the limit of the atom becomes a resolvable $\(0/0\)$ singularity, representing a smooth phase transition rather than a hard boundary).
 
-### 23.4. Dynamic Sign Calibration and Möbius Trace
+### 23.4. Dynamic Sign Calibration and Möbius Matrices
 
-The geometric implication becomes clear when we translate the continuous phase atom into its Möbius matrix representation. For a given state $\(A\)$ and a signed parameter $\(B\)$, the transformation operates on $\(K = B/D\)$. The matrix $\(M\)$ acting on the complex plane takes the form:
+The geometric implication becomes clear when we translate the continuous phase atom into its Möbius matrix representation. Because the atom now possesses **two degrees of freedom** (the geometric phase $\(\alpha\$) and the gauge scalar $\(D\$)), its matrix representation bifurcates depending on which variable we choose as the dynamic state.
 
-$$
-M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\\\ A / D & 1 - \cos(2\alpha) \end{pmatrix}
-$$
-
-*(Note: The trace of a Möbius matrix is independent of the specific values of (A) and (B) in the numerator/denominator, as they are scaled out).*
-
-The trace of this matrix is:
+**Matrix for the Modulation Parameter (Varying $\(B\$))**
+If we treat the modulation parameter $\(B\$) as the dynamic variable (with $\(A, D, \alpha\$) fixed), the transformation $\(B \mapsto F(A, B, D, \alpha$)\) takes the standard fractional-linear form. The corresponding Möbius matrix is:
 
 $$
-\tau = 1 - \cos(2\alpha).
+M_B = \begin{pmatrix} 0 & A \cdot D \\\\ A/D & 1 - \cos(2\alpha) \end{pmatrix}.
 $$
 
-This formula reveals the magic of the continuous phase:
-- **Parabolic Class $(\(|\tau| = 2\))$:** Occurs when $\(\cos(2\alpha) = -1\)$, i.e., $\(\alpha = \pi/2\)$. This is the classical, monotonic KMR flow.
-- **Elliptic Class $(\(|\tau| < 2\))$:** Occurs when $\(0 < \alpha < \pi/2\)$. The system oscillates (return trajectories, like in S_00022, but without needing complex numbers).
-- **Hyperbolic Class $(\(|\tau| > 2\))$:** Not reachable with real \(\alpha\) in this specific normalization, but accessible if the phase is complexified.
+The trace of this matrix is remarkably simple:
 
-By simply rotating the phase $\(\alpha\)$, the atom continuously changes its conjugacy class. The angle $\(\alpha\)$ controls the **geometry** (the trace), while the sign of $\(B\)$ controls the **duality direction** (compression vs. expansion).
+$$
+\tau_B = 1 - \cos(2\alpha).
+$$
+
+Here, the gauge scalar $\(D\$) scales out completely. The conjugacy class of the *modulation step* is determined solely by the phase $\(\alpha\)$:
+- **Parabolic Class $(|\tau_B| = 2\)$:** $\alpha = \pi/2$. The classical monotonic KMR flow.
+- **Elliptic Class $(|\tau_B| < 2\)$:** $0 < \alpha < \pi/2$. Oscillatory modulation (return trajectories).
+- **Hyperbolic Class $(|\tau_B| > 2\)$:** Not reachable with real $\(\alpha\)$ unless the phase is complexified.
+
+**Matrix for the State Variable (Varying $\(A\$))**
+Alternatively, if we treat the input amplitude $\(A\$) as the dynamic state (as is standard in canonical KMR), the transformation $\(A \mapsto F(A, B, D, \alpha$)\) yields a different matrix:
+
+$$
+M_A = \begin{pmatrix} D & 0 \\\\ B/D & 1 - \cos(2\alpha) \end{pmatrix}.
+$$
+
+Here, the trace depends on *both* degrees of freedom:
+
+$$
+\tau_A = D + 1 - \cos(2\alpha).
+$$
+
+This reveals the role of the balancing scalar $\(D\$). By tuning $\(D\$), we can shift the trace of the state transformation:
+- When $\(D \to 0\)$, $\tau_A = 1 - \cos(2\alpha)$, reducing to the pure phase behavior.
+- When $\(D\)$ is large, $\(\tau_A \gg 2\)$, pushing the state dynamics into the hyperbolic regime (exponential growth/decay), even if the modulation step $\(B\)$ remains elliptic.
+- When $\(D\)$ varies dynamically, the state matrix smoothly changes its conjugacy class, allowing the system to "breathe" and avoid singularities.
+
+**Conclusion on the Bifurcation.**
+The rigid unit "1" of the canonical KMR atom has been fully deconstructed into two independent parameters: the phase $\(\alpha\)$ (which governs the trace of the modulation matrix $\(M_B\))$ and the gauge $\(D\)$ (which governs the trace of the state matrix $\(M_A\))$. The discrete $\(\pm\)$ operator is gone. We are no longer jumping between two different half-planes; we are moving along a single smooth Riemann surface parameterized by $\((\alpha, D)\)$.
+
+---
 
 ## 23.5. Conclusion
 
