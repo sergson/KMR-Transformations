@@ -142,10 +142,15 @@ This document provides a comprehensive reference of all properties and formulas 
 | $F(A, B, D, \alpha) = \dfrac{A \cdot D}{(1 - \cos 2\alpha) + A(B/D)}$ | Continuous phase atom (monolithic denominator) | 23.3 |
 | $B > 0 \Rightarrow \odot\text{-like}, \quad B < 0 \Rightarrow \oslash\text{-like}$ | Sign of $B$ as continuous operator switch | 23.3 |
 | $F(A, B, D, 0) = D^2 / B$ | Phase transition at $\alpha = 0$ (pure division) | 23.3 |
-| $\tau = 1 - \cos(2\alpha)$ | Trace controls conjugacy class | 23.4 |
+| $\tau_B = 1 - \cos(2\alpha)$ | Trace of \(M_B\) (controls conjugacy class of the modulation step) | 23.4 |
+| $\tau_A = D + 1 - \cos(2\alpha)$ | Trace of \(M_A\) (controls conjugacy class of the state dynamics) | 23.4 |
 
 $$
-M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\\\ A / D & 1 - \cos(2\alpha) \end{pmatrix} | Möbius matrix representation | 23.4
+M_B = \begin{pmatrix} 0 & A \cdot D \\\\ A/D & 1 - \cos(2\alpha) \end{pmatrix} | Möbius matrix acting on the modulation parameter \(B\) | 23.4
+$$
+
+$$
+M_A = \begin{pmatrix} D & 0 \\\\ B/D & 1 - \cos(2\alpha) \end{pmatrix} | Möbius matrix acting on the state variable \(A\) | 23.4
 $$
 
 ### 10. Dimensional Modulations (2D and 3D Cross-Chains)
