@@ -72,33 +72,39 @@ In classical 2D cross-chains (S_00021), the Abel structure forces monotonic beha
 
 Path B allows the space to "breathe," cyclically exchanging roles between $\(A\)$ and $\(B\)$, thus destroying the rigid Abelian monotonicity.
 
-## 23.3. The Unified Continuous Phase Atom
+### 23.3. The Unified Continuous Phase Atom
 
-Both paths are symmetrical and mathematically consistent. They converge when we recognize that the deconstructed unit itself is the phase wave. By substituting $\(D = 1 - \cos(2\alpha)\)$ into our transformed atom, we arrive at the **Continuous Phase Atom**:
+Both paths are symmetrical and mathematically consistent. They converge when we recognize that the deconstructed unit itself is the phase wave. By substituting \(D = 1 - \cos(2\alpha)\) into our transformed atom, and by keeping a strictly positive sign in the denominator, we arrive at the **Continuous Phase Atom**:
 
 $$
-F(A, B, D, \alpha) = \frac{A \cdot D}{(1 - \cos 2\alpha) \pm A \cdot \left(\frac{B}{D}\right)}.
+F(A, B, D, \alpha) = \frac{A \cdot D}{(1 - \cos 2\alpha) + A \cdot \left(\frac{B}{D}\right)}.
 $$
 
-The manual $\(\pm\)$ operator is gone. The sign is completely absorbed by the phase rotation.
+**The New Role of B (Operator Type).**
+Notice that the rigid $\(\pm\)$ operator is completely gone from the formula. In the canonical KMR model, the choice between direct $(\(\odot\))$ and inverse $(\(\oslash\))$ required an external switch. Here, this choice is naturally absorbed by the **sign of the modulation parameter $\(B\)$**:
+- If $\(B > 0\)$, the term $\(A(B/D)\)$ is positive, yielding the direct-like (compression) behavior.
+- If $\(B < 0\)$, the term $\(A(B/D)\)$ is negative, yielding the inverse-like (expansion) behavior.
+
+Thus, $\(B\)$ is no longer just a magnitude of modulation; it is a **signed parameter that defines the operator's duality class**.
 
 **Behavior at Critical Points:**
-1. **At $\(\alpha = \pi/2\)$:** $\(D = 1 - \cos(\pi) = 2\)$. The denominator becomes $\((2) \pm A(B/2)\)$. We recover the canonical direct/inverse KMR atom with a doubled metric weight.
+1. **At $\(\alpha = \pi/2\)$:** $\(D = 1 - \cos(\pi) = 2\)$. The denominator becomes $\(2 + A(B/D)\)$. We recover a scaled canonical KMR atom, where the sign of $\(B\)$ dictates direct vs. inverse.
 2. **At $\(\alpha = 0\)$:** $\(D = 1 - \cos(0) = 0\)$. The constant metric completely annihilates. The nonlinear residue remains:
 
 $$
-F(A, B, 0) = \frac{A \cdot 0}{0 \pm A(B/0)} = \frac{0}{0}.
+F(A, B, 0) = \frac{A \cdot 0}{0 + A(B/0)} = \frac{D^2}{B}.
 $$
+The input impulse $\(A\)$ completely cancels out, and the system undergoes a phase transition into a "pure division" mode. The sign of $\(B\)$ determines whether this limit is positive or negative, acting as the stabilizing lever.
 
-The input impulse $\(A\)$ completely cancels out, and the system undergoes a phase transition into a "pure division" mode, where $\(D\)$ acts as the stabilizing lever preventing the computation from "exploding."
+### 23.4. Dynamic Sign Calibration and Möbius Trace
 
-## 23.4. Dynamic Sign Calibration and Möbius Trace
-
-The geometric implication becomes clear when we translate the continuous phase atom into its Möbius matrix representation. For a given state $\(A\)$, the transformation operates on $\(K = B/D\)$. The matrix $\(M\)$ acting on the complex plane takes the form:
+The geometric implication becomes clear when we translate the continuous phase atom into its Möbius matrix representation. For a given state $\(A\)$ and a signed parameter $\(B\)$, the transformation operates on $\(K = B/D\)$. The matrix $\(M\)$ acting on the complex plane takes the form:
 
 $$
 M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\ A/D & 1 - \cos(2\alpha) \end{pmatrix}.
 $$
+
+*(Note: The trace of a Möbius matrix is independent of the specific values of $\(A\)$ and $\(B\)$ in the numerator/denominator, as they are scaled out).*
 
 The trace of this matrix is:
 
@@ -106,16 +112,16 @@ $$
 \tau = 1 - \cos(2\alpha).
 $$
 
-This simple formula reveals the magic of the continuous phase:
-- **Parabolic Class $(\(|\tau| = 2\))$:** Occurs when $\(\cos(2\alpha) = -1\)$, i.e., $\(\alpha = \pi/2\)$. This is the classical, monotonic KMR flow (discussed in S_00021, §21.4).
+This formula reveals the magic of the continuous phase:
+- **Parabolic Class $(\(|\tau| = 2\))$:** Occurs when $\(\cos(2\alpha) = -1\)$, i.e., $\(\alpha = \pi/2\)$. This is the classical, monotonic KMR flow.
 - **Elliptic Class $(\(|\tau| < 2\))$:** Occurs when $\(0 < \alpha < \pi/2\)$. The system oscillates (return trajectories, like in S_00022, but without needing complex numbers).
-- **Hyperbolic Class $(\(|\tau| > 2\))$:** Not reachable with real $\(\alpha\)$ in this specific normalization, but accessible if $\(D\)$ is allowed to become complex or if the orthogonal phase is broken.
+- **Hyperbolic Class $(\(|\tau| > 2\))$:** Not reachable with real \(\alpha\) in this specific normalization, but accessible if the phase is complexified.
 
-By simply rotating the phase $\(\alpha\)$, the atom continuously changes its conjugacy class. We are no longer jumping between two different half-planes; we are moving along a single smooth Riemann surface.
+By simply rotating the phase $\(\alpha\)$, the atom continuously changes its conjugacy class. The angle $\(\alpha\)$ controls the **geometry** (the trace), while the sign of $\(B\)$ controls the **duality direction** (compression vs. expansion).
 
 ## 23.5. Conclusion
 
-We have deconstructed the KMR atom along two symmetric paths. The rigid unit $1$ is replaced by a dynamic phase wave \(1 - \cos(2\alpha)\) (Path A) and a balancing scalar \(D\) (Path B) that controls the computational lever. This "clean" atom removes the need for conditional operators in numerical implementations. The flow simply evolves according to the phase \(\alpha\). This closes the structure of the atom and opens the door to creating 2D cross-chains where the angles \(\alpha_1, \alpha_2\) themselves generate auto-oscillations instead of monotonic escapes to infinity.
+We have deconstructed the KMR atom along two symmetric paths. The rigid unit $1$ is replaced by a dynamic phase wave $\(1 - \cos(2\alpha)\)$ (Path A) and a balancing scalar $\(D\)$ (Path B) that controls the computational lever. This "clean" atom removes the need for conditional operators in numerical implementations. The flow simply evolves according to the phase \(\alpha\). This closes the structure of the atom and opens the door to creating 2D cross-chains where the angles $\(\alpha_1, \alpha_2\)$ themselves generate auto-oscillations instead of monotonic escapes to infinity.
 
 ---
 
