@@ -86,22 +86,26 @@ Notice that the rigid $\(\pm\)$ operator is completely gone from the formula. In
 - If $\(B < 0\)$, the term $\(A(B/D)\)$ is negative, yielding the inverse-like (expansion) behavior.
 
 Thus, $\(B\)$ is no longer just a magnitude of modulation; it is a **signed parameter that defines the operator's duality class**.
+The general form of the atom treats the geometric phase $\(\alpha\)$ and the gauge scalar $\(D\)$ as **independent** parameters: $\(\alpha\)$ controls the geometry (the trace of the Möbius matrix), while $\(D\)$ controls the computational scale (co-scaling lever).
 
 **Behavior at Critical Points:**
-1. **At $\(\alpha = \pi/2\)$:** $\(D = 1 - \cos(\pi) = 2\)$. The denominator becomes $\(2 + A(B/D)\)$. We recover a scaled canonical KMR atom, where the sign of $\(B\)$ dictates direct vs. inverse.
-2. **At $\(\alpha = 0\)$:** $\(D = 1 - \cos(0) = 0\)$. The constant metric completely annihilates. The nonlinear residue remains:
+1. **At $\(\alpha = \pi/2\)$:** $\(1 - \cos(\pi) = 2\)$. The denominator becomes $\(2 + A(B/D)\)$. We recover a scaled canonical KMR atom, where the sign of $\(B\)$ dictates direct vs. inverse.
+2. **At $\(\alpha = 0\)$:** $\(1 - \cos(0) = 0\)$. The constant metric annihilates, and the input impulse $\(A\)$ cancels out:
 
 $$
-F(A, B, 0) = \frac{A \cdot 0}{0 + A(B/0)} = \frac{D^2}{B}.
+F(A, B, D, 0) = \frac{A \cdot D}{A \cdot (B/D)} = \frac{D^2}{B}.
 $$
-The input impulse $\(A\)$ completely cancels out, and the system undergoes a phase transition into a "pure division" mode. The sign of $\(B\)$ determines whether this limit is positive or negative, acting as the stabilizing lever.
+
+The system undergoes a phase transition into a "pure division" mode. The parameter $\(D\)$ acts as the stabilizing lever preventing the computation from "exploding."
+
+(Note: If one chooses Path A — the strict geometric link $\(D = 1 - \cos(2\alpha)\)$ — then as $\(\alpha \to 0\)$, $\(D \to 0\)$, and the limit of the atom becomes a resolvable $\(0/0\)$ singularity, representing a smooth phase transition rather than a hard boundary).
 
 ### 23.4. Dynamic Sign Calibration and Möbius Trace
 
 The geometric implication becomes clear when we translate the continuous phase atom into its Möbius matrix representation. For a given state $\(A\)$ and a signed parameter $\(B\)$, the transformation operates on $\(K = B/D\)$. The matrix $\(M\)$ acting on the complex plane takes the form:
 
 $$
-M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\ A/D & 1 - \cos(2\alpha) \end{pmatrix}.
+M(\alpha) = \begin{pmatrix} 0 & A \cdot D \\\\ A / D & 1 - \cos(2\alpha) \end{pmatrix}
 $$
 
 *(Note: The trace of a Möbius matrix is independent of the specific values of (A) and (B) in the numerator/denominator, as they are scaled out).*
