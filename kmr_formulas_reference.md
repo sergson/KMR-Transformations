@@ -153,6 +153,20 @@ $$
 M_A = \begin{pmatrix} D & 0 \\\\ B/D & 1 - \cos(2\alpha) \end{pmatrix} | Möbius matrix acting on the state variable \(A\) | 23.4
 $$
 
+### 9c. Curvature Atom (S_00024)
+
+| Formula | Property Description | Section Reference |
+|---------|---------------------|-------------------|
+| $\cos_k^2(\alpha) + k\sin_k^2(\alpha) = 1$ | Generalized Pythagorean identity | 24.3 |
+| $\cos_k(2\alpha) = \cos_k^2(\alpha) - k\sin_k^2(\alpha)$ | Generalized double-angle formula | 24.3 |
+| $1 - \cos_k(2\alpha) = 2k\sin_k^2(\alpha)$ | Deformed unit (curvature wave) | 24.3 |
+| $F_k(A, B, D, \alpha) = \dfrac{A \cdot D}{\bigl(1 - \cos_k(2\alpha)\bigr) + A(B/D)}$ | Curvature atom (canonical form) | 24.4 |
+| $k = 1 \Rightarrow$ Elliptic class ($\tau \in [0,2]$) | Sphere geometry | 24.5 |
+| $k = 0 \Rightarrow$ Parabolic class (unit $\to 0$) | Flat plane geometry | 24.5 |
+| $k < 0 \Rightarrow$ Hyperbolic class ($\tau < -2$) | Saddle geometry | 24.5 |
+| $\alpha = \frac{\pi}{4\sqrt{k}}$ (for $k>0$) | Forced classical waypoint: $F_k = \frac{A \cdot D}{1 + A(B/D)}$ | 24.6 |
+| $1 \to 1 - \cos_{k_1}(2\alpha_1) \to 1 - \cos_{k_2}(2\alpha_2) - \cos_{k_1}(2\alpha_1) \to \cdots$ | Recursive unfolding (fractal hierarchy) | 24.7 |
+
 ### 10. Dimensional Modulations (2D and 3D Cross-Chains)
 | Formula | Property Description | Section Reference |
 |---------|---------------------|-------------------|
