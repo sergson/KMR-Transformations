@@ -14,6 +14,7 @@ are explicitly licensed under CC BY-SA 4.0.
 - **Direct (⊙)**: ` A ⊙ K ≔ (A/(1 + A) ∘ A/(1 + A) ... A/(1 + A)) K times ` 
 - **Inverse (⊘)**: ` A ⊘ K ≔ (A/(1 - A) ∘ A/(1 - A) ... A/(1 - A)) K times `
 - Structural universality is demonstrated as a further generalization to spaces of constant curvature, achieved through the decomposition of an "additional unit"—expressed analytically in such a way as to preclude any violation of this "additional unit."
+- The expression $\(A \odot K = \frac{A}{1 + K A}\)$ is shown to represent a fundamental **computational atom**—an algebraic "building block" upon which various systems can be constructed, ranging from one-dimensional continuous flows to phase-dependent modulations and geometries defined by curvature. The KMR atom is presented as a structural invariant that maintains its stability.
 
 ## Repository Structure
 ```text
