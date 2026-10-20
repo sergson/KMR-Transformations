@@ -255,3 +255,6 @@ F(A, B, D, \alpha) = \frac{A \cdot D}{(1 - \cos 2\alpha) + A(B/D)}
 $$
 
 interpolates smoothly between elliptic, parabolic, and hyperbolic Möbius classes as $\alpha$ varies. The sign of $B$ determines the operator duality (compression vs. expansion), while $\alpha$ controls the geometry via the trace $\tau = 1 - \cos(2\alpha)$. (Section 23)
+
+### Theorem 11 (Curvature Generalization)
+The continuous phase atom of S_00023 can be generalized to spaces of constant curvature \(k\) by deforming the unit \(1 \to 1 - \cos_k(2\alpha)\). The resulting atom naturally produces all three Möbius classes: elliptic (\(k=1\)), parabolic (\(k=0\)), and hyperbolic (\(k<0\)). The unit \(1\) is preserved explicitly in the denominator as a structural anchor, allowing recursive unfolding into a fractal hierarchy of curvatures. The classical KMR form \(A/(1+A(B/D))\) appears as a forced waypoint for any monotonic transition in the elliptic regime. (Section 24)
