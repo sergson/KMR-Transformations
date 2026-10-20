@@ -13,7 +13,8 @@ are explicitly licensed under CC BY-SA 4.0.
 ## Core Operators
 - **Direct (⊙)**: ` A ⊙ K ≔ (A/(1 + A) ∘ A/(1 + A) ... A/(1 + A)) K times ` 
 - **Inverse (⊘)**: ` A ⊘ K ≔ (A/(1 - A) ∘ A/(1 - A) ... A/(1 - A)) K times `
-- 
+- Structural universality is demonstrated as a further generalization to spaces of constant curvature, achieved through the decomposition of an "additional unit"—expressed analytically in such a way as to preclude any violation of this "additional unit."
+
 ## Repository Structure
 ```text
 .
@@ -33,6 +34,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── S_00021_KMR_modulations.md                      # KMR Modulations: Cross-Chain Dynamics in 2D and 3D (Section 21)
 ├── S_00022_KMR_trigonometry.md                     # Complex KMR Continuation: The Genesis of Trigonometry (Section 22)
 ├── S_00023_kmr_continuous_phase_atom.md            # Continuous Phase Atom: Deconstruction of Unity and Gauge-Balanced Dualities (Section 23)
+├── S_00024_kmr_curvature_atom.md                   # Curvature Generalization of the Continuous Phase Atom: The Persistent Unity (Section 24)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
@@ -96,6 +98,7 @@ print(f"f(1) = {evaluate_function_chain(f_id, space, 1):.3f}")  # 0.333
 - Algebraic Rigor: Full classification of parabolic Abelian dynamics (2D/3D modulations) and their boundaries.
 - Ready-to-use Python Implementation: Pure mathematical formulation with extensible operator framework.
 - **Continuous Phase Atom**: The discrete switch $\odot/\oslash$ is replaced by a smooth phase rotation, where the sign-based modulation parameter $B$ governs duality, and the scaling scalar $D$ regulates the computations.
+- **Curvature Atom**: Generalization to spaces of constant curvature \(k\), where the unit \(1\) is deformed as \(1 - \cos_k(2\alpha)\), naturally producing elliptic (\(k=1\)), parabolic (\(k=0\)), and hyperbolic (\(k<0\)) regimes while preserving recursive unfolding.
 
 ## Acronym Interpretations
 KMR may represent:
