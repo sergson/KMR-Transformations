@@ -175,13 +175,13 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
            and the Governing Term of the Top Level},
   year = {2026},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations/S_00026_atomic_algebra.md}},
-  note = {Section 26 of the KMR Transformations Framework}
-}
+  note = {Section 26 of the KMR Transformations Framework}}
 
 @misc{AtomicAlgebraFAQ,
   author = {Terikhov, Sergei},
   title = {Atomic Algebra: Questions and Answers on the Advantages of the Approach},
   year = {2026},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations/S_00027_Atomic_Algebra_FAQ.md}},
-  note = {Section 27 of the KMR Transformations Framework}
-}
+  note = {Section 27 of the KMR Transformations Framework}}
+```
+
