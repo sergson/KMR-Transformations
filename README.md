@@ -101,7 +101,7 @@ print(f"f(1) = {evaluate_function_chain(f_id, space, 1):.3f}")  # 0.333
 - Algebraic Rigor: Full classification of parabolic Abelian dynamics (2D/3D modulations) and their boundaries.
 - Ready-to-use Python Implementation: Pure mathematical formulation with extensible operator framework.
 - **Continuous Phase Atom**: The discrete switch $\odot/\oslash$ is replaced by a smooth phase rotation, where the sign-based modulation parameter $B$ governs duality, and the scaling scalar $D$ regulates the computations.
-- **Curvature Atom**: Generalization to spaces of constant curvature \(k\), where the unit \(1\) is deformed as \(1 - \cos_k(2\alpha)\), naturally producing elliptic (\(k=1\)), parabolic (\(k=0\)), and hyperbolic (\(k<0\)) regimes while preserving recursive unfolding.
+- **Curvature Atom**: Generalization to spaces of constant curvature $\(k\)$, where the unit $\(1\)$ is deformed as $\(1 - \cos_k(2\alpha)\)$, naturally producing elliptic $(\(k=1\))$, parabolic $(\(k=0\))$, and hyperbolic $(\(k<0\))$ regimes while preserving recursive unfolding.
 - **Primacy of Division**: Confirming the atomicity of KMR operations by proving that division takes precedence over shifting
 - **Atimic algebra**: Introduction to the polymorphic atom and non-shift algebra.
 
