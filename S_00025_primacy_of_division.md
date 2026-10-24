@@ -347,9 +347,9 @@ Points 1–7 are proved. Point 8 is a definition.
 | Two algebras | $\nu$ typed above | Proved (§5) |
 | Collapse | without extension | Proved (§5) |
 | Primacy of division | in the order of signatures | Proved (§5) |
-| “$\nu$ generated shift” | as generation of extension | Definition (§5) |
+| “ $\nu$ generated shift ” | as generation of extension | Definition (§5) |
 | Absolute primeness of $\Phi$ | — | Not proved |
-| “$e/e$ is not primitive” | — | Not proved; requires linear terms |
+| “ $e/e$ is not primitive” | — | Not proved; requires linear terms |
 
 ---
 
