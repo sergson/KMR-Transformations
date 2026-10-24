@@ -38,6 +38,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── S_00024_kmr_curvature_atom.md                   # Curvature Generalization of the Continuous Phase Atom: The Persistent Unity (Section 24)
 ├── S_00025_primacy_of_division.md                  # Primacy of Division (Section 25)
 ├── S_00026_atomic_algebra.md                       # Atomic Algebra (Section 26)
+├── S_00027_Atomic_Algebra_FAQ.md                   # Atomic Algebra: Questions and Answers on the Advantages of the Approach (Section 26)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
