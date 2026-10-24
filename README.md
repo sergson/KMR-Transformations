@@ -37,6 +37,7 @@ are explicitly licensed under CC BY-SA 4.0.
 ├── S_00023_kmr_continuous_phase_atom.md            # Continuous Phase Atom: Deconstruction of Unity and Gauge-Balanced Dualities (Section 23)
 ├── S_00024_kmr_curvature_atom.md                   # Curvature Generalization of the Continuous Phase Atom: The Persistent Unity (Section 24)
 ├── S_00025_primacy_of_division.md                  # Primacy of Division (Section 25)
+├── S_00026_atomic_algebra.md                       # Atomic Algebra (Section 26)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
@@ -102,6 +103,7 @@ print(f"f(1) = {evaluate_function_chain(f_id, space, 1):.3f}")  # 0.333
 - **Continuous Phase Atom**: The discrete switch $\odot/\oslash$ is replaced by a smooth phase rotation, where the sign-based modulation parameter $B$ governs duality, and the scaling scalar $D$ regulates the computations.
 - **Curvature Atom**: Generalization to spaces of constant curvature \(k\), where the unit \(1\) is deformed as \(1 - \cos_k(2\alpha)\), naturally producing elliptic (\(k=1\)), parabolic (\(k=0\)), and hyperbolic (\(k<0\)) regimes while preserving recursive unfolding.
 - **Primacy of Division**: Confirming the atomicity of KMR operations by proving that division takes precedence over shifting
+- **Atimic algebra**: Introduction to the polymorphic atom and non-shift algebra.
 
 ## Acronym Interpretations
 KMR may represent:
