@@ -184,4 +184,4 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
   year = {2026},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations/S_00027_Atomic_Algebra_FAQ.md}},
   note = {Section 27 of the KMR Transformations Framework}
-}}
+}
