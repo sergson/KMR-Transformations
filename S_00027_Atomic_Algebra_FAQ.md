@@ -141,7 +141,7 @@ By construction $C_{n+1}=C_n\cup\{\delta_n\}$, where $\delta_n$ is the threshold
 
 **Second, the status of $e/e$.** In the standard syntax, $e/e$ is a term of $\Sigma_3^+$ and equals $1_R$. The claim that "$e/e$ is not primitive" requires linear or resource-sensitive terms. Without this, the claim is not proved.
 
-**Third, the general classification of Möbius generators.** Uniqueness is proved in the class with $f(0)=0$, a pole at $u$, and a fixed value at $\varepsilon$. The full classification of all Möbius generators by the invariant $\operatorname{tr}^2/\det$ remains open.
+**Third, the general classification of Möbius generators.** Uniqueness is proved in the class with $f(0)=0$, a pole at $u$, and a fixed value at $\varepsilon$. The full classification of all Möbius generators by the invariant $\mathrm{tr}^2/\det$ remains open.
 
 ---
 
