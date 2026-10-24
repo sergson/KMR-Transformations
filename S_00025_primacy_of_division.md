@@ -155,7 +155,7 @@ $$
 \partial^{\mathcal M}(x)=1_R-x;
 $$
 
-$ /^{\mathcal M}$ is ordinary division for nonzero denominator. The injection $\iota:C_3\to R$ is:
+$/^{\mathcal M}$ is ordinary division for nonzero denominator. The injection $\iota:C_3\to R$ is:
 
 $$
 \iota(0^\ast)=0_R,\qquad \iota(e)=\varepsilon,\qquad \iota(1)=1_R.
@@ -277,7 +277,7 @@ where $\mathcal O_n$ is the meta-level over $C_n$, and $\nu_n$ is the act of ext
 
 **Corollary 5.5 (extension is forced).** The transition $C_n\to C_{n+1}=C_n\cup\{\nu(C_n)\}$ is not an additional construction; it is necessary for the existence of $\nu$ as an operation with the condition $\nu(S)\notin S$. Without generating an extension, the datum algebra collapses at level $n$.
 
-### 25.5.3. Formal Meaning of “$\nu$ Generated Shift”
+### 25.5.3. Formal Meaning of “ $\nu$ Generated Shift ”
 
 **Definition 5.6 (generation of extension).** The act $\nu_n$ **generates an extension** $\mathcal A_n^{G}\to\mathcal A_{n+1}^{G}$ if $C_{n+1}=C_n\cup\{\nu_n(C_n)\}$ and $\nu_n(C_n)\notin C_n$. Without this, $\mathcal A_n^{G}$ collapses by Theorem 5.4.
 
