@@ -167,7 +167,7 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
   year = {2025},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/sergson/KMR-Transformations}}}```
+  howpublished = {\url{https://github.com/sergson/KMR-Transformations}}
 
 @misc{AtomicAlgebra,
   author = {Terikhov, Sergei},
@@ -184,4 +184,4 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
   year = {2026},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations/S_00027_Atomic_Algebra_FAQ.md}},
   note = {Section 27 of the KMR Transformations Framework}
-}
+}}
