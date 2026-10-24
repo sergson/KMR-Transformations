@@ -76,7 +76,7 @@ first, shift appears later, after the unit has been identified.
 ├── S_00024_kmr_curvature_atom.md                   # Curvature Generalization of the Continuous Phase Atom: The Persistent Unity (Section 24)
 ├── S_00025_primacy_of_division.md                  # Primacy of Division (Section 25)
 ├── S_00026_atomic_algebra.md                       # Atomic Algebra (Section 26)
-├── S_00027_Atomic_Algebra_FAQ.md                   # Atomic Algebra: Questions and Answers on the Advantages of the Approach (Section 26)
+├── S_00027_Atomic_Algebra_FAQ.md                   # Atomic Algebra: Questions and Answers on the Advantages of the Approach (Section 27)
 ├── kmr_formulas_reference.md       		        # Properties and Formulas Reference (handbook)
 ├── LICENSE-СС                  		            # License for THEORY (CC BY-SA 4.0)
 ├── LICENSE                      		            # License for CODE (GPL 3.0)
@@ -168,3 +168,20 @@ This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/sergson/KMR-Transformations}}}```
+
+@misc{AtomicAlgebra,
+  author = {Terikhov, Sergei},
+  title = {Atomic Algebra: Polymorphic Atom, Distinguishability Threshold,
+           and the Governing Term of the Top Level},
+  year = {2026},
+  howpublished = {\url{https://github.com/sergson/KMR-Transformations/S_00026_atomic_algebra.md}},
+  note = {Section 26 of the KMR Transformations Framework}
+}
+
+@misc{AtomicAlgebraFAQ,
+  author = {Terikhov, Sergei},
+  title = {Atomic Algebra: Questions and Answers on the Advantages of the Approach},
+  year = {2026},
+  howpublished = {\url{https://github.com/sergson/KMR-Transformations/S_00027_Atomic_Algebra_FAQ.md}},
+  note = {Section 27 of the KMR Transformations Framework}
+}
