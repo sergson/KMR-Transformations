@@ -169,6 +169,280 @@ The full title could be: **Atomic Algebra: Division as Primitive, Shift as Deriv
 
 ---
 
+## Q16. Can this be shown on a numerical example?
+
+**Answer.** Yes. Take four levels with units $u=8,4,2,1$. The atom at each level is
+
+$$
+A_u(x)=\frac{x}{u-x},\qquad \delta=\frac{u}{2}.
+$$
+
+| Level | $u$ | Threshold $\delta=u/2$ | Atom |
+|---|---|---|---|
+| 1 | 8 | 4 | $x/(8-x)$ |
+| 2 | 4 | 2 | $x/(4-x)$ |
+| 3 | 2 | 1 | $x/(2-x)$ |
+| 4 | 1 | 0.5 | $x/(1-x)$ |
+
+At level 1, as $x\to4$, we have $A_8(x)\to1$, and at $x=4$: $\mathrm{NOT}(4)=8-4=4$, i.e. $x=\mathrm{NOT}(x)$—the distinction vanishes. This is the hint of shift. The observer passes downward:
+
+$$
+\nu_1=4,\quad u_2=4,\quad \delta_2=2.
+$$
+
+Then at level 2, as $x\to2$, a new split occurs, and $u_3=2$, $\delta_3=1$ are passed down. At level 3, as $x\to1$: $u_4=1$, $\delta_4=0.5$. At level 4 the governing term
+
+$$
+\Delta(x)=u-\frac{x}{u-x}
+$$
+
+at the threshold gives
+
+$$
+\Delta_1(0.5)=1-\frac{0.5}{0.5}=0.
+$$
+
+The sequence of the governing term along the chain:
+
+$$
+\Delta_8(4)=7,\quad \Delta_4(2)=3,\quad \Delta_2(1)=1,\quad \Delta_1(0.5)=0.
+$$
+
+That is, $7\to3\to1\to0$: the signal from the tip to the head decreases until it vanishes at the Boolean normalization point $u=1$. Below $u=1$ it becomes negative: $\Delta_{0.5}(0.25)=-0.5$—the algebra enters the anti-Boolean regime.
+
+**Short formula:**
+
+$$
+\boxed{
+\text{Downward: threshold becomes an element, the unit is halved.}
+\quad
+\text{Upward: }\Delta(\delta)=u-1\text{ decreases }7\to3\to1\to0\to-0.5.
+}
+$$
+
+---
+
+## Q17. Is there an intuitive analogy?
+
+**Answer.** Yes—an octopus. The head sets the scale, the tentacles stretch downward to different depths, the suckers are the elements of the levels, and $\Delta(x)$ is the nerve signal from tip to head.
+
+**Head.** The top unit $u_{\mathrm{top}}$—the scale from which all lengths are measured.
+
+**Tentacle.** The chain
+
+$$
+C_1\subsetneq C_2\subsetneq\dots\subsetneq C_N,
+$$
+
+where the length is given by halving:
+
+$$
+N=\log_2\!\left(\frac{u_{\mathrm{top}}}{\delta_{\min}}\right).
+$$
+
+That is, **the length of a tentacle is a solution**: how many times the unit must be halved to reach the minimal distinguishable threshold.
+
+**Suckers.** The elements of the levels: $0^\ast,e,1,\dots$. The farther from the head, the smaller: $u_n=u_{\mathrm{top}}/2^{n-1}$.
+
+**Thinner means more sensitive.** The derivative of the atom at the threshold point:
+
+$$
+\left.\frac{dA_u}{dx}\right|_{x=u/2}=\frac{4}{u}.
+$$
+
+The product of thickness and sensitivity:
+
+$$
+u\cdot\frac{4}{u}=4=\text{const}.
+$$
+
+Law of conservation: the thinner the tentacle, the more sensitive it is, and the product is constant along its length. This is the formal analogue of the octopus tentacle tip containing more receptors per unit area.
+
+**The governing term is the nervous system.** $\Delta(x)$ is the signal from tip to head: "the limit has been reached here." It decreases along the tentacle: $7\to3\to1\to0\to-0.5$. Positive—the tentacle is alive; zero—it has reached Boolean normalization; negative—it has entered the anti-Boolean regime.
+
+**Collapse—the tentacle hits the bottom.** As $u\to\ell_P$, further halving is impossible: the threshold falls below distinguishability. The threshold returns to the head as $\Delta_{\mathrm{top}}$, and the head reassigns the norm.
+
+**Summary:**
+
+$$
+\boxed{
+\begin{aligned}
+&\text{Head: }u_{\mathrm{top}}\text{ --- the scale.}\\
+&\text{Tentacles: chains }C_1\subsetneq\dots\subsetneq C_N\text{ per number of independent thresholds.}\\
+&\text{Length: }N=\log_2(u_{\mathrm{top}}/\delta_{\min})\text{ --- the solution of the distinction problem.}\\
+&\text{Suckers: elements of the levels; thinner --- more sensitive }(u\cdot4/u=4).\\
+&\text{Bottom: }\delta_{\min}\text{ (e.g. }\ell_P\text{); collapse and return of }\Delta(x)\text{ to the head.}
+\end{aligned}}
+$$
+
+---
+
+## Q18. How can a second dimension be added if extensions of the lower levels are forbidden?
+
+**Answer.** Through **modulation of the distinguishability threshold** by the information coming from the lower layers. This is the minimal variant consistent with the triadic construction.
+
+**The prohibition.** In the triadic scheme, an extension of a lower level is impossible: $C_{n+1}=C_n\cup\{\nu_n(C_n)\}$ is a transition upward, not an addition of terms downward. Hence a second dimension cannot be obtained by a flat extension $C_n\to C_n\cup\{\text{new terms}\}$.
+
+**The resolution.** The threshold $\delta_n$ is not fixed: it is **modulated** by the signal $\Delta_{n+1}$ coming from above. That is,
+
+$$
+\delta_n\;\longmapsto\;\delta_n(\Delta_{n+1}).
+$$
+
+This is the second dimension: not a new element, but a **dependence of the threshold on information from above**.
+
+**Formally.** Introduce a modulation parameter $m$:
+
+$$
+\delta_n(m)=\frac{u_n}{2}\bigl(1+m\,\Delta_{n+1}\bigr),
+$$
+
+where $m\in[0,1]$ is the coupling strength. For $m=0$—the original threshold; for $m>0$—the threshold shifts depending on the signal $\Delta_{n+1}$ from the upper level.
+
+**Triadic interpretation.** This is exactly what $\mathcal O_n$ means in the triad $\mathcal L_n=(\mathcal O_n\mid C_n\mid\nu_n(C_n))$: the observer does not add elements to $C_n$ but **modulates the condition of distinction** at level $n$. The second dimension is the axis $\mathcal O_n$, orthogonal to the axis $C_n$.
+
+**Scheme:**
+
+$$
+\underbrace{\mathcal A_n^G(u_n)}_{\text{datum}}
+\;\xrightarrow{\ \Delta_{n+1}\ }\;
+\underbrace{\delta_n(m)}_{\text{modulated threshold}}
+\;\xrightarrow{\ m\ }\;
+\underbrace{\mathcal A_{n+1}^G}_{\text{next level}}.
+$$
+
+**Properties:**
+1. The lower level is not extended: $C_n$ remains the same.
+2. The threshold becomes a function: $\delta_n=\delta_n(m)$.
+3. The second dimension is the axis $m$, not a new sort of elements.
+4. As $m\to0$ the original algebra is restored; as $m\to1$—maximal coupling.
+
+**Corollary.** A second dimension does not require extending the lower levels. It requires only a modulation of the threshold—that is, a dependence of $\delta_n$ on $\Delta_{n+1}$. This is the minimal variant consistent with the triad: the observer modulates the distinction without adding data.
+
+---
+
+## Q19. What does this give for the "animation" of the algebra?
+
+**Answer.** This is precisely the mechanism of "animation": the algebra ceases to be static, because its thresholds depend on signals coming from above.
+
+First, let us recall two notions.
+
+**Interface.** The interface between layers $k$ and $k+1$ is the space of admissible maps
+
+$$
+\mathcal M^{(k)}=\{\,\varphi:C^{(k+1)}\to C^{(k)}\mid \varphi\text{ is consistent with the norm, threshold and signature}\,\}.
+$$
+
+The elements of the interface are not numbers and not coefficients, but **maps**. This is the sort $E\to E$, not the sort $E$.
+
+**Tower.** The tower is the alternation of algebras and interfaces:
+
+$$
+\mathcal A^{(1)}\;\xrightarrow{\ \mathcal M^{(1)}\ }\;\mathcal A^{(2)}\;\xrightarrow{\ \mathcal M^{(2)}\ }\;\mathcal A^{(3)}\;\to\;\dots
+$$
+
+where each $\mathcal A^{(k)}$ is an atomic algebra of type $x/(u-x)$, and each $\mathcal M^{(k)}$ is the interface between adjacent algebras. The depth of the tower $L$ is the number of levels up to the first trivial interface.
+
+Now—static and modulated algebras.
+
+**Static algebra:** one level, one threshold, one distinction. It does not change—it simply is.
+
+**Modulated algebra:** the threshold $\delta_n$ depends on $\Delta_{n+1}$, which depends on $\Delta_{n+2}$, and so on. Each level modulates the next through a signal. The algebra becomes a **process**, not a structure.
+
+**Relation to flat extension.** A flat extension adds terms within a single level—the dimension does not change. Modulation of the threshold adds an **axis of dependence**—the dimension grows. This is vertical growth: not more of the same, but **something else**.
+
+**Criterion of "life".** The tower is "alive" as long as the interfaces are nontrivial: $c_k\neq0$, where $c_k$ is the "curvature" of the interface $\mathcal M^{(k)}$ (a measure of its inhomogeneity). When the interface is trivial ($c_k=0$), the tower terminates—the algebra "freezes" at that level. Modulation of the threshold is precisely the nontriviality of the interface: $\delta_n$ depends on $\Delta_{n+1}$, hence $c_n\neq0$. That is why "life" = nontriviality of the interface: as long as the signal from above changes the threshold below, the tower works as a process; when the signal ceases to influence, the tower becomes a static structure.
+
+**The shift-free atom is universal.** The atom $x/(u-x)$ contains no shift. Shift arises as a transition between levels, not as a term. That is why the tower is "alive": it contains no shift, yet generates it as an act at every step. Modulation of the threshold is the way in which the act of transition influences the lower level without adding terms to it.
+
+**Summary:**
+
+$$
+\boxed{
+\begin{aligned}
+&\text{Interface: space of maps between layers; tower: alternation of algebras and interfaces.}\\
+&\text{Flat extension: more terms, same dimension, statics.}\\
+&\text{Threshold modulation: }\delta_n=\delta_n(\Delta_{n+1})\text{ --- a second dimension without extension.}\\
+&\text{"Animation" = modulation: each level influences the threshold of the lower one via }\Delta.\\
+&\text{Criterion of "life": the interface is nontrivial }(c_k\neq0)\text{; otherwise the tower "freezes".}
+\end{aligned}}
+$$
+
+The algebra "comes alive" not because new elements were added to it, but because its thresholds have become **dependent on signals from above**. This is the minimal change consistent with the triad: the observer modulates the distinction without adding data. And this is precisely what turns the tower into a process rather than a structure.
+
+---
+
+## Q20. How can such algebras be used already today?
+
+**Answer.** Such algebras can be used as **objects in the shift algebra**. That is, define an object by an atomic algebra, and measure its external parameters in the shift algebra. A combination is born—a hybrid structure in which the atomic algebra provides the internal constitution of the object, and the shift algebra provides its behaviour in the external space of parameters.
+
+**Scheme.** Let $\mathcal A_u$ be the atomic algebra with parameter $u$, and $\mathcal S_\sigma$ the shift algebra with operation $\sigma(x)=x+1$. Then the object
+
+$$
+\mathcal O=(\mathcal A_u;\ \mathcal S_\sigma)
+$$
+
+is defined as follows:
+- **internal constitution** is given by $\mathcal A_u$: atom $x/(u-x)$, threshold $u/2$, governing term $\Delta(x)=u-x/(u-x)$;
+- **external parameters** are measured in $\mathcal S_\sigma$: shift $\sigma$, normalization, iterations.
+
+**What this gives.** The atomic algebra answers the question "how is the object constituted"; the shift algebra—"how does the object behave under a transition to the next". Together they give a **two-layer description**: internal (atomic) and external (shift).
+
+**Example: the KMR atom.** In the KMR framework, the atom $A/(1+KA)$ is an object whose internal constitution is given by the atomic algebra $\mathcal A_u$ with $u=1$, and whose external behaviour is given by the iterations $\odot$ and $\oslash$, i.e. by the shift algebra. The combination
+
+$$
+\mathcal O_{\mathrm{KMR}}=(\mathcal A_1;\ \mathcal S_{\odot,\oslash})
+$$
+
+gives a complete description: atom $x/(1-x)$ inside, iterations outside.
+
+**Example: the curvature atom.** In $S_{00024}$, the object is given by the atomic algebra $A_{u(k)}$ with $u(k)=1-\cos_k(2\alpha)$, and its external behaviour is given by shift in the curvature space $k$. The combination
+
+$$
+\mathcal O_{\mathrm{curv}}=(\mathcal A_{u(k)};\ \mathcal S_k)
+$$
+
+gives the curvature generalization: atom with parameter $u(k)$ inside, shift in $k$ outside.
+
+**Why this works.** The atomic algebra is **shift-free**: it contains no $\sigma$. The shift algebra is **division-free**: it contains no atom $x/(u-x)$. The combination supplies what is missing in each taken separately:
+
+$$
+\mathcal A_u\ \text{gives division and threshold},\qquad
+\mathcal S_\sigma\ \text{gives shift and iteration}.
+$$
+
+Together—a complete structure.
+
+**Formally.** The combination is a fibration
+
+$$
+\pi:\ \mathcal S_\sigma\;\longrightarrow\;\mathcal A_u,
+$$
+
+where the fibre over a point $a\in\mathcal A_u$ is the orbit of $a$ under the action of $\sigma$. The internal constitution is the base; the external behaviour is the fibre. This is precisely the fibred tower discussed in Q19, but with two levels: $\mathcal A_u$ and $\mathcal S_\sigma$.
+
+**Properties of the combination:**
+1. The internal parameters of the object (atom, threshold, $\Delta$) are given by $\mathcal A_u$.
+2. The external parameters (shift, iteration, normalization) are given by $\mathcal S_\sigma$.
+3. The object $\mathcal O=(\mathcal A_u;\mathcal S_\sigma)$ is a fibration, not a product: the fibre depends on the point of the base.
+4. For $u=1$ the object reduces to the KMR atom; for $u=u(k)$—to the curvature atom.
+
+**Summary:**
+
+$$
+\boxed{
+\begin{aligned}
+&\text{Object = (atomic algebra inside; shift algebra outside).}\\
+&\mathcal O=(\mathcal A_u;\ \mathcal S_\sigma):\quad
+\mathcal A_u\text{ gives constitution, }\mathcal S_\sigma\text{ gives behaviour.}\\
+&\text{Combination --- fibration }\pi:\mathcal S_\sigma\to\mathcal A_u;\text{ fibre = orbit under }\sigma.\\
+&\text{Examples: KMR atom }(\mathcal A_1;\mathcal S_{\odot,\oslash}),\ \text{curvature }(\mathcal A_{u(k)};\mathcal S_k).\\
+&\text{For }u=1\text{ --- KMR; for }u=u(k)\text{ --- curvature atom.}
+\end{aligned}}
+$$
+
+Such algebras can be used already today: define an object by an atomic algebra, and measure its external parameters in the shift algebra. A **combination** is born—a two-layer description in which the atomic algebra is responsible for the internal constitution (division, threshold, governing term), and the shift algebra for the external behaviour (shift, iteration, normalization). This is not a replacement of one algebra by another, but their **conjugation**: base and fibre, internal and external, constitution and behaviour.
+
 ## Conclusion
 
 The atomic algebra is an attempt to build algebra from below—from the division atom and the distinguishability threshold—rather than from above, from a fixed Boolean unit. Its main advantages are: adjustable unit, secondary shift, explained hierarchy. Its main open questions are: absolute primacy of the atom, the status of $e/e$, and the full classification of Möbius generators.
