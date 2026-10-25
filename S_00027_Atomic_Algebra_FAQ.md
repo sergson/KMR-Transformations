@@ -794,7 +794,7 @@ The **proven core** is complete for the main thesis:
 Beyond the core lie **extensions**, not gaps:
 
 - *absolute* primacy of the atom belongs to clone theory and functional completeness; the main thesis does not need it;
-- the status of $ e/e $ depends on the choice of syntax—standard or linear; the order-of-signatures theorem holds in either;
+- the status of $e/e$ depends on the choice of syntax—standard or linear; the order-of-signatures theorem holds in either;
 - the full classification of Möbius generators belongs to geometric group theory ($PGL_2(\mathbb{Z})$, $\mathrm{tr}^2/\det$); uniqueness in the relevant class is already proved.
 
 **On the architecture.** The parts are old: Brouwer's construction, Cantor's generation, Grothendieck's toposes, Robinson's non-standard limits. Each identified a fragment of a single structural fact—the tension between the generative and the static modes. What is new is the **architecture**: one algebra in which generation is primitive and the static view is a derived limit. Without triadic discipline, flat extension produces the *photographer error*—multiple observers, inconsistent snapshots, stratification. With triadic discipline, the photographer is **one, at the top**: the head integrates modulated thresholds into one consistent snapshot, and the Cantor periscope turns the cycle into a living process. The triadic construction is canonical: the unique minimal structure in which generation is primitive and the photograph is a limit.
