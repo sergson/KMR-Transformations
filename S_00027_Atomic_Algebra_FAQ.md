@@ -133,15 +133,33 @@ By construction $C_{n+1}=C_n\cup\{\delta_n\}$, where $\delta_n$ is the threshold
 
 ---
 
-## Q13. What remains open?
+Q13. What exactly is proven, and what lies beyond the proven core?
 
-**Answer.** Three questions.
+**Answer.** The proven core is complete for the main thesis. What remains open are stronger claims that the theory does not depend on. The distinction matters, so let us separate them.
 
-**First, absolute primacy of $A_u$.** Relative atomicity is proved: $A_u$ is not definable in $\Sigma_0$. But absolute primacy requires a separate order of term complexity. This is not yet built.
+**What is proven (the core):**
 
-**Second, the status of $e/e$.** In the standard syntax, $e/e$ is a term of $\Sigma_3^+$ and equals $1_R$. The claim that "$e/e$ is not primitive" requires linear or resource-sensitive terms. Without this, the claim is not proved.
+In the minimal signature $\Sigma_0=\{0^\ast,e,1,\nu\}$, no nontrivial unary term of sort $E$ in $x$ exists except $x$ itself. Hence $A_u(x)=x/(u-x)$ is not definable in $\Sigma_0$ for any $u$. This is relative atomicity—the atom cannot be assembled from the minimal language.
 
-**Third, the general classification of Möbius generators.** Uniqueness is proved in the class with $f(0)=0$, a pole at $u$, and a fixed value at $\varepsilon$. The full classification of all Möbius generators by the invariant $\mathrm{tr}^2/\det$ remains open.
+In $\Sigma_3^+=\{0^\ast,e,1,\partial,/\}$, the atom is a term, and its value at $x=e$ is $\varepsilon/(u-\varepsilon)$.
+
+Successor $\sigma(x)=x+1$ is not in $\Sigma_3^+$. In the order of signatures, division precedes shift.
+
+In the Möbius class with $f(0)=0$, a pole at $u$, and $f(\varepsilon)=\varepsilon/(u-\varepsilon)$, the atom is unique.
+
+These four statements are theorems. They do not depend on anything below.
+
+**What is open, and why it does not undermine the core:**
+
+**(a) "Absolute" primacy of the atom.** Relative atomicity says: the atom cannot be built from $\Sigma_0$. "Absolute" primacy would say: no extension of any kind can express the atom more simply than the atom itself. This is a much stronger claim, and it requires a separate theory of term complexity—a way to compare terms across different signatures. That theory is not yet built. But the main thesis does not need it. The claim "division is primary" is a claim about $\Sigma_0$ and $\Sigma_3^+$, and it is fully proven. "Absolute" primacy is a bonus question, not a foundation.
+
+**(b) The status of $e/e$.** In standard syntax, $e/e$ is a term of $\Sigma_3^+$ and equals $1$. So in standard syntax, "$1$ can be obtained by division" is true. The claim that "$e/e$ is not primitive" requires a different syntax—linear terms, in which each constant is used at most once. In linear syntax, $e/e$ is not a term, and $1$ is introduced only through $\nu(C_2)$. Which syntax is "right" is a modelling choice, not a mathematical gap. The theorem "division precedes shift in the order of signatures" holds in either syntax; only the finer claim about $e/e$ depends on the choice.
+
+**(c) Full classification of Möbius generators.** The theorem proves uniqueness in the class with $f(0)=0$, a pole at $u$, and $f(\varepsilon)=\varepsilon/(u-\varepsilon)$. The full classification of all Möbius generators by the invariant $\mathrm{tr}^2/\det$ is a completeness question: which other generators exist, and how they relate. It does not affect the proven result: within the relevant class, the atom is unique. The open question is "what lies outside the class", not "is the class correct".
+
+**Why this is not a weakness.** A theory is not weak because it states what it does not cover. It is weak if it claims more than it proves. Here the core claims—relative atomicity, primacy of division in the order of signatures, uniqueness in the Möbius class—are fully proven. The open items are extensions: stronger primacy, a finer syntax, a full classification. Each is a separate project, and each can be pursued without touching the core.
+
+**In one sentence:** the foundation is proven; what is open are stronger claims that the foundation does not need.
 
 ---
 
@@ -445,6 +463,19 @@ Such algebras can be used already today: define an object by an atomic algebra, 
 
 ## Conclusion
 
-The atomic algebra is an attempt to build algebra from below—from the division atom and the distinguishability threshold—rather than from above, from a fixed Boolean unit. Its main advantages are: adjustable unit, secondary shift, explained hierarchy. Its main open questions are: absolute primacy of the atom, the status of $e/e$, and the full classification of Möbius generators.
+The atomic algebra is an attempt to build algebra from below—from the division atom and the distinguishability threshold—rather than from above, from a fixed Boolean unit. Its main advantages are: an adjustable unit, a secondary shift, and an explained hierarchy. Boolean algebra appears as the normalized limit with a frozen unit, not as the only possible algebra.
 
-The approach does not replace Boolean algebra; it explains it as a normalized limit. This is its main value: Boolean algebra ceases to be the only possible algebra and becomes one case among many, distinguished by a frozen unit.
+The **proven core** is complete for the main thesis:
+
+- relative atomicity: $A_u$ is not definable in $\Sigma_0$ for any $u$;
+- definability in $\Sigma_3^+$, with the value $\varepsilon/(u-\varepsilon)$ at $x=e$;
+- primacy of division in the order of signatures: $\sigma\notin\Sigma_3^+$;
+- uniqueness in the Möbius class with $f(0)=0$, a pole at $u$, and $f(\varepsilon)=\varepsilon/(u-\varepsilon)$.
+
+Beyond the core lie **extensions**, not gaps:
+
+- *absolute* primacy of the atom requires a separate theory of term complexity; the main thesis does not need it;
+- the status of $e/e$ depends on the choice of syntax—standard or linear; the order-of-signatures theorem holds in either;
+- the full classification of Möbius generators is a completeness question, not a correctness question; uniqueness in the relevant class is already proved.
+
+In short: the foundation is proven; what remains open are stronger claims that the foundation does not depend on. The approach does not replace Boolean algebra—it explains it as a normalized limit distinguished by a frozen unit.
