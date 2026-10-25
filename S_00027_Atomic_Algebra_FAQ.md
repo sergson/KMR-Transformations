@@ -616,6 +616,90 @@ $$
 \end{aligned}}
 $$
 
+## Q23. Three remaining objections: "beautiful language," "no implementation," "high barrier"
+
+**Answer.** Notice what has happened: the skeptic has moved from "your mathematics is weak" to "your ecosystem is thin." That is a concession. The mathematical objections of Q21–Q22 are gone; what remains are questions about **consequences**, **artifacts**, and **pedagogy**—none of which touches the proven core. Each has an answer.
+
+### 1. "Risk of remaining a beautiful language"
+
+The criterion the skeptic names is: *the theory must generate theorems that cannot be proved by old methods.* By that criterion, the theory already passes—not fully, but on specific points.
+
+**The order-of-signatures theorem is not a clone-theory theorem.** Clone theory classifies sets of terms; it has **no notion of "availability at a level"**. The statement "in $\Sigma_3^+$, division is available at $C_3$, while $\sigma$ is not available at all" cannot be formulated in clone theory, because clone theory has no levels. It is a new statement, proved by a new argument (signature analysis plus the triadic chain). It is not an "old method in a new wrapper."
+
+**The unification is not a repackaging.** Łukasiewicz negation, Boolean complement, the KMR atom, and the curvature atom are shown to be special cases of $A_u$ for different $u$. This is a **new theorem**: four objects from four different fields turn out to be one. Repackaging does not produce such identifications; it only restates them.
+
+**The modulation axis does not exist in any donor field.** Łukasiewicz fixes $u$; clone theory has no parameter $u$; linear logic has no threshold $\delta_n$; geometric group theory has no tower of levels. The statement $\delta_n=\delta_n(\Delta_{n+1})$ is a new object. It may or may not yield deep theorems—but it is not a wrapper for anything.
+
+So the honest answer is: **the risk is real, but the criterion is already partly met.** What remains is a matter of time—will the modulation axis yield deep theorems? That is an open question, not a verdict.
+
+### 2. "No software or hardware implementation"
+
+This is **factually incorrect**, and it is the weakest of the three objections.
+
+The KMR repository already contains:
+
+- `src/kmr_operations.py`—core KMR operations;
+- `src/kmr_chains.py`—chain space implementation;
+- `src/kmr_chains_operations_by_id.py`, `..._func.py`, `..._init.py`—operations on chains;
+- `src/kmr_tunneling.py`—tunneling and extraction;
+- `tests/`—algebra test suite, extraction test suite, tunneling test suite;
+- `examples/`—quick start, functional operations, algebraic properties verification.
+
+The Quick Start is three lines:
+
+```python
+from kmr_operations import kmr_direct, kmr_inverse
+print(kmr_direct(2, 3))   # 0.2857 = 2 ⊙ 3
+print(kmr_inverse(2, 3))  # -0.4   = 2 ⊘ 3
+```
+
+The atomic algebra core is **directly implementable** as a parameterized class:
+
+```python
+class AtomicAtom:
+    def __init__(self, u):        self.u = u
+    def atom(self, x):            return x / (self.u - x)
+    def threshold(self):          return self.u / 2
+    def delta(self, x):           return self.u - x / (self.u - x)
+```
+
+This is not a speculative architecture; it is a twenty-line class that captures the entire atom, threshold, and governing term. Hardware controllers of the "atomic" type are a separate engineering question, but the **software layer already exists**.
+
+So the objection "no implementation" is not a critique of the theory—it is a description of the skeptic's not having opened the repository.
+
+### 3. "High barrier to entry"
+
+This one is **fair**, but it is a pedagogical question, not a theoretical one.
+
+The barrier is real for **proving** the deeper claims: relative non-definability needs signature analysis, the syntax question needs linear logic, the classification needs $PGL_2(\mathbb{Z})$. But the barrier for **using** the atom is almost zero:
+
+- to use $A_u(x)=x/(u-x)$ you need arithmetic;
+- to compute a threshold you need $u/2$;
+- to compute the governing term you need $u-x/(u-x)$.
+
+None of this requires linear logic, clone theory, or Möbius transformations. Those are needed only to prove **why** the atom is primary—not to use it.
+
+This is exactly what the FAQ is for: it lowers the barrier by separating "what you need to use" from "what you need to prove." The first is three formulas; the second is a research program.
+
+### 4. The meta-point
+
+The skeptic's three objections have a common structure: they are all about **the surrounding ecosystem**—theorems yet to come, artifacts, pedagogy. None of them is about the **proven core**:
+
+$$
+\boxed{
+\begin{aligned}
+&\text{Core (closed): relative non-definability, definability in } \Sigma_3^+,\\
+&\qquad \text{order of signatures, uniqueness in the Möbius class.}\\
+&\text{Beautiful language: open, but the criterion is already partly met.}\\
+&\text{No implementation: false, the repository has code, tests, examples.}\\
+&\text{High barrier: fair, but it is about pedagogy, not theory.}\\
+&\text{The skeptic has moved from "your math is weak" to "your ecosystem is thin."}\\
+&\text{That is a concession, not a refutation.}
+\end{aligned}}
+$$
+
+**In one sentence:** the mathematical objections are answered; what remains are questions of time, artifacts, and pedagogy—and the second of these is not even true.
+
 ## Conclusion
 
 The atomic algebra is an attempt to build algebra from below—from the division atom and the distinguishability threshold—rather than from above, from a fixed Boolean unit. Its main advantages are: an adjustable unit, a secondary shift, and an explained hierarchy. Boolean algebra appears as the normalized limit with a frozen unit, not as the only possible algebra.
