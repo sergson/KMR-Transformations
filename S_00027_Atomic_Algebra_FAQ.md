@@ -461,6 +461,58 @@ $$
 
 Such algebras can be used already today: define an object by an atomic algebra, and measure its external parameters in the shift algebra. A **combination** is born—a two-layer description in which the atomic algebra is responsible for the internal constitution (division, threshold, governing term), and the shift algebra for the external behaviour (shift, iteration, normalization). This is not a replacement of one algebra by another, but their **conjugation**: base and fibre, internal and external, constitution and behaviour.
 
+## Q21. Does atomic algebra compete with Łukasiewicz, Post, intuitionistic, or quantum logic?
+
+**Answer.** No. These are different types of objects solving different problems. The comparison is not "apples to apples", and the honest way to state the relation is: atomic algebra **adds an axis** that these logics do not have, rather than replacing them.
+
+**Łukasiewicz and Post: flat extensions.**
+
+Łukasiewicz logic $\mathbf{L}_n$ has truth values $\{0,\tfrac{1}{n-1},\dots,1\}$ and negation $\neg x=1-x$. Post logic $\mathbf{P}_m$ has values $\{0,1,\dots,m-1\}$ and cyclic negation $\neg x=x+1\pmod m$.
+
+Both are **flat extensions** in a precise sense: they add truth values to the carrier, but the unit and the negation are **fixed**. There is no mechanism that changes the unit in response to information from above. In the notation of atomic algebra, Łukasiewicz is the case $u=1$ with a **frozen** unit and **no modulation**. Post is even further: its cyclic negation is an iteration of shift, not a duality $u-x$.
+
+So the relation is:
+
+- Łukasiewicz negation $\neg x=1-x$ is the **duality component** $\partial_u(x)=u-x$ of the atomic algebra at $u=1$;
+- atomic algebra **uses** this duality, but adds what Łukasiewicz does not have: a regulated unit and generated levels;
+- Post's cyclic negation is closer to shift than to division; it is a different construction altogether.
+
+The word "flat" is exact: these logics extend the carrier without generating new levels. The levels are **given**, not produced by a threshold.
+
+**Intuitionistic logic: levels, but given.**
+
+Intuitionistic logic does have a level structure—Kripke models, partial order of worlds, the Brouwer–Heyting–Kolmogorov reading. But these levels are **given** by the model, not **generated** by a threshold of distinguishability. There is no operation $C_{n+1}=C_n\cup\{\nu(C_n)\}$ that produces the next level; the levels are part of the semantics from the start.
+
+So intuitionistic logic is not "flat" in the same sense as Łukasiewicz, but it is also not "tower-like" in the sense of atomic algebra: it has levels, but they are data, not products.
+
+**Quantum logic: a different axis.**
+
+Quantum logic (orthomodular lattices, the logic of quantum propositions) addresses **non-commutativity**—the failure of distributivity in the lattice of projections. This is orthogonal to the axis "unit–threshold–modulation". Quantum logic does not ask "how is the unit assigned?" or "how does the threshold distinguish $x$ from $\mathrm{NOT}(x)$?" It asks "what is the lattice of propositions when observables do not commute?"
+
+Atomic algebra and quantum logic do not compete because they address different questions. One could imagine a combination—non-commutative atomic algebra—but that is a separate project, not a competition.
+
+**What atomic algebra actually adds.**
+
+The axis that Łukasiewicz, Post, and intuitionistic logic do not have is **modulation of the unit**:
+
+- in Łukasiewicz and Post, $u$ is fixed;
+- in intuitionistic logic, the level structure is fixed by the model;
+- in atomic algebra, $u$ is a **parameter** that can be modulated by a signal from above: $\delta_n=\delta_n(\Delta_{n+1})$.
+
+This is the second dimension discussed in Q18: not a new truth value, but a **dependence of the threshold on information from above**. None of the competing logics has this axis.
+
+**Honest limitations.**
+
+Atomic algebra does **not** replace these logics in their own domains:
+
+- it does not solve Łukasiewicz's problem (many-valued semantics with a fixed t-norm);
+- it does not solve the intuitionistic problem (constructivity, BHK semantics);
+- it does not solve the quantum-logic problem (non-commutativity, orthomodularity).
+
+It adds an axis—modulation of the unit—that these logics do not have. This is not a competition; it is a **complement**. The skeptical objection "there are already powerful non-Boolean logics" is correct as a statement about those logics, but it does not apply to atomic algebra, because atomic algebra is not trying to be a non-Boolean logic in their sense. It is trying to be a **generated** algebra with a modulated unit.
+
+**In one sentence:** Łukasiewicz and Post are flat extensions with a frozen unit; intuitionistic logic has given levels; quantum logic addresses an orthogonal axis; atomic algebra adds a modulated unit and generated levels—an axis none of them has.
+
 ## Conclusion
 
 The atomic algebra is an attempt to build algebra from below—from the division atom and the distinguishability threshold—rather than from above, from a fixed Boolean unit. Its main advantages are: an adjustable unit, a secondary shift, and an explained hierarchy. Boolean algebra appears as the normalized limit with a frozen unit, not as the only possible algebra.
